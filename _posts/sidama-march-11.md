@@ -5,7 +5,7 @@ coverImage: '/assets/blog/sidama-march-11/cover.jpeg'
 date: '2023-03-11'
 author:
   name: Surafel Yimam
-  picture: '/assets/blog/authors/tim.jpeg'
+  picture: '/assets/blog/authors/surafel.jpg'
 ogImage:
   url: '/assets/blog/sidama-march-11/cover.jpeg'
 ---

@@ -5,7 +5,7 @@ coverImage: '/assets/blog/shewarobit-july-15/cover.jpeg'
 date: '2023-07-15'
 author:
   name: Surafel Yimam
-  picture: '/assets/blog/authors/jj.jpeg'
+  picture: '/assets/blog/authors/surafel.jpg'
 ogImage:
   url: '/assets/blog/shewarobit-july-15/cover.jpeg'
 ---
