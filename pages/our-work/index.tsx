@@ -1,53 +1,6 @@
 import Layout from '../../components/layout'
 import React from "react"
-import { ComposableMap, Geographies, Geography } from "react-simple-maps"
-import GoogleMapReact from 'google-map-react';
 
-// const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
-// export const SimpleMap = () => {
-//     const defaultProps = {
-//         center: {
-//             lat: 9.005401,
-//             lng: 38.763611
-//         },
-//         zoom: 7
-//     };
-
-//     return (
-//         // Important! Always set the container height explicitly
-//         <div style={{ height: '600px', width: '100%' }}>
-//             <GoogleMapReact
-//                 bootstrapURLKeys={{ key: "" }}
-//                 defaultCenter={defaultProps.center}
-//                 defaultZoom={defaultProps.zoom}
-//             >
-//                 <AnyReactComponent
-//                     lat={9.005401}
-//                     lng={38.763611}
-//                     text="My Marker"
-//                 />
-//             </GoogleMapReact>
-//         </div>
-//     );
-// }
-
-// const geoUrl =
-//     "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json"
-
-// export const MapChart = () => {
-//     return (
-//         <ComposableMap>
-//             <Geographies geography={geoUrl}>
-//                 {({ geographies }) =>
-//                     geographies.map((geo) => (
-//                         <Geography key={geo.rsmKey} geography={geo} />
-//                     ))
-//                 }
-//             </Geographies>
-//         </ComposableMap>
-//     )
-// }
 
 export default function Index({ allPosts }: any) {
 
