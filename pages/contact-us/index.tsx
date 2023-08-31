@@ -20,7 +20,6 @@ export default function Index({ allPosts }: any) {
                                 <p>Floor 11 Office No. 04 </p>
                             </div>
                             <div className='text-bottom-border-primary-color py-5'>
-
                                 <h3 className='font-semibold mb-2'>
                                     Phone No.
                                 </h3>

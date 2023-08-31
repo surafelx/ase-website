@@ -34,7 +34,7 @@ const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
+        content={`At AgriSun Ethiopia, we are dedicated to revolutionizing the agricultural landscape by harnessing the power of design, energy, agriculture, water, and software. Our mission is to provide affordable and sustainable solutions to small landholder farmers who lack access to national power grid electrification connection.`}
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
