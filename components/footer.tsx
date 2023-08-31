@@ -11,12 +11,69 @@ const Footer = () => {
               <Image
                 src="/images/logo-2.png"
                 width={48}
-                className="mr-3"
+                className="mr-3 mt-2"
                 height={48}
                 alt="AgriSun Ethiopia Engineering and Trading PLC"
               />
               <span className="hidden lg:flex self-center text-2xl font-bold whitespace-nowrap dark:text-white text-white">AgriSun Ethiopia</span>
             </a>
+            <div className='mt-4 flex'>
+              <div className=''>
+                <Image
+                  src="/images/address.svg"
+                  width={30}
+                  className="mr-3 mt-2"
+                  height={30}
+                  alt="AgriSun Ethiopia Engineering and Trading PLC"
+                />
+              </div>
+              <div>
+                <div className='font-bold text-gray-500'>
+                  Main Office Address
+                </div>
+                <div className='text-white'>
+                  Hayahulet, Nigat Business Center
+                </div>
+              </div>
+            </div>
+            <div className='mt-4 flex'>
+              <div className=''>
+                <Image
+                  src="/images/phone.svg"
+                  width={30}
+                  className="mr-3 mt-2"
+                  height={30}
+                  alt="AgriSun Ethiopia Engineering and Trading PLC"
+                />
+              </div>
+              <div>
+                <div className='font-bold text-gray-500'>
+                  Phone Number
+                </div>
+                <div className='text-white'>
+                  +251941970026
+                </div>
+              </div>
+            </div>
+            <div className='mt-4 flex'>
+              <div className=''>
+                <Image
+                  src="/images/email.svg"
+                  width={30}
+                  className="mr-3 mt-2"
+                  height={30}
+                  alt="AgriSun Ethiopia Engineering and Trading PLC"
+                />
+              </div>
+              <div>
+                <div className='font-bold text-gray-500'>
+                  Email
+                </div>
+                <div className='text-white'>
+                  info@agrisunethiopia.com
+                </div>
+              </div>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
@@ -40,22 +97,22 @@ const Footer = () => {
                 <li className="mb-4">
                   <a href="https://flowbite.com/" className="hover:underline">Software</a>
                 </li>
-               
+
               </ul>
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Who We Are</h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="mb-4">
-                <Link href="who-we-are/about-us">
-               About Us
-                </Link>
+                <li className="mb-4">
+                  <Link href="who-we-are/about-us">
+                    About Us
+                  </Link>
                 </li>
 
                 <li className="mb-4">
-                <Link href="who-we-are/our-strategy">
-               Our Strategy
-                </Link>
+                  <Link href="who-we-are/our-strategy">
+                    Our Strategy
+                  </Link>
                 </li>
               </ul>
             </div>

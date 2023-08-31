@@ -24,7 +24,7 @@ export default function Index({ allPosts }: any) {
                                 <h3 className='font-semibold mb-2'>
                                     Phone No.
                                 </h3>
-                                <p>+251995698080 | +251941970026</p>
+                                <p>+251941970026</p>
                             </div>
                             <div className='text-bottom-border-primary-color py-5'>
                                 <h3 className='font-semibold mb-2'>Email</h3>

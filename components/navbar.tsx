@@ -75,6 +75,7 @@ const Navbar = () => {
   return (
 
     <nav className="w-full z-10 bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900  ">
+    
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4 rounded-2xl">
 
         <Link href="/">
@@ -108,7 +109,7 @@ const Navbar = () => {
           (isMenuOpen) && (
             <div className="items-center justify-between font-medium w-full lg:flex lg:w-auto lg:order-1">
               <ul className="flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700">
-                {/* <li>
+                <li>
                   <button onClick={() => {
                     setIsDrawerOpen(!isDrawerOpen)
                     setIsWhoWeAreDrawerOpen(false)
@@ -123,7 +124,7 @@ const Navbar = () => {
                       </svg></>)}
 
                   </button>
-                </li> */}
+                </li>
                 <li>
                   <button onClick={() => {
                     setIsWhoWeAreDrawerOpen(!isWhoWeAreDrawerOpen)
@@ -163,13 +164,13 @@ const Navbar = () => {
             <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500 dark:text-gray-400 lg:flex lg:px-24 ">
               <ul className="mb-4 w-1/2 space-y-4 lg:mb-0" aria-labelledby="mega-menu-full-image-button">
                 <li>
-                  <Link href="/what-we-do/design">
+                  <Link href="/what-we-do/agriculture">
                     <button
-                      onMouseEnter={() => setShowHighlights('design')}
+                      onMouseEnter={() => setShowHighlights('agriculture')}
                       onMouseLeave={() => setShowHighlights('')}
                       className="text-border-white text-white font-bold">
 
-                      Design
+                      Agriculture
                       <svg className="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                       </svg>
@@ -178,11 +179,11 @@ const Navbar = () => {
                 </li>
                 <li>
                   <button
-                    onMouseEnter={() => setShowHighlights('energy')}
+                    onMouseEnter={() => setShowHighlights('manufacturing')}
                     onMouseLeave={() => setShowHighlights('')}
                     className="text-border-white text-white font-bold">
-                    <Link href="/what-we-do/energy">
-                      Energy
+                    <Link href="/what-we-do/manufacturing">
+                      Manufacturing
                     </Link>
                     <svg className="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -190,7 +191,7 @@ const Navbar = () => {
                   </button>
 
                 </li>
-                <li>
+                {/* <li>
                   <button
                     onMouseEnter={() => setShowHighlights('construction')}
                     onMouseLeave={() => setShowHighlights('')}
@@ -203,8 +204,8 @@ const Navbar = () => {
                     </svg>
                   </button>
 
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <button
                     onMouseEnter={() => setShowHighlights('agriculture')}
                     onMouseLeave={() => setShowHighlights('')}
@@ -244,8 +245,7 @@ const Navbar = () => {
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                     </svg>
                   </button>
-
-                </li>
+                </li> */}
               </ul>
 
               {/* <div className="lg:block w-full hidden text-left">
@@ -301,12 +301,12 @@ const Navbar = () => {
                   </ Link>
                 </li>
                 {/* <li>
-                  <Link href="/who-we-are/gallery">
+                  <Link href="/who-we-are/our-products">
                     <button
                       onMouseEnter={() => setShowHighlights('energy')}
                       onMouseLeave={() => setShowHighlights('')}
                       className="text-border-white text-white font-bold">
-                      Gallery
+                      Our Products
                       <svg className="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                       </svg>

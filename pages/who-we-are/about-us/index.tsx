@@ -43,10 +43,6 @@ export default function Index({ allPosts }: any) {
                             title={'CEO'}
                         />
                         <TeamsCard
-                            name='Abel Hailu'
-                            title={'Marketing Manager'}
-                        />
-                        <TeamsCard
                             name='Yimam Mohammed'
                             title={'Construction Division Head'}
                         />

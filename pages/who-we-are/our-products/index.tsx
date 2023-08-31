@@ -1,17 +1,17 @@
 import Layout from '../../../components/layout'
+import Recents from '../../../components/recents'
+import AboutUs from '../../../components/about-us'
+import Services from '../../../components/focus'
+import OtherAreas from '../../../components/other-areas'
+import MediaCard from '../../../components/media-card'
+import Layout3 from '../../../components/CardLayouts/Layout3'
 
-export default function Index() {
-  return (
-  
-          <>
-
-            <Layout title={'What We Do - Agriculture'}>
-            <section className='w-full mx-auto max-w-screen-xl'>
-                    <div className='my-4'>Home {'>'} What We Do {'>'} Agriculture</div>
-                    <h3 className='font-bold text-3xl'>Agriculture</h3>
-                </section>
-                <section className='mt-14 w-full px-12 mx-auto max-w-screen-xl'>
-                    <h3 className='font-bold text-3xl'>Products</h3>
+export default function Index({ allPosts }: any) {
+    return (
+        <>
+            <Layout title={'About Us'}>
+                <section className='my-8 w-full px-12 mx-auto max-w-screen-xl'>
+                    <h2 className='font-bold'>Our Products</h2>
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto my-8'>
                     <h3 className="text-lg font-semibold mb-4">Solar Powered Water Pumping Systems</h3>
@@ -206,5 +206,11 @@ export default function Index() {
                 }
             </style>
         </>
-  )
+    )
 }
+
+
+
+
+
+
