@@ -15,8 +15,8 @@ export default function Index() {
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto my-8'>
                     <h3 className="text-lg font-semibold mb-4">Mounting Racks</h3>
-                    <div className="flex gap-4">
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div className="flex flex-col md:flex-row gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -28,7 +28,7 @@ export default function Index() {
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Securely install solar panels with our durable and adjustable mounting racks.</p>
                             </div>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -40,7 +40,7 @@ export default function Index() {
                             </div>
                         </div>
 
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -55,8 +55,8 @@ export default function Index() {
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto my-8'>
                     <h3 className="text-lg font-semibold mb-4">Power Backup System Boxes</h3>
-                    <div className="flex gap-4">
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div className="flex flex-col md:flex-row gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -67,7 +67,7 @@ export default function Index() {
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Protect and optimize your inverter performance with our reliable inverter boxes.</p>
                             </div>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -79,7 +79,7 @@ export default function Index() {
                             </div>
                         </div>
 
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -94,8 +94,8 @@ export default function Index() {
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto my-8'>
                     <h3 className="text-lg font-semibold mb-4">Other</h3>
-                    <div className="flex gap-4">
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div className="flex flex-col md:flex-row gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -106,7 +106,7 @@ export default function Index() {
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Ensure well integrity with our reliable water well safety cups.</p>
                             </div>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -117,7 +117,7 @@ export default function Index() {
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Protect your PV modules with our sturdy and secure module fencing.</p>
                             </div>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>

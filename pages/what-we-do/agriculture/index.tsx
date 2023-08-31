@@ -15,8 +15,8 @@ export default function Index() {
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto my-8'>
                     <h3 className="text-lg font-semibold mb-4">Solar Powered Water Pumping Systems</h3>
-                    <div className="flex gap-4">
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div className="flex flex-col md:flex-row gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="w-1/2 bg-white w-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -27,7 +27,7 @@ export default function Index() {
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Experience unmatched efficiency and durability with our cutting-edge PV modules.</p>
                             </div>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="w-1/2 bg-white w-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -39,7 +39,7 @@ export default function Index() {
                             </div>
                         </div>
 
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -50,7 +50,7 @@ export default function Index() {
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Discover the power of our high-performance pumps for all your needs.</p>
                             </div>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -65,8 +65,8 @@ export default function Index() {
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto my-8'>
                     <h3 className="text-lg font-semibold mb-4">Irrigation Equipment & Accessories</h3>
-                    <div className="flex gap-4">
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div className="flex flex-col md:flex-row gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -77,7 +77,7 @@ export default function Index() {
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Experience lush green lawns with our precision-engineered sprinklers and accessories.</p>
                             </div>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -89,7 +89,7 @@ export default function Index() {
                             </div>
                         </div>
 
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -100,7 +100,7 @@ export default function Index() {
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Enhance the performance and longevity of your system with our top-notch accessories.</p>
                             </div>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -115,8 +115,8 @@ export default function Index() {
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto my-8'>
                     <h3 className="text-lg font-semibold mb-4">Shallow Depth Water Well Drilling Rigs</h3>
-                    <div className="flex gap-4">
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div className="flex flex-col md:flex-row gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -127,7 +127,7 @@ export default function Index() {
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Efficiently drill shallow water wells with our versatile tractor-mounted drilling rig.</p>
                             </div>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -142,8 +142,8 @@ export default function Index() {
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto my-8'>
                     <h3 className="text-lg font-semibold mb-4">Solar Powered Energy Backup System</h3>
-                    <div className="flex gap-4">
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div className="flex flex-col md:flex-row gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -154,7 +154,7 @@ export default function Index() {
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Harness abundant solar energy with our high-efficiency PV arrays for backup.</p>
                             </div>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -165,7 +165,7 @@ export default function Index() {
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Efficiently manage and convert solar power with our advanced controller and inverter.</p>
                             </div>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
@@ -176,7 +176,7 @@ export default function Index() {
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Store excess energy for backup with our reliable and long-lasting storage batteries.</p>
                             </div>
                         </div>
-                        <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                             </a>
