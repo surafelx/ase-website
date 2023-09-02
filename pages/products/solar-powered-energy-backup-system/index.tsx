@@ -7,10 +7,10 @@ export default function Index() {
 
         <>
 
-            <Layout title={'Solar Powered Water Pumping Systems'}>
+            <Layout title={'Solar Powered Energy Backup Systems'}>
                 <section className='w-full mx-auto max-w-screen-xl'>
-                    <div className='my-4'>Home {'>'} Products {'>'} Solar Powered Water Pumping Systems</div>
-                    <h3 className='font-bold text-3xl'>Solar Powered Water Pumping Systems</h3>
+                    <div className='my-4'>Home {'>'} Products {'>'} Solar Powered Energy Backup Systems</div>
+                    <h3 className='font-bold text-3xl'>Solar Powered Energy Backup Systems</h3>
                 </section>
                 <section className='w-full mx-auto max-w-screen-xl my-4 h-1/6'>
                     <Carousel
@@ -38,13 +38,13 @@ export default function Index() {
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto'>
                     <p className="mb-4 text-lg text-gray-500 md:text-xl font-semibold dark:text-gray-400">
-                        At AgriSun Ethiopia, we understand the invaluable role that small landholder farmers play in nourishing communities and sustaining agriculture. Our mission is to empower these dedicated individuals with the tools they need to thrive in an ever-changing agricultural landscape. We take pride in offering a range of innovative solutions, with a particular focus on providing solar powered water pumping systems tailored to the unique needs of small landholder farmers.
+                        In today's world, access to reliable energy is essential for modern living and business operations. However, power outages are an all-too-familiar challenge that can disrupt productivity and daily life.
                     </p>
                     <p className="mb-4 text-lg text-gray-500 dark:text-gray-400 font-semibold">
-                        Our journey began with a deep-rooted commitment to sustainable farming practices and environmental stewardship. Over the years, we've recognized the challenges faced by small landholders – limited resources, unpredictable weather patterns, and the need for cost-effective, reliable water supply solutions. In response, we've developed cutting-edge solar pumping systems designed to make a meaningful difference in the lives of these farmers.
+                        At AgriSun Ethiopia, we understand the importance of uninterrupted energy supply, especially for small landholder farmers and rural communities. That's why we're committed to providing innovative solutions, such as our solar-powered energy backup systems. In this article, we delve into the significance of reliable energy and introduce our range of solar-powered backup systems, designed to empower individuals and communities, even in the face of power disruptions.
                     </p>
                     <p className="mb-4 text-lg text-gray-500 dark:text-gray-400 font-semibold">
-                        Solar powered water pumping systems are innovative technology marvels that combine solar panels, specialized pumps, and energy storage solutions to draw water from a source, such as a well or reservoir, and distribute it where needed. Let's break down the key components:
+                        Reliable energy is the backbone of progress in today's world. It powers homes, businesses, and critical infrastructure. For small landholder farmers and rural communities, access to energy can be the key to:
                     </p>
                     <div className="flex flex-col md:flex-row gap-4 grid grid-cols-1 md:grid-cols-2 py-4">
                         <div className="w-1/2 bg-white w-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -53,9 +53,9 @@ export default function Index() {
                             </a>
                             <div className="p-5">
                                 <a href="#">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">PV Module</h5>
+                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">PV Array</h5>
                                 </a>
-                                <div className="mb-3 font-normal text-gray-700 dark:text-gray-400">These are the heart of the system. Solar panels capture sunlight and convert it into electrical energy. The size and efficiency of the panels determine how much water can be pumped.</div>
+                                <div className="mb-3 font-normal text-gray-700 dark:text-gray-400"> Harness the sun's energy with our high-efficiency PV arrays, providing clean and sustainable power for your needs.</div>
                             </div>
                         </div>
                         <div className="w-1/2 bg-white w-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -64,37 +64,37 @@ export default function Index() {
                             </a>
                             <div className="p-5">
                                 <a href="#">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Controller & Inverter</h5>
+                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Controller and Inverter</h5>
                                 </a>
-                                <div className="mb-3 font-normal text-gray-700 dark:text-gray-400">This crucial component manages the system's operation, ensuring optimal performance and protecting it from overloading or underperformance due to varying sunlight levels.</div>
+                                <div className="mb-3 font-normal text-gray-700 dark:text-gray-400">We offer a range of filters to safeguard your irrigation system from debris and contaminants, ensuring a continuous flow of clean water to your crops.</div>
                             </div>
                         </div>
 
-                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img className="rounded-t-lg" src="/assets/products/solar-powered/4.png" alt="" />
-                            </a>
-                            <div className="p-5">
-                                <a href="#">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Pump</h5>
-                                </a>
-                                <div className="mb-3 font-normal text-gray-700 dark:text-gray-400">The pump is responsible for lifting water from the source to the desired location. Solar pumps come in various types, including submersible, surface, and centrifugal pumps, each tailored to specific applications.</div>
-                            </div>
-                        </div>
                         <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
                                 <img className="rounded-t-lg" src="/assets/products/solar-powered/3.png" alt="" />
                             </a>
                             <div className="p-5">
                                 <a href="#">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Energy Storage</h5>
+                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Storage Batteries</h5>
                                 </a>
-                                <div className="mb-3 font-normal text-gray-700 dark:text-gray-400"> To ensure consistent water supply during cloudy days or at night, solar powered water pumping systems may include batteries or other energy storage solutions to store excess energy generated during the day.</div>
+                                <div className="mb-3 font-normal text-gray-700 dark:text-gray-400">Maintain consistent water pressure with our pressure regulators, preventing over- or under-irrigation and optimizing water usage.</div>
+                            </div>
+                        </div>
+                        <div className="bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img className="rounded-t-lg" src="/assets/products/solar-powered/4.png" alt="" />
+                            </a>
+                            <div className="p-5">
+                                <a href="#">
+                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">PV Cables & Fittings</h5>
+                                </a>
+                                <div className="mb-3 font-normal text-gray-700 dark:text-gray-400">Choose from a variety of emitters and sprayers to customize water distribution for different crop types and field layouts.</div>
                             </div>
                         </div>
                     </div>
-                    <h3 className='text-3xl font-bold py-3 my-2  '>Advantages of Our Solar Powered Water Pumping Systems</h3>
-                    <div className="mb-3 font-normal text-gray-700 font-normal dark:text-gray-400"> Small landholder farmers face unique challenges in agriculture, often limited by resources and access to technology. Solar powered water pumping systems offer several advantages tailored specifically to meet the needs of these farmers:</div>
+                    <h3 className='text-3xl font-bold py-3 my-2  '>Advantages of Our Solar Powered Energy Backup Systems</h3>
+                    <div className="mb-3 font-normal text-gray-700 font-normal dark:text-gray-400"> Our commitment to empowering individuals and communities extends to providing reliable energy solutions, even in the face of power outages. Our range of solar-powered energy backup systems is designed to offer:</div>
                     <div className=' grid grid-cols-1 md:grid-cols-2 gap-2'>
                         <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium grid-cols-2">
                             <div className='mx-auto '>
@@ -107,9 +107,9 @@ export default function Index() {
                                 />
                             </div>
                             <a href="#">
-                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Tailored Solutions</h5>
+                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Solar Reliability</h5>
                             </a>
-                            We understand that every farm is unique, and each farmer has distinct requirements. That's why we offer a range of solar powered water pumping systems that can be customized to match the specific needs and resources of small landholders.
+                            Our systems harness the power of the sun, providing a clean and renewable source of energy. This not only reduces electricity bills but also minimizes the carbon footprint.
                         </div>
                         <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium">
                             <div className='mx-auto '>
@@ -122,9 +122,9 @@ export default function Index() {
                                 />
                             </div>
                             <a href="#">
-                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Affordability</h5>
+                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Energy Storage</h5>
                             </a>
-                            We believe that sustainable technology should be accessible to all. Our pricing and financing options are designed to ensure that even those with modest budgets can benefit from the advantages of solar pumping.
+                            Our systems come equipped with energy storage solutions, such as batteries, which store excess solar energy during the day for use during the night or during power interruptions.
                         </div>
                         <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium">
                             <div className='mx-auto '>
@@ -137,9 +137,9 @@ export default function Index() {
                                 />
                             </div>
                             <a href="#">
-                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Reliability</h5>
+                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Custom Solutions</h5>
                             </a>
-                            Small landholder farmers need solutions they can rely on day in and day out. Our solar pumping systems are built to last and require minimal maintenance, so farmers can focus on what matters most – their crops and livelihoods.
+                            We understand that energy needs vary. Our systems can be tailored to the specific requirements of homes, businesses, and communities, ensuring optimal performance.
                         </div>
                         <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium">
                             <div className='mx-auto '>
@@ -152,9 +152,24 @@ export default function Index() {
                                 />
                             </div>
                             <a href="#">
-                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Environmental Responsibility</h5>
+                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Ease of Use</h5>
                             </a>
-                            Our commitment to the environment extends beyond our products. We take every step to ensure that our solar pumping systems are eco-friendly, producing no emissions and contributing to a greener, more sustainable future.
+                            Our solar-powered energy backup systems are user-friendly, with intuitive controls and automatic switching to backup power during outages, eliminating the need for manual intervention.
+                        </div>
+                        <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium">
+                            <div className='mx-auto '>
+                                <Image
+                                    src={`/images/productive.svg`}
+                                    className="mx-auto"
+                                    width={70}
+                                    height={70}
+                                    alt={``}
+                                />
+                            </div>
+                            <a href="#">
+                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Affordability</h5>
+                            </a>
+                            We believe that reliable energy should be accessible to all. Our pricing and financing options make our systems affordable for small landholder farmers and rural communities.
                         </div>
                         <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium">
                             <div className='mx-auto '>
@@ -167,29 +182,17 @@ export default function Index() {
                                 />
                             </div>
                             <a href="#">
-                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Community Impact</h5>
+                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Expert SUpport</h5>
                             </a>
-                            We recognize that small landholder farmers are the backbone of rural communities. By supporting these farmers, we aim to strengthen the entire community, providing not only economic benefits but also improved living standards and access to clean water.
-                        </div>
-                        <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium">
-                            <div className='mx-auto '>
-                                <Image
-                                    src={`/images/knowledge.svg`}
-                                    className="mx-auto"
-                                    width={70}
-                                    height={70}
-                                    alt={``}
-                                />
-                            </div>
-                            <a href="#">
-                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Knowledge Sharing</h5>
-                            </a>
-                            We believe that knowledge is power. In addition to offering state-of-the-art solar pumping systems, we are dedicated to providing small landholder farmers with the knowledge and training needed to make the most of our technology.
+                            A Our team of experts is always available to offer guidance on system selection, installation, and maintenance, ensuring that you get the most from your investment.
                         </div>
                     </div>
                     <div className='my-2'>
                         <p className="mb-4 text-lg text-gray-500 dark:text-gray-400 font-semibold my-4 ">
-                            We are not just a provider of solar powered water pumping systems; we are a partner on your farming journey. We're here to equip you with the tools you need to overcome challenges, increase productivity, and achieve your agricultural goals sustainably. Join us in our commitment to empower small landholder farmers and make a positive impact on agriculture and rural communities. Together, we can grow a brighter and more sustainable future.
+                        By offering solar-powered energy backup systems, we aim to empower individuals and communities with the resilience and security of uninterrupted energy supply. Our systems are more than just a source of power; they are a beacon of hope, productivity, and progress for rural areas and beyond.
+                        </p>
+                        <p className="mb-4 text-lg text-gray-500 dark:text-gray-400 font-semibold my-4 ">
+                        Join us at AgriSun Ethiopia in our mission to shine brighter, even in the darkest hours. With our solar-powered energy backup systems, we're illuminating the path to a more empowered and sustainable future for all.
                         </p>
                     </div>
                 </section>

@@ -256,9 +256,9 @@ const Navbar = () => {
             <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500 dark:text-gray-400 lg:flex lg:px-24 ">
               <ul className="mb-4 w-1/2 space-y-4 lg:mb-0" aria-labelledby="mega-menu-full-image-button">
                 <li>
-                  <Link href="/services/solar-powered-water-pumping-systems">
+                  <Link href="/services/installation">
                     <button
-                      onMouseEnter={() => setShowHighlights('solar-powered-water-pumping-systems')}
+                      onMouseEnter={() => setShowHighlights('installation')}
                       onMouseLeave={() => setShowHighlights('')}
                       className="text-border-white text-white font-bold">
                       Installation
@@ -269,9 +269,9 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/solar-powered-water-pumping-systems">
+                  <Link href="/services/training">
                     <button
-                      onMouseEnter={() => setShowHighlights('solar-powered-water-pumping-systems')}
+                      onMouseEnter={() => setShowHighlights('training')}
                       onMouseLeave={() => setShowHighlights('')}
                       className="text-border-white text-white font-bold">
                       Training
@@ -282,9 +282,9 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/solar-powered-water-pumping-systems">
+                  <Link href="/services/manufacturing">
                     <button
-                      onMouseEnter={() => setShowHighlights('solar-powered-water-pumping-systems')}
+                      onMouseEnter={() => setShowHighlights('manufacturing')}
                       onMouseLeave={() => setShowHighlights('')}
                       className="text-border-white text-white font-bold">
                       Manufacturing
@@ -296,10 +296,10 @@ const Navbar = () => {
                 </li>
                 <li>
                   <button
-                    onMouseEnter={() => setShowHighlights('irrigation-equipment-accessories')}
+                    onMouseEnter={() => setShowHighlights('shallow-depth-water-well-drilling')}
                     onMouseLeave={() => setShowHighlights('')}
                     className="text-border-white text-white font-bold">
-                    <Link href="/services/irrigation-equipment-accessories">
+                    <Link href="/services/shallow-depth-water-well-drilling">
                       Shallow Depth Water Well Drilling
                     </Link>
                     <svg className="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -309,10 +309,10 @@ const Navbar = () => {
                 </li>
                 <li>
                   <button
-                    onMouseEnter={() => setShowHighlights('shallow-depth-water-well-drilling-rigs')}
+                    onMouseEnter={() => setShowHighlights('consulting')}
                     onMouseLeave={() => setShowHighlights('')}
                     className="text-border-white text-white font-bold">
-                    <Link href="/services/shallow-depth-water-well-drilling-rigs">
+                    <Link href="/services/consulting">
                       Consulting
                     </Link>
                     <svg className="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -341,7 +341,7 @@ const Navbar = () => {
       }
       {
         (isMenuOpen && isWhoWeAreDrawerOpen) && (
-          <div className="absolute w-full top-[250px] lg:top-[68px] mt-1 bg-gray-800 border-gray-800 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600 rounded-b-3xl">
+          <div className="absolute w-full top-[250px] z-30 lg:top-[68px] mt-1 bg-gray-800 border-gray-800 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600 rounded-b-3xl">
             <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500 dark:text-gray-400 lg:flex lg:px-24 ">
               <ul className="mb-4 w-1/2 space-y-4 lg:mb-0" aria-labelledby="mega-menu-full-image-button">
                 <li>
