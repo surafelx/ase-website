@@ -66,15 +66,6 @@ const ServicesCard = ({ title, text, backgroundImage }) => {
     return (
         <>
             <div className='h-full lg:h-1/3 w-full mb-4 '>
-                <div className="card  bg-blue-600/30 backdrop-brightness-75 rounded-3xl h-[450px] w-full mb-4">
-                    {/* <Image
-                        src={`/images/social.svg`}
-                        className="mr-3"
-                        width={30}
-                        height={30}
-                        alt={`${title}`}
-                    /> */}
-                </div>
                 <div className=''>
                     <h3 className='font-bold text-2xl my-4'>
                         {title}
