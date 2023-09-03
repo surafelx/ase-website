@@ -4,6 +4,7 @@ import AboutUs from '../../../components/about-us'
 import Services from '../../../components/focus'
 import OtherAreas from '../../../components/other-areas'
 import { getAllPosts } from '../../../lib/api'
+import Image from 'next/image'
 
 export default function Index({ allPosts }: any) {
     const morePosts = allPosts
@@ -12,7 +13,7 @@ export default function Index({ allPosts }: any) {
         <>
             <Layout title={'About Us'}>
                 <section className='my-8 w-full px-12 mx-auto max-w-screen-xl'>
-                    <h2 className='font-bold'>Who we are</h2>
+                    <h2 className='font-bold'>About Us</h2>
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto'>
                     <p className="mb-4 text-lg text-gray-500 md:text-xl font-semibold dark:text-gray-400">
@@ -34,7 +35,101 @@ export default function Index({ allPosts }: any) {
                         Join us on this transformative journey as we work hand in hand with farmers, communities, and stakeholders to build a resilient and prosperous agricultural sector in Ethiopia. Together, let's harness the power of the sun to cultivate a sustainable future.
                     </p>
                 </section>
-                {morePosts.length > 0 && <Recents posts={morePosts} />}
+                <section className='px-12 max-w-screen-xl mx-auto'>
+                <h2 className='mb-8 font-bold'>Our Values</h2>
+                    <div className=' grid grid-cols-1 md:grid-cols-2 gap-2'>
+                        <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium grid-cols-2">
+                            <div className='mx-auto '>
+                                <Image
+                                    src={`/images/tailor.svg`}
+                                    className="mx-auto"
+                                    width={70}
+                                    height={70}
+                                    alt={``}
+                                />
+                            </div>
+                            <a href="#">
+                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Sustainbility</h5>
+                            </a>
+                            We are committed to promoting effective use of renewable energy for the attainment of sustainable agriculture and minimize the impact of fossil fuel to the natural environment.
+                        </div>
+                        <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium">
+                            <div className='mx-auto '>
+                                <Image
+                                    src={`/images/affordable.svg`}
+                                    className="mx-auto"
+                                    width={70}
+                                    height={70}
+                                    alt={``}
+                                />
+                            </div>
+                            <a href="#">
+                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Affordability</h5>
+                            </a>
+                            We strive to make the latest solar energy technologies accessible to all farmers, regardless of their financial capabilities.
+                        </div>
+                        <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium">
+                            <div className='mx-auto '>
+                                <Image
+                                    src={`/images/reliable.svg`}
+                                    className="mx-auto"
+                                    width={70}
+                                    height={70}
+                                    alt={``}
+                                />
+                            </div>
+                            <a href="#">
+                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Innovation</h5>
+                            </a>
+                            We are dedicated to providing cutting-edge solutions that enable farmers to increase crop yields and improve their livelihoods. 
+                        </div>
+                        <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium">
+                            <div className='mx-auto '>
+                                <Image
+                                    src={`/images/sustainable.svg`}
+                                    className="mx-auto"
+                                    width={70}
+                                    height={70}
+                                    alt={``}
+                                />
+                            </div>
+                            <a href="#">
+                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Equity</h5>
+                            </a>
+                            We believe that all farmers should have equal access to the latest solar energy technology and strive to support the development of local communities.
+                        </div>
+                        <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium">
+                            <div className='mx-auto '>
+                                <Image
+                                    src={`/images/productive.svg`}
+                                    className="mx-auto"
+                                    width={70}
+                                    height={70}
+                                    alt={``}
+                                />
+                            </div>
+                            <a href="#">
+                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Partnership</h5>
+                            </a>
+                            We highly value collaboration and cooperation, and work closely with our clients, partners, and stakeholders to achieve our shared goals.
+                        </div>
+                        <div className="mb-4 text-gray-500  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-8 dark:text-gray-400 font-medium">
+                            <div className='mx-auto '>
+                                <Image
+                                    src={`/images/community.svg`}
+                                    className="mx-auto"
+                                    width={70}
+                                    height={70}
+                                    alt={``}
+                                />
+                            </div>
+                            <a href="#">
+                                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center">Resilience</h5>
+                            </a>
+                            We are dedicated to building resilience within farming communities, enabling them to withstand challenges, adapt to changing conditions.
+                        </div>
+                    </div>
+                </section>
                 <section className='m-16 max-w-screen-xl mx-auto'>
                     <h2 className='mb-8 font-bold'>Our Team</h2>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -70,9 +165,13 @@ export default function Index({ allPosts }: any) {
                     <div className="spacer w-full relative h-6 md:h-12 spacer-divider">
                     </div>
                 </section>
-                <AboutUs />
-                <Services />
-                <OtherAreas />
+                <section className='max-w-screen-xl mx-auto'>
+                    <h2 className='mb-8 font-bold'>Testimony</h2>
+                    
+                    <div className="spacer w-full relative h-6 md:h-12 spacer-divider">
+                    </div>
+                </section>
+                
             </Layout>
             <style jsx>
                 {
@@ -80,7 +179,6 @@ export default function Index({ allPosts }: any) {
             .hero {
               background-image:
               linear-gradient(230.7deg,rgba(0,0,0,.105) 2.42%,rgba(0,0,0,.07) 24.45%,rgba(0,0,0,.21) 41.88%,rgba(0,0,0,.546) 76.81%),
-              url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg');
               background-size: cover;
               background-repeat: no-repeat;
           }

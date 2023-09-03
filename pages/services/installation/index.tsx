@@ -9,7 +9,7 @@ export default function Index() {
 
             <Layout title={'Installation'}>
                 <section className='w-full mx-auto max-w-screen-xl'>
-                    <div className='my-4'>Home {'>'} Serices {'>'} Installation</div>
+                    <div className='my-4'>Home {'>'} Services {'>'} Installation</div>
                     <h3 className='font-bold text-3xl'>Installation</h3>
                 </section>
                 <section className='w-full mx-auto max-w-screen-xl my-4 h-1/6'>

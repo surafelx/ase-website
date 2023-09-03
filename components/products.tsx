@@ -4,39 +4,27 @@ import Image from 'next/image'
 const exampleServices = [
     {
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
-        text: 'Professional Installation services to ensure seamless integration of our products.',
-        title: 'Installation',
+        text: "Our Solar Powered Water Pumping Systems harness the sun's energy to deliver a reliable and eco-friendly solution for meeting your farm's water requirements, ensuring sustainability and cost-efficiency.",
+        title: 'Solar Powered Water Pumping Systems',
         backgroundImage: 'https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     },
     {
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
-        text: 'Empowering Training programs to equip you with essential skills and knowledge.',
-        title: 'Training',
+        text: "Explore our wide range of Irrigation Equipment & Accessories, meticulously designed to enhance crop cultivation, optimize resource utilization, and boost agricultural productivity.",
+        title: 'Irrigation Equipment & Accessories',
         backgroundImage: 'https://images.pexels.com/photos/4148472/pexels-photo-4148472.jpeg?auto=compress&cs=tinysrgb&w=1600'
     },
     {
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
-        text: 'Innovative Manufacturing of top-quality agricultural components and structures.',
-        title: 'Manufacturing',
+        text: "Unearth the potential of your land with our Shallow Depth Water Well Drilling Rigs, providing easy access to groundwater resources for a consistent and abundant water supply, vital for successful farming.",
+        title: 'Shallow Depth Water Well Digging Rigs',
         backgroundImage: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1600'
     },
     {
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
-        text: 'Expert Shallow Water Well Depth Digging for accessible groundwater resources.',
-        title: 'Shallow Water Well Digging',
+        text: "Stay powered and prepared with our Solar Powered Energy Backup System, ensuring uninterrupted electricity during outages and emergencies, promoting energy efficiency and self-reliance.",
+        title: 'Solar Powered Energy Backup Systems',
         backgroundImage: 'https://images.pexels.com/photos/21393/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-    },
-    {
-        link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
-        text: 'Insightful Consulting for informed decision-making in agriculture.',
-        title: 'Consulting',
-        backgroundImage: 'https://images.pexels.com/photos/14783299/pexels-photo-14783299.jpeg?auto=compress&cs=tinysrgb&w=1600'
-    },
-    {
-        link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
-        text: 'Tailored Custom Services designed to meet your unique agricultural needs and objectives.',
-        title: 'Other Custom Services',
-        backgroundImage: 'https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     }
 ]
 
@@ -44,8 +32,8 @@ const Focus = () => {
     return (
         <>
             <section className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-                <h2 className='mb-8 text-4xl font-extrabold tracking-tight leading-none text-black md:text-5xl lg:text-6xl'>Services</h2>
-                <div className="flex flex-col md:flex-row gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <h2 className='mb-8 text-4xl font-extrabold tracking-tight leading-none text-black md:text-5xl lg:text-6xl'>Products</h2>
+                <div className="flex flex-col md:flex-row gap-4 grid grid-cols-1 md:grid-cols-2">
                     {exampleServices.map(({ title, text, backgroundImage }) => {
                         return (
                             <ServicesCard
