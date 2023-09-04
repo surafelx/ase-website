@@ -3,28 +3,28 @@ import Image from 'next/image'
 
 const exampleServices = [
     {
-        link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
+        link: '/assets/home/products-pump.png',
         text: "Our Solar Powered Water Pumping Systems harness the sun's energy to deliver a reliable and eco-friendly solution for meeting your farm's water requirements, ensuring sustainability and cost-efficiency.",
         title: 'Solar Powered Water Pumping Systems',
-        backgroundImage: 'https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        backgroundImage: '/assets/home/products-pump.png'
     },
     {
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
         text: "Explore our wide range of Irrigation Equipment & Accessories, meticulously designed to enhance crop cultivation, optimize resource utilization, and boost agricultural productivity.",
         title: 'Irrigation Equipment & Accessories',
-        backgroundImage: 'https://images.pexels.com/photos/4148472/pexels-photo-4148472.jpeg?auto=compress&cs=tinysrgb&w=1600'
+        backgroundImage: '/assets/home/products-irrigation.png'
     },
     {
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
         text: "Unearth the potential of your land with our Shallow Depth Water Well Drilling Rigs, providing easy access to groundwater resources for a consistent and abundant water supply, vital for successful farming.",
         title: 'Shallow Depth Water Well Digging Rigs',
-        backgroundImage: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1600'
+        backgroundImage: '/assets/home/products-digging.png'
     },
     {
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
         text: "Stay powered and prepared with our Solar Powered Energy Backup System, ensuring uninterrupted electricity during outages and emergencies, promoting energy efficiency and self-reliance.",
         title: 'Solar Powered Energy Backup Systems',
-        backgroundImage: 'https://images.pexels.com/photos/21393/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        backgroundImage: '/assets/home/products-backup.png'
     }
 ]
 

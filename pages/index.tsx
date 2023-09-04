@@ -34,7 +34,7 @@ export default function Index({ allPosts }: Props) {
            slug={heroPost.slug}
            excerpt={heroPost.excerpt}
             /> */}
-          <section className='w-full mx-auto max-w-screen-xl my-4 h-1/6'>
+          <section className='w-full mx-auto max-w-screen-sm md:max-w-screen-md lg:max-w-screen-xl my-4 h-1/6'>
             <Carousel
               className="rounded-xl"
               autoplay={true}
@@ -53,21 +53,21 @@ export default function Index({ allPosts }: Props) {
                     <Typography
                       variant="h1"
                       color="white"
-                      className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl"
+                      className="mb-4 text-lg font-bold md:text-4xl lg:text-5xl"
                     >
                       Solar-Powered Water Pumping Systems
                     </Typography>
                     <Typography
                       variant="lead"
                       color="white"
-                      className="mb-12 opacity-80"
+                      className="mb-12 text-sm md:text-lg opacity-80"
                     >
                       Step into the future of agriculture with our cutting-edge Solar Powered Water Pumping Systems, offering eco-friendly and cost-effective solutions to meet your farm's water needs while reducing your carbon footprint.
                     </Typography>
                     <div className="flex justify-center gap-2">
-                      <Button size="lg" color="white">
+                      <div className='btn btn-primary px-4 py-2'>
                         Read More
-                      </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -83,21 +83,21 @@ export default function Index({ allPosts }: Props) {
                     <Typography
                       variant="h1"
                       color="white"
-                      className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl"
+                      className="mb-4 text-lg font-bold md:text-4xl lg:text-5xl"
                     >
                       Irrigation Equipment & Accessories
                     </Typography>
                     <Typography
                       variant="lead"
                       color="white"
-                      className="mb-12 opacity-80"
+                      className="mb-12 text-sm md:text-lg opacity-80"
                     >
                       Discover the versatility and efficiency of our extensive range of Irrigation Equipment & Accessories, designed to enhance your farming practices and optimize resource utilization for sustainable agricultural success
                     </Typography>
                     <div className="flex justify-center gap-2">
-                      <Button size="lg" color="white">
+                      <div className='btn btn-primary px-4 py-2'>
                         Read More
-                      </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -113,21 +113,21 @@ export default function Index({ allPosts }: Props) {
                     <Typography
                       variant="h1"
                       color="white"
-                      className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl"
+                      className="mb-4 text-lg font-bold md:text-4xl lg:text-5xl"
                     >
                       Shallow-Depth Water Well Drilling Services
                     </Typography>
                     <Typography
                       variant="lead"
                       color="white"
-                      className="mb-12 opacity-80"
+                      className="mb-12 text-sm md:text-lg opacity-80"
                     >
                       Experience the transformative power of our Shallow Depth Water Well Drilling Rigs, designed to provide easy access to groundwater resources, ensuring a reliable and abundant water supply for your farming needs.
                     </Typography>
                     <div className="flex justify-center gap-2">
-                      <Button size="lg" color="white">
+                      <div className='btn btn-primary px-4 py-2'>
                         Read More
-                      </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -143,21 +143,21 @@ export default function Index({ allPosts }: Props) {
                     <Typography
                       variant="h1"
                       color="white"
-                      className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl"
+                      className="mb-4 text-lg font-bold md:text-4xl lg:text-5xl"
                     >
                       Solar Powered Energy Backup Systems
                     </Typography>
                     <Typography
                       variant="lead"
                       color="white"
-                      className="mb-12 opacity-80"
+                      className="mb-12 text-sm md:text-lg opacity-80"
                     >
                       Ensure uninterrupted power for your home or business with our Solar Powered Energy Backup System, a reliable and sustainable solution to keep you powered up during outages and emergencies
                     </Typography>
                     <div className="flex justify-center gap-2">
-                      <Button size="lg" color="white">
+                      <div className='btn btn-primary px-4 py-2'>
                         Read More
-                      </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -173,21 +173,21 @@ export default function Index({ allPosts }: Props) {
                     <Typography
                       variant="h1"
                       color="white"
-                      className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl"
+                      className="mb-4 text-lg font-bold md:text-4xl lg:text-5xl"
                     >
                       Installation
                     </Typography>
                     <Typography
                       variant="lead"
                       color="white"
-                      className="mb-12 opacity-80"
+                      className="mb-12 text-sm md:text-lg opacity-80"
                     >
                       Experience the convenience of our professional Installing services, where we handle the intricate setup and configuration of our advanced agricultural equipment, ensuring seamless integration into your operations for improved efficiency and productivity
                     </Typography>
                     <div className="flex justify-center gap-2">
-                      <Button size="lg" color="white">
+                      <div className='btn btn-primary px-4 py-2'>
                         Read More
-                      </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -204,21 +204,21 @@ export default function Index({ allPosts }: Props) {
                     <Typography
                       variant="h1"
                       color="white"
-                      className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl"
+                      className="mb-4 text-lg font-bold md:text-4xl lg:text-5xl"
                     >
                       Training
                     </Typography>
                     <Typography
                       variant="lead"
                       color="white"
-                      className="mb-12 opacity-80"
+                      className="mb-12 text-sm md:text-lg opacity-80"
                     >
                       "Explore our comprehensive Training services, designed to empower farmers and businesses with the knowledge and skills needed to optimize agricultural practices and make the most of our cutting-edge products, ensuring sustainable growth and success.
                     </Typography>
                     <div className="flex justify-center gap-2">
-                      <Button size="lg" color="white">
+                      <div className='btn btn-primary px-4 py-2'>
                         Read More
-                      </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -234,21 +234,21 @@ export default function Index({ allPosts }: Props) {
                     <Typography
                       variant="h1"
                       color="white"
-                      className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl"
+                      className="mb-4 text-lg font-bold md:text-4xl lg:text-5xl"
                     >
                       Manufacturing
                     </Typography>
                     <Typography
                       variant="lead"
                       color="white"
-                      className="mb-12 opacity-80"
+                      className="mb-12 text-sm md:text-lg opacity-80"
                     >
-                      Discover the precision and innovation behind our Manufacturing services, producing a wide range of top-quality agricultural components and structures, such as solar panel mounting racks, reservoir mounting structures, inverter/controller safety boxes, water well safety cups, PV module mounting fencing, and various types of stands, tailored to meet your unique needs and enhance your agricultural endeavors.
+                      Discover the precision and innovation behind our Manufacturing services, producing a wide range of top-quality agricultural components and structures, such as solar panel mounting racks, reservoir mounting structures, inverter/controller safety boxes, water well safety cups, PV module mounting fencing, and various types of stands.
                     </Typography>
                     <div className="flex justify-center gap-2">
-                      <Button size="lg" color="white">
+                      <div className='btn btn-primary px-4 py-2'>
                         Read More
-                      </Button>
+                      </div>
                     </div>
                   </div>
                 </div>

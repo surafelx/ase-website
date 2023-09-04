@@ -6,37 +6,37 @@ const exampleServices = [
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
         text: 'Professional Installation services to ensure seamless integration of our products.',
         title: 'Installation',
-        backgroundImage: 'https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        backgroundImage: '/assets/home/services-installation.png'
     },
     {
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
         text: 'Empowering Training programs to equip you with essential skills and knowledge.',
         title: 'Training',
-        backgroundImage: 'https://images.pexels.com/photos/4148472/pexels-photo-4148472.jpeg?auto=compress&cs=tinysrgb&w=1600'
+        backgroundImage: '/assets/home/services-training.png'
     },
     {
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
         text: 'Innovative Manufacturing of top-quality agricultural components and structures.',
         title: 'Manufacturing',
-        backgroundImage: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1600'
+        backgroundImage: '/assets/home/services-manufacturing.png'
     },
     {
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
         text: 'Expert Shallow Water Well Depth Digging for accessible groundwater resources.',
         title: 'Shallow Water Well Digging',
-        backgroundImage: 'https://images.pexels.com/photos/21393/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        backgroundImage: '/assets/home/services-digging.png'
     },
     {
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
         text: 'Insightful Consulting for informed decision-making in agriculture.',
         title: 'Consulting',
-        backgroundImage: 'https://images.pexels.com/photos/14783299/pexels-photo-14783299.jpeg?auto=compress&cs=tinysrgb&w=1600'
+        backgroundImage: '/assets/home/services-consulting.png'
     },
     {
         link: 'https://www.snv.org/update/beyond-formality-how-embracing-informal-markets-can-drive-inclusive-economic-growth',
         text: 'Tailored Custom Services designed to meet your unique agricultural needs and objectives.',
         title: 'Other Custom Services',
-        backgroundImage: 'https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        backgroundImage: '/assets/home/services-custom.png'
     }
 ]
 
