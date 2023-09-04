@@ -20,18 +20,8 @@ export default function Index() {
                         autoplayDelay={3000}
                     >
                         <img
-                            src="/assets/products/solar-powered/panel.JPG"
+                            src="/assets/home/services-installation.png"
                             alt="image 1"
-                            className="h-full w-full object-cover"
-                        />
-                        <img
-                            src="/assets/products/solar-powered/pump.JPG"
-                            alt="image 2"
-                            className="h-full w-full object-cover"
-                        />
-                        <img
-                            src="/assets/products/solar-powered/spray.JPG"
-                            alt="image 3"
                             className="h-full w-full object-cover"
                         />
                     </Carousel>
