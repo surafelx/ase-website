@@ -19,18 +19,14 @@ export default function Index() {
                         loop={true}
                         autoplayDelay={3000}
                     >
+                      
                         <img
-                            src="/assets/products/solar-powered/panel.JPG"
-                            alt="image 1"
-                            className="h-full w-full object-cover"
-                        />
-                        <img
-                            src="/assets/products/solar-powered/pump.JPG"
+                            src="/assets/products/irrigation-equipment/irrigation-2.jpg"
                             alt="image 2"
                             className="h-full w-full object-cover"
                         />
                         <img
-                            src="/assets/products/solar-powered/spray.JPG"
+                            src="/assets/products/irrigation-equipment/irrigation-3.jpg"
                             alt="image 3"
                             className="h-full w-full object-cover"
                         />
@@ -38,13 +34,13 @@ export default function Index() {
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto'>
                     <p className="mb-4 text-lg text-gray-500 md:text-xl font-semibold dark:text-gray-400">
-                    At AgriSun Ethiopia, we recognize that small landholder farmers are the backbone of agriculture, and their success is vital for food security and sustainable farming practices. Our commitment to supporting these dedicated individuals extends beyond providing essential irrigation equipment accessories tailored to their unique needs.
+                        At AgriSun Ethiopia, we recognize that small landholder farmers are the backbone of agriculture, and their success is vital for food security and sustainable farming practices. Our commitment to supporting these dedicated individuals extends beyond providing essential irrigation equipment accessories tailored to their unique needs.
                     </p>
                     <p className="mb-4 text-lg text-gray-500 dark:text-gray-400 font-semibold">
-                        AgriSun Ethiopia is deeply rooted in the local farming community, and we take pride in our commitment to supporting the needs of small landholder farmers. 
+                        AgriSun Ethiopia is deeply rooted in the local farming community, and we take pride in our commitment to supporting the needs of small landholder farmers.
                     </p>
                     <p className="mb-4 text-lg text-gray-500 dark:text-gray-400 font-semibold">
-                    In the ever-evolving landscape of agriculture, small landholder farmers play a pivotal role in feeding communities and driving local economies. Their dedication to sustainable and efficient farming practices is the bedrock of food security and environmental responsibility. At AgriSun Ethiopia, we share this commitment to supporting small landholder farmers on their journey to success.
+                        In the ever-evolving landscape of agriculture, small landholder farmers play a pivotal role in feeding communities and driving local economies. Their dedication to sustainable and efficient farming practices is the bedrock of food security and environmental responsibility. At AgriSun Ethiopia, we share this commitment to supporting small landholder farmers on their journey to success.
                     </p>
                     <div className="flex flex-col md:flex-row gap-4 grid grid-cols-1 md:grid-cols-2 py-4">
                         <div className="w-1/2 bg-white w-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -211,7 +207,7 @@ export default function Index() {
                     </div>
                     <div className='my-2'>
                         <p className="mb-4 text-lg text-gray-500 dark:text-gray-400 font-semibold my-4 ">
-                        Join us at AgriSun Ethiopia as we continue to innovate and provide solutions that nurture growth, making the dream of a thriving, sustainable farm a reality for small landholder farmers. These accessories are the unsung heroes of modern farming, enhancing the effectiveness of irrigation systems and helping farmers make the most of their valuable resources. Whether you're a seasoned farmer or just starting your journey, our irrigation equipment accessories are here to support you in achieving healthier crops, greater yields, and a more sustainable future for agriculture.
+                            Join us at AgriSun Ethiopia as we continue to innovate and provide solutions that nurture growth, making the dream of a thriving, sustainable farm a reality for small landholder farmers. These accessories are the unsung heroes of modern farming, enhancing the effectiveness of irrigation systems and helping farmers make the most of their valuable resources. Whether you're a seasoned farmer or just starting your journey, our irrigation equipment accessories are here to support you in achieving healthier crops, greater yields, and a more sustainable future for agriculture.
                         </p>
                     </div>
                 </section>

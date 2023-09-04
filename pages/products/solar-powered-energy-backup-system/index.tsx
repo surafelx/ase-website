@@ -19,21 +19,12 @@ export default function Index() {
                         loop={true}
                         autoplayDelay={3000}
                     >
-                        <img
-                            src="/assets/products/solar-powered/panel.JPG"
+                         <img
+                            src="/assets/products/solar-powered-backup/solar-powered-backup.jpg"
                             alt="image 1"
                             className="h-full w-full object-cover"
                         />
-                        <img
-                            src="/assets/products/solar-powered/pump.JPG"
-                            alt="image 2"
-                            className="h-full w-full object-cover"
-                        />
-                        <img
-                            src="/assets/products/solar-powered/spray.JPG"
-                            alt="image 3"
-                            className="h-full w-full object-cover"
-                        />
+                       
                     </Carousel>
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto'>

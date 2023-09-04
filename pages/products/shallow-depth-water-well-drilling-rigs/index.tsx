@@ -7,7 +7,7 @@ export default function Index() {
 
         <>
 
-            <Layout title={'Irrigation Equipment Accessories'}>
+            <Layout title={'Shallow Depth Water Well Drilling'}>
                 <section className='w-full mx-auto max-w-screen-xl'>
                     <div className='my-4'>Home {'>'} Products {'>'} Shallow Depth Water Well Drilling </div>
                     <h3 className='font-bold text-3xl'>Shallow Depth Water Well Drilling </h3>
@@ -20,20 +20,11 @@ export default function Index() {
                         autoplayDelay={3000}
                     >
                         <img
-                            src="/assets/products/solar-powered/panel.JPG"
+                            src="/assets/products/irrigation-equipment/irrigation-1.jpg"
                             alt="image 1"
                             className="h-full w-full object-cover"
                         />
-                        <img
-                            src="/assets/products/solar-powered/pump.JPG"
-                            alt="image 2"
-                            className="h-full w-full object-cover"
-                        />
-                        <img
-                            src="/assets/products/solar-powered/spray.JPG"
-                            alt="image 3"
-                            className="h-full w-full object-cover"
-                        />
+                       
                     </Carousel>
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto'>

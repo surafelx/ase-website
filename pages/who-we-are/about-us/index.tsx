@@ -5,6 +5,7 @@ import Services from '../../../components/focus'
 import OtherAreas from '../../../components/other-areas'
 import { getAllPosts } from '../../../lib/api'
 import Image from 'next/image'
+import { Carousel } from "@material-tailwind/react";
 
 export default function Index({ allPosts }: any) {
     const morePosts = allPosts
@@ -14,6 +15,30 @@ export default function Index({ allPosts }: any) {
             <Layout title={'About Us'}>
                 <section className='my-8 w-full px-12 mx-auto max-w-screen-xl'>
                     <h2 className='font-bold'>About Us</h2>
+                </section>
+                <section className='w-full mx-auto max-w-screen-xl my-4 h-1/6'>
+                    <Carousel
+                        className="rounded-xl"
+                        autoplay={true}
+                        loop={true}
+                        autoplayDelay={3000}
+                    >
+                        <img
+                            src="/assets/about-us/about-us-hero-1.jpg"
+                            alt="image 1"
+                            className="h-full w-full object-cover"
+                        />
+                        <img
+                            src="/assets/about-us/about-us-hero-2.jpg"
+                            alt="image 2"
+                            className="h-full w-full object-cover"
+                        />
+                        <img
+                            src="/assets/about-us/about-us-hero-3.jpg"
+                            alt="image 3"
+                            className="h-full w-full object-cover"
+                        />
+                    </Carousel>
                 </section>
                 <section className='px-12 max-w-screen-xl mx-auto'>
                     <p className="mb-4 text-lg text-gray-500 md:text-xl font-semibold dark:text-gray-400">
@@ -162,12 +187,6 @@ export default function Index({ allPosts }: any) {
                             title={'Software Division Head'}
                         />
                     </div>
-                    <div className="spacer w-full relative h-6 md:h-12 spacer-divider">
-                    </div>
-                </section>
-                <section className='max-w-screen-xl mx-auto'>
-                    <h2 className='mb-8 font-bold'>Testimony</h2>
-                    
                     <div className="spacer w-full relative h-6 md:h-12 spacer-divider">
                     </div>
                 </section>
