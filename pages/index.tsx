@@ -48,7 +48,7 @@ export default function Index({ allPosts }: Props) {
                   alt="image 1"
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/60">
+                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
                   <div className="w-3/4 text-center md:w-2/4">
                     <Typography
                       variant="h1"
@@ -78,7 +78,7 @@ export default function Index({ allPosts }: Props) {
                   alt="image 1"
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/60">
+                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
                   <div className="w-3/4 text-center md:w-2/4">
                     <Typography
                       variant="h1"
@@ -108,7 +108,7 @@ export default function Index({ allPosts }: Props) {
                   alt="image 1"
                   className=" w-full object-cover"
                 />
-                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/60">
+                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
                   <div className="w-3/4 text-center md:w-2/4">
                     <Typography
                       variant="h1"
@@ -138,7 +138,7 @@ export default function Index({ allPosts }: Props) {
                   alt="image 1"
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/60">
+                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
                   <div className="w-3/4 text-center md:w-2/4">
                     <Typography
                       variant="h1"
@@ -168,7 +168,7 @@ export default function Index({ allPosts }: Props) {
                   alt="image 1"
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/60">
+                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
                   <div className="w-3/4 text-center md:w-2/4">
                     <Typography
                       variant="h1"
@@ -199,7 +199,7 @@ export default function Index({ allPosts }: Props) {
                   alt="image 1"
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/60">
+                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
                   <div className="w-3/4 text-center md:w-2/4">
                     <Typography
                       variant="h1"
@@ -229,7 +229,7 @@ export default function Index({ allPosts }: Props) {
                   alt="image 1"
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/60">
+                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
                   <div className="w-3/4 text-center md:w-2/4">
                     <Typography
                       variant="h1"
