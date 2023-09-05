@@ -35,7 +35,7 @@ export default function Index({ allPosts }: Props) {
            slug={heroPost.slug}
            excerpt={heroPost.excerpt}
             /> */}
-          <section className='w-full mx-auto max-w-screen-sm md:max-w-screen-md lg:max-w-screen-xl my-4 h-1/6'>
+          <section className='w-full mx-auto max-w-screen-sm md:max-w-screen-md lg:max-w-screen-xl my-4 h-1/2'>
             <Carousel
               className="rounded-xl"
               autoplay={true}
