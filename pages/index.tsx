@@ -15,6 +15,7 @@ import AboutUs from '../components/about-us'
 import ContactUs from '../components/contact-us'
 import { Carousel, Typography, Button } from "@material-tailwind/react";
 import Products from '../components/products'
+import Link from 'next/link'
 
 type Props = {
   allPosts: Post[]
@@ -49,7 +50,7 @@ export default function Index({ allPosts }: Props) {
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
-                  <div className="w-3/4 text-center md:w-2/4">
+                  <div className="w-3/4 absolute bottom-5 left-5 md:w-2/4">
                     <Typography
                       variant="h1"
                       color="white"
@@ -57,18 +58,20 @@ export default function Index({ allPosts }: Props) {
                     >
                       Solar-Powered Water Pumping Systems
                     </Typography>
-                    <Typography
-                      variant="lead"
-                      color="white"
-                      className="mb-12 text-sm md:text-lg opacity-80"
+
+                    <Link
+                      as={`/products/solar-powered-water-pumping-systems`}
+                      href="/products/solar-powered-water-pumping-systems"
+                      className=""
                     >
-                      Step into the future of agriculture with our cutting-edge Solar Powered Water Pumping Systems, offering eco-friendly and cost-effective solutions to meet your farm's water needs while reducing your carbon footprint.
-                    </Typography>
-                    <div className="flex justify-center gap-2">
-                      <div className='btn btn-primary px-4 py-2'>
-                        Read More
+
+                      <div className="flex gap-2">
+                        <div className='btn btn-primary px-4 py-2'>
+                          Read More
+                        </div>
                       </div>
-                    </div>
+                    </Link>
+
                   </div>
                 </div>
               </div>
@@ -79,7 +82,7 @@ export default function Index({ allPosts }: Props) {
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
-                  <div className="w-3/4 text-center md:w-2/4">
+                  <div className="w-3/4 absolute bottom-5 left-5 md:w-2/4">
                     <Typography
                       variant="h1"
                       color="white"
@@ -87,18 +90,19 @@ export default function Index({ allPosts }: Props) {
                     >
                       Irrigation Equipment & Accessories
                     </Typography>
-                    <Typography
-                      variant="lead"
-                      color="white"
-                      className="mb-12 text-sm md:text-lg opacity-80"
+
+                    <Link
+                      as={`/products/irrigation-equipment-accessories`}
+                      href="/products/irrigation-equipment-accessories"
+                      className=""
                     >
-                      Discover the versatility and efficiency of our extensive range of Irrigation Equipment & Accessories, designed to enhance your farming practices and optimize resource utilization for sustainable agricultural success
-                    </Typography>
-                    <div className="flex justify-center gap-2">
-                      <div className='btn btn-primary px-4 py-2'>
-                        Read More
+
+                      <div className="flex gap-2">
+                        <div className='btn btn-primary px-4 py-2'>
+                          Read More
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -109,7 +113,7 @@ export default function Index({ allPosts }: Props) {
                   className=" w-full object-cover"
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
-                  <div className="w-3/4 text-center md:w-2/4">
+                  <div className="w-3/4 absolute bottom-5 left-5 md:w-2/4">
                     <Typography
                       variant="h1"
                       color="white"
@@ -117,18 +121,19 @@ export default function Index({ allPosts }: Props) {
                     >
                       Shallow-Depth Water Well Drilling Services
                     </Typography>
-                    <Typography
-                      variant="lead"
-                      color="white"
-                      className="mb-12 text-sm md:text-lg opacity-80"
+
+                    <Link
+                      as={`/products/shallow-depth-water-well-drilling-rigs`}
+                      href="/products/shallow-depth-water-well-drilling-rigs"
+                      className=""
                     >
-                      Experience the transformative power of our Shallow Depth Water Well Drilling Rigs, designed to provide easy access to groundwater resources, ensuring a reliable and abundant water supply for your farming needs.
-                    </Typography>
-                    <div className="flex justify-center gap-2">
-                      <div className='btn btn-primary px-4 py-2'>
-                        Read More
+
+                      <div className="flex gap-2">
+                        <div className='btn btn-primary px-4 py-2'>
+                          Read More
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -139,7 +144,7 @@ export default function Index({ allPosts }: Props) {
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
-                  <div className="w-3/4 text-center md:w-2/4">
+                  <div className="w-3/4 absolute bottom-5 left-5 md:w-2/4">
                     <Typography
                       variant="h1"
                       color="white"
@@ -147,18 +152,19 @@ export default function Index({ allPosts }: Props) {
                     >
                       Solar Powered Energy Backup Systems
                     </Typography>
-                    <Typography
-                      variant="lead"
-                      color="white"
-                      className="mb-12 text-sm md:text-lg opacity-80"
+
+                    <Link
+                      as={`/products/solar-powered-energy-backup-system`}
+                      href="/products/solar-powered-energy-backup-system"
+                      className=""
                     >
-                      Ensure uninterrupted power for your home or business with our Solar Powered Energy Backup System, a reliable and sustainable solution to keep you powered up during outages and emergencies
-                    </Typography>
-                    <div className="flex justify-center gap-2">
-                      <div className='btn btn-primary px-4 py-2'>
-                        Read More
+
+                      <div className="flex gap-2">
+                        <div className='btn btn-primary px-4 py-2'>
+                          Read More
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -169,7 +175,7 @@ export default function Index({ allPosts }: Props) {
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
-                  <div className="w-3/4 text-center md:w-2/4">
+                  <div className="w-3/4 absolute bottom-5 left-5 md:w-2/4">
                     <Typography
                       variant="h1"
                       color="white"
@@ -177,18 +183,19 @@ export default function Index({ allPosts }: Props) {
                     >
                       Installation
                     </Typography>
-                    <Typography
-                      variant="lead"
-                      color="white"
-                      className="mb-12 text-sm md:text-lg opacity-80"
+
+                    <Link
+                      as={`/sevices/installation`}
+                      href="/sevices/installation"
+                      className=""
                     >
-                      Experience the convenience of our professional Installing services, where we handle the intricate setup and configuration of our advanced agricultural equipment, ensuring seamless integration into your operations for improved efficiency and productivity
-                    </Typography>
-                    <div className="flex justify-center gap-2">
-                      <div className='btn btn-primary px-4 py-2'>
-                        Read More
+
+                      <div className="flex gap-2">
+                        <div className='btn btn-primary px-4 py-2'>
+                          Read More
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -200,7 +207,7 @@ export default function Index({ allPosts }: Props) {
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
-                  <div className="w-3/4 text-center md:w-2/4">
+                  <div className="w-3/4 absolute bottom-5 left-5 md:w-2/4">
                     <Typography
                       variant="h1"
                       color="white"
@@ -208,18 +215,19 @@ export default function Index({ allPosts }: Props) {
                     >
                       Training
                     </Typography>
-                    <Typography
-                      variant="lead"
-                      color="white"
-                      className="mb-12 text-sm md:text-lg opacity-80"
+
+                    <Link
+                      as={`/services/training`}
+                      href="/services/training"
+                      className=""
                     >
-                      "Explore our comprehensive Training services, designed to empower farmers and businesses with the knowledge and skills needed to optimize agricultural practices and make the most of our cutting-edge products, ensuring sustainable growth and success.
-                    </Typography>
-                    <div className="flex justify-center gap-2">
-                      <div className='btn btn-primary px-4 py-2'>
-                        Read More
+
+                      <div className="flex gap-2">
+                        <div className='btn btn-primary px-4 py-2'>
+                          Read More
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -230,7 +238,7 @@ export default function Index({ allPosts }: Props) {
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/40">
-                  <div className="w-3/4 text-center md:w-2/4">
+                  <div className="w-3/4 absolute bottom-5 left-5 md:w-2/4">
                     <Typography
                       variant="h1"
                       color="white"
@@ -238,18 +246,18 @@ export default function Index({ allPosts }: Props) {
                     >
                       Manufacturing
                     </Typography>
-                    <Typography
-                      variant="lead"
-                      color="white"
-                      className="mb-12 text-sm md:text-lg opacity-80"
+                    <Link
+                      as={`/services/manufacturing`}
+                      href="/services/manufacturing"
+                      className=""
                     >
-                      Discover the precision and innovation behind our Manufacturing services, producing a wide range of top-quality agricultural components and structures, such as solar panel mounting racks, reservoir mounting structures, inverter/controller safety boxes, water well safety cups, PV module mounting fencing, and various types of stands.
-                    </Typography>
-                    <div className="flex justify-center gap-2">
-                      <div className='btn btn-primary px-4 py-2'>
-                        Read More
+
+                      <div className="flex gap-2">
+                        <div className='btn btn-primary px-4 py-2'>
+                          Read More
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
