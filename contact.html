@@ -232,7 +232,34 @@
         stroke="#34772e" />
     </svg></div>
 
-
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = [
+          'images/agrisunethiopia-blogs.jpg',
+          'images/agrisunethiopia-projects.jpeg',
+          'images/bg_10.jpeg',
+        ];
+  
+        let currentImageIndex = 0;
+        const heroWrap = document.querySelector('.hero-wrap');
+  
+        // Preload images
+        images.forEach((src) => {
+          const img = document.createElement('img');
+          img.src = src;
+          heroWrap.appendChild(img);
+        });
+  
+        const heroImages = heroWrap.querySelectorAll('img');
+        heroImages[currentImageIndex].classList.add('active');
+  
+        setInterval(() => {
+          heroImages[currentImageIndex].classList.remove('active');
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+          heroImages[currentImageIndex].classList.add('active');
+        }, 3000);
+      });
+    </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
