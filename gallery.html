@@ -52,13 +52,13 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
           <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
           <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
           <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li class="nav-item active"><a href="gallery.html" class="nav-link">Gallery</a></li>
           <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -67,15 +67,15 @@
   </nav>
   <!-- END nav -->
 
-  <div class="hero-wrap" style="background-image: url('images/agrisunethiopia-gallery-cover.webp');"
-    data-stellar-background-ratio="0.5">
+  <div class="hero-wrap">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
         <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-          <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a
-                href="index.html">Home</a></span> <span>Gallery</span></p>
-          <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Galleries</h1>
+          <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+            <span class="mr-2"><a href="index.html">Home</a></span> <span>Gallery</span>
+          </p>
+          <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Gallery</h1>
         </div>
       </div>
     </div>
@@ -324,7 +324,33 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = [
+        'images/services/digging.jpg',
+        'images/products/panel.jpeg' // Add more image URLs as needed
+      ];
 
+      let currentImageIndex = 0;
+      const heroWrap = document.querySelector('.hero-wrap');
+
+      // Preload images
+      images.forEach((src) => {
+        const img = document.createElement('img');
+        img.src = src;
+        heroWrap.appendChild(img);
+      });
+
+      const heroImages = heroWrap.querySelectorAll('img');
+      heroImages[currentImageIndex].classList.add('active');
+
+      setInterval(() => {
+        heroImages[currentImageIndex].classList.remove('active');
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        heroImages[currentImageIndex].classList.add('active');
+      }, 2000);
+    });
+  </script>
 </body>
 
 </html>

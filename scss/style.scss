@@ -295,24 +295,47 @@ h1, h2, h3, h4, h5,
 
 
 
-.hero-wrap{
-	width: 100%;
-	height: calc(100vh - 117px);
-	min-height: 700px;
-	position: relative;
-	&.hero-wrap-2{
-		height: 600px;
-	}
-	.overlay{
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		content: '';
-		opacity: 0;
-		background: $black;
-	}
+.hero-wrap {
+    width: 100%;
+    height: calc(100vh - 117px);
+    min-height: 700px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-wrap .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 0.5; /* Adjusted opacity */
+    background: $black;
+    z-index: 1;
+}
+
+.hero-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-wrap img.active {
+    opacity: 1;
+}
+
+.hero-wrap .container {
+    position: relative;
+    z-index: 2;
 }
 
 .slider-text{

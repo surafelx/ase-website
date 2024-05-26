@@ -68,13 +68,14 @@
   </nav>
   <!-- END nav -->
 
-  <div class="hero-wrap" style="background-image: url('images/products.jpg');" data-stellar-background-ratio="0.5">
+  <div class="hero-wrap">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
         <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-          <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a
-                href="index.html">Home</a></span> <span>Products</span></p>
+          <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+            <span class="mr-2"><a href="index.html">Home</a></span> <span>Products</span>
+          </p>
           <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Products</h1>
         </div>
       </div>
@@ -98,7 +99,7 @@
         </div>
         <div style="padding-top: 30px;" class="col-md-6 ftco-animate">
           <div class="cause-entry">
-            <a href="#" class="img" style="background-image: url(images/products/irrigation.png);"></a>
+            <a href="#" class="img" style="background-image: url(images/home/irrgation.jpeg);"></a>
             <div class="text p-3 p-md-4">
               <h3><a href="#">Irrigation Equipment & Accessories</a></h3>
               <p>Discover our diverse Irrigation Equipment & Accessories—precision-designed to elevate crop
@@ -134,12 +135,12 @@
     </div>
   </section>
 
-  <section class="ftco-section-3 img" style="background-image: url(images/bg_3.jpg);">
+  <section class="ftco-section-3 img" style="background-image: url(images/home/cover/14.jpeg);">
     <div class="overlay"></div>
     <div class="container">
       <div class="row d-md-flex">
         <div class="col-md-6 d-flex ftco-animate">
-          <div class="img img-2 align-self-stretch" style="background-image: url(images/bg_4.jpg);"></div>
+          <div class="img img-2 align-self-stretch" style="background-image: url(images/home/cover/14.jpeg);"></div>
         </div>
         <div class="col-md-6 volunteer pl-md-5 ftco-animate">
           <h3 class="mb-3">What We Do</h3>
@@ -282,7 +283,33 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = [
+        'images/services/digging.jpg',
+        'images/products/panel.jpeg' // Add more image URLs as needed
+      ];
 
+      let currentImageIndex = 0;
+      const heroWrap = document.querySelector('.hero-wrap');
+
+      // Preload images
+      images.forEach((src) => {
+        const img = document.createElement('img');
+        img.src = src;
+        heroWrap.appendChild(img);
+      });
+
+      const heroImages = heroWrap.querySelectorAll('img');
+      heroImages[currentImageIndex].classList.add('active');
+
+      setInterval(() => {
+        heroImages[currentImageIndex].classList.remove('active');
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        heroImages[currentImageIndex].classList.add('active');
+      }, 2000);
+    });
+  </script>
 </body>
 
 </html>
