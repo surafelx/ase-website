@@ -26,6 +26,7 @@
 
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -499,11 +500,268 @@
     </div>
   </section>
 
-  <section class="ftco-section">
-    <div class="container">
 
-    </div>
-  </section>
+  <style>
+    #map {
+      height: 600px;
+      width: 100%;
+    }
+
+    .info-card {
+      width: 300px;
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .info-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+  </style>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([11.5, 37.5], 6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    var locations = [
+      {
+        name: "Dera, Amhara",
+        coords: [11.25, 37.85],
+        owner: "Agriculture Transformation Institute",
+        client: "Aweke Mesfin",
+        phoneNumber: "0985960934",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/hh Discharge @ 20m Head",
+        panelSize: "620W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+        image: "https://agrisunethiopia.com/images/gallery/agrisunethiopia-gallery-10.jpeg"
+      },
+      {
+        name: "Dera, Amhara",
+        coords: [11.26, 37.86],
+        owner: "Agriculture Transformation Institute",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        client: "Melke Tefera",
+        phoneNumber: "0918383920",
+        capacity: "3000l/hh Discharge @ 20m Head",
+        panelSize: "620W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+        image: "https://agrisunethiopia.com/images/gallery/agrisunethiopia-gallery-12.jpeg"
+      },
+      {
+        name: "Fogera, Amhara",
+        coords: [11.96, 37.72],
+        owner: "Agriculture Transformation Institute",
+        client: "Alemante Wetet",
+        phoneNumber: "0918094853",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/hh Discharge @ 20m Head",
+        panelSize: "620W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+        image: "https://agrisunethiopia.com/images/ato-alemante-wetet.png"
+      },
+      {
+        name: "Fogera, Amhara",
+        coords: [11.95, 37.72],
+        owner: "Agriculture Transformation Institute",
+        client: "Wondem Getnet",
+        phoneNumber: "0945292078",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/hh Discharge @ 20m Head",
+        panelSize: "620W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+        image: "https://agrisunethiopia.com/images/gallery/agrisunethiopia-gallery-7.jpeg"
+      },
+      {
+        name: "Bahir Dar Zuria, Amhara",
+        coords: [11.6, 37.4],
+        owner: "Agriculture Transformation Institute",
+        client: "Getaneh Addis",
+        phoneNumber: "0936319072",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/hh Discharge @ 20m Head",
+        panelSize: "620W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+        image: "https://agrisunethiopia.com/images/gallery/agrisunethiopia-gallery-6.jpeg"
+      },
+      {
+        name: "Bahir Dar Zuria, Amhara",
+        coords: [11.65, 37.45],
+        owner: "Agriculture Transformation Institute",
+        client: "Taffere Wende",
+        phoneNumber: "0927604575",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/hh Discharge @ 20m Head",
+        panelSize: "620W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+        image: "https://agrisunethiopia.com/images/tafere.jpeg"
+      },
+      {
+        name: "Semen Mecha, Amhara",
+        coords: [11.7, 37.2],
+        client: "Demeke Tilahun",
+        phoneNumber: "0975514509",
+        owner: "Agriculture Transformation Institute",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/hh Discharge @ 20m Head",
+        panelSize: "620W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+        image: "hhttps://agrisunethiopia.com/images/demeke.jpg"
+      },
+      {
+        name: "Galo Argisa Hawassa Zuriya",
+        coords: [7.043349, 38.382930],
+        client: "Ayele Adamo",
+        phoneNumber: "0916032088",
+        owner: "Sidama National Regional State Bureau of Agriculture and Natural Resource Development",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/h Discharge @ 20m Head",
+        panelSize: "310W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+
+      },
+      {
+        name: "Galo Argisa Hawassa Zuriya",
+        coords: [7.044311, 38.385237],
+        client: "Elfe Wondemu",
+        phoneNumber: "0926385197",
+        owner: "Sidama National Regional State Bureau of Agriculture and Natural Resource Development",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/h Discharge @ 20m Head",
+        panelSize: "310W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+
+      },
+      {
+        name: "Galo Argisa Hawassa Zuriya",
+        coords: [7.042627, 38.383655],
+        client: "Elias Amino",
+        phoneNumber: "0964248870",
+        owner: "Sidama National Regional State Bureau of Agriculture and Natural Resource Development",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/h Discharge @ 20m Head",
+        panelSize: "310W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+
+      },
+      {
+        name: "Galo Argisa Hawassa Zuriya",
+        coords: [7.041153, 38.384517],
+        client: "Halala Wayso",
+        phoneNumber: "0982069346",
+        owner: "Sidama National Regional State Bureau of Agriculture and Natural Resource Development",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/h Discharge @ 20m Head",
+        panelSize: "310W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+
+      },
+      {
+        name: "Galo Argisa Hawassa Zuriya",
+        coords: [7.042674, 38.385394],
+        owner: "Sidama National Regional State Bureau of Agriculture and Natural Resource Development",
+        client: "Betu Dawit",
+        phoneNumber: "0930007974",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/h Discharge @ 20m Head",
+        panelSize: "310W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+
+      },
+      {
+        name: "Galo Argisa Hawassa Zuriya",
+        coords: [7.043885, 38.384659],
+        owner: "Sidama National Regional State Bureau of Agriculture and Natural Resource Development",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        client: "Walitu Wayso",
+        phoneNumber: "0900699091",
+        capacity: "3000l/h Discharge @ 20m Head",
+        panelSize: "310W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+
+      },
+      {
+        name: "Galo Argisa Hawassa Zuriya",
+        coords: [7.044011, 38.383662],
+        owner: "Sidama National Regional State Bureau of Agriculture and Natural Resource Development",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        client: "Yohannes Wayiso",
+        phoneNumber: "0916032206",
+        capacity: "3000l/h Discharge @ 20m Head",
+        panelSize: "310W x 1",
+        installationDate: "February 20, 2023 to March 11 2023",
+
+      }
+      ,
+      {
+        name: "Galo Argisa Hawassa Zuriya",
+        coords: [7.043242, 38.384071],
+        owner: "Sidama National Regional State Bureau of Agriculture and Natural Resource Development",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/h Discharge @ 20m Head",
+        panelSize: "310W x 1",
+        client: "Abebech Elias",
+        phoneNumber: "0941004934",
+        installationDate: "February 20, 2023 to March 11 2023",
+
+      },
+      {
+        name: "Galo Argisa Hawassa Zuriya",
+        coords: [7.043772, 38.381345],
+        owner: "Sidama National Regional State Bureau of Agriculture and Natural Resource Development",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/h Discharge @ 20m Head",
+        panelSize: "310W x 1",
+        client: "Aregash Tamre",
+        phoneNumber: "0961944395",
+        installationDate: "February 20, 2023 to March 11 2023",
+
+      },
+      {
+        name: "Galo Argisa Hawassa Zuriya",
+        coords: [7.043043, 38.384089],
+        owner: "Sidama National Regional State Bureau of Agriculture and Natural Resource Development",
+        type: "Submersible Pump (Rainmaker 2C With Battery)",
+        capacity: "3000l/h Discharge @ 20m Head",
+        panelSize: "310W x 1",
+        client: "Elias Sigiso",
+        phoneNumber: "0916026220",
+        installationDate: "February 20, 2023 to March 11 2023",
+
+      }
+    ];
+
+
+    locations.forEach(function (location) {
+      var marker = L.marker(location.coords).addTo(map);
+      marker.bindPopup(`
+                  <div class="info-card">
+                       ${location.image ? (
+          `<img src="${location.image}" alt="${location.name}">`) : ""
+        }
+                      <strong>${location.name}</strong><br>
+                      <strong>Owner:</strong> ${location.owner}<br>
+                  ${location.client ? (`<strong>Client:</strong> ${location.client} <br>`) : ""
+        }
+             ${location.phoneNumber ? (`<strong>Phone Number:</strong> ${location.phoneNumber} <br>`)
+          : ""}
+          <strong>Type:</strong> ${location.type} <br>
+          <strong>Capacity:</strong> ${location.capacity} <br>
+          <strong>Panel Size:</strong> ${location.panelSize} <br>
+          <strong>Installation Date:</strong> ${location.installationDate} <br>
+          ${location.numberOfSites ? (`<strong>Sites:</strong> ${location.numberOfSites} <br>`)
+          : ""}
+                  </div >
+              `);
+    });
+  </script>
+
 
 
   <section class="ftco-section-3 img" style="background-image: url(images/home/cover/13.jpeg);">
@@ -533,6 +791,7 @@
       </div>
     </div>
   </section>
+
 
 
   <footer class="ftco-footer ftco-section img">
@@ -636,34 +895,34 @@
         stroke="#34772e" />
     </svg></div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const images = [
-          'images/agrisunethiopia-blogs.jpg',
-          'images/agrisunethiopia-projects.jpeg',
-          'images/bg_10.jpeg',
-        ];
-  
-        let currentImageIndex = 0;
-        const heroWrap = document.querySelector('.hero-wrap');
-  
-        // Preload images
-        images.forEach((src) => {
-          const img = document.createElement('img');
-          img.src = src;
-          heroWrap.appendChild(img);
-        });
-  
-        const heroImages = heroWrap.querySelectorAll('img');
-        heroImages[currentImageIndex].classList.add('active');
-  
-        setInterval(() => {
-          heroImages[currentImageIndex].classList.remove('active');
-          currentImageIndex = (currentImageIndex + 1) % images.length;
-          heroImages[currentImageIndex].classList.add('active');
-        }, 3000);
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = [
+        'images/agrisunethiopia-blogs.jpg',
+        'images/agrisunethiopia-projects.jpeg',
+        'images/bg_10.jpeg',
+      ];
+
+      let currentImageIndex = 0;
+      const heroWrap = document.querySelector('.hero-wrap');
+
+      // Preload images
+      images.forEach((src) => {
+        const img = document.createElement('img');
+        img.src = src;
+        heroWrap.appendChild(img);
       });
-    </script>
+
+      const heroImages = heroWrap.querySelectorAll('img');
+      heroImages[currentImageIndex].classList.add('active');
+
+      setInterval(() => {
+        heroImages[currentImageIndex].classList.remove('active');
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        heroImages[currentImageIndex].classList.add('active');
+      }, 3000);
+    });
+  </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -678,8 +937,8 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s"></script> -->
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 
