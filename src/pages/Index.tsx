@@ -4,10 +4,12 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import NewYearBanner from "@/components/NewYearBanner";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <NewYearBanner />
       <Navigation />
       <Hero />
       <Services />

@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <Sprout className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold">AgroSolar</span>
+              <span className="text-xl font-bold">AgriSun Ethiopia</span>
             </div>
             <p className="text-white/80 mb-6 leading-relaxed">
               Empowering small farmers with sustainable solar irrigation solutions. 
@@ -63,17 +63,17 @@ const Footer = () => {
             <div className="space-y-4 text-white/80">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <span>+91 98765 43210</span>
+                <span>+251 11 123 4567</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
-                <span>info@agrosolar.com</span>
+                <span>info@agrisun-ethiopia.com</span>
               </div>
               <div>
                 <p className="leading-relaxed">
-                  123 Agriculture Innovation Hub<br />
-                  Green Valley, Maharashtra 411001<br />
-                  India
+                  Bole Sub City, Addis Ababa<br />
+                  P.O. Box 12345<br />
+                  Ethiopia
                 </p>
               </div>
             </div>
@@ -83,7 +83,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center text-white/60">
-            <p>&copy; 2024 AgroSolar. All rights reserved.</p>
+            <p>&copy; 2024 AgriSun Ethiopia. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
