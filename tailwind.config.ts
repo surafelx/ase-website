@@ -57,6 +57,35 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom agricultural theme colors
+        agriculture: {
+          green: "hsl(var(--agriculture-green))",
+          "green-dark": "hsl(var(--agriculture-green-dark))",
+          "green-light": "hsl(var(--agriculture-green-light))",
+        },
+        solar: {
+          gold: "hsl(var(--solar-gold))",
+          "gold-dark": "hsl(var(--solar-gold-dark))",
+        },
+        earth: {
+          brown: "hsl(var(--earth-brown))",
+        },
+        sky: {
+          blue: "hsl(var(--sky-blue))",
+        },
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-sunset": "var(--gradient-sunset)",
+      },
+      boxShadow: {
+        agriculture: "var(--shadow-agriculture)",
+        solar: "var(--shadow-solar)",
+        elegant: "var(--shadow-elegant)",
+      },
+      transitionTimingFunction: {
+        smooth: "var(--transition-smooth)",
       },
       borderRadius: {
         lg: "var(--radius)",
