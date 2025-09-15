@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 142 71% 8%;
 
-    --primary: 142 71% 45%;
+    --primary: 142 71% 35%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 46 87% 65%;
@@ -37,8 +37,8 @@ All colors MUST be HSL.
     --ring: 142 71% 45%;
 
     /* Custom agricultural theme tokens */
-    --agriculture-green: 142 71% 45%;
-    --agriculture-green-dark: 142 71% 35%;
+    --agriculture-green: 142 71% 35%;
+    --agriculture-green-dark: 142 71% 25%;
     --agriculture-green-light: 142 71% 85%;
     --solar-gold: 46 87% 65%;
     --solar-gold-dark: 46 87% 55%;
