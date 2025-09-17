@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Award, Users, Globe } from "lucide-react";
 import EthiopiaMap from "./EthiopiaMap";
-import teamEthiopia1 from "@/assets/team-ethiopia-1.jpg";
-import teamEthiopia2 from "@/assets/team-ethiopia-2.jpg";
-import teamEthiopia3 from "@/assets/team-ethiopia-3.jpg";
-import communityBg from "@/assets/community-bg.jpg";
+import teamEthiopia1 from "@/assets/team/team-1.jpg";
+import teamEthiopia2 from "@/assets/team/team-3.jpg";
+import teamEthiopia3 from "@/assets/team/team-2.jpg";
+import communityBg from "@/assets/team/communityBg.jpg";
+import { motion, useInView } from "framer-motion";
 
 const About = () => {
   const benefits = [
@@ -93,12 +94,14 @@ const About = () => {
 
         {/* Community Story Section */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-20">
-          <img 
+            <motion.img
             src={communityBg} 
             alt="Ethiopian farmers in traditional clothing working with modern solar irrigation equipment"
             className="w-full h-96 object-cover"
+             animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 flex items-center">
+          <div className="absolute inset-0 bg-agriculture-green-dark/70 flex items-center">
             <div className="container mx-auto px-8 text-white">
               <div className="max-w-2xl">
                 <h3 className="text-3xl font-bold mb-4">Bridging Tradition and Innovation</h3>

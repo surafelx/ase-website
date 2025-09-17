@@ -1,0 +1,623 @@
+{
+  "projects": [
+    {
+      "id": "solar-pumps-moa",
+      "title": "Revolutionary Solar Irrigation Initiative: 60 Solar-Powered Surface Pumps Transforming Agriculture in Diredewa & Harari Regions",
+      "location": "Diredewa & Harari Regions",
+      "status": "Completed",
+      "beneficiaries": 60,
+      "area": "300+ hectares",
+      "yieldIncrease": "200%",
+      "image": "/assets/projects/diredawa/diredawa-1.png",
+      "description": "Major project with Ministry of Agriculture for supply, delivery, and installation of 60 solar-powered surface pumps benefiting small landholder farmers across three regions and five woredas.",
+      "fullDescription": "We are pleased to announce our contract with the Ministry of Agriculture (MOA) for the Supply, Delivery, and Installation of 60 sets of Solar Powered Surface Pumps, aiming to benefit sixty small landholder farmers across three regions and five woredas. Our commitment to delivering reliable solar water pumping solutions aligns with the MOA's rural development initiatives.",
+      "challenges": [
+        "Absence of pre-selected sites",
+        "Improper water sources at some locations",
+        "Bureaucratic delays in approvals",
+        "Need for adjustment in installation techniques"
+      ],
+      "solutions": [
+        "Thorough site assessments and baseline data collection",
+        "Flexible installation approaches",
+        "Effective communication with stakeholders",
+        "Continuous improvement in methodologies"
+      ],
+      "results": [
+        "Successful installation and testing of all 60 pumps",
+        "Comprehensive training provided to end users",
+        "Improved agricultural productivity across project areas",
+        "Enhanced food security for beneficiary families"
+      ],
+      "technologies": [
+        "Solar PV panels with MPPT controllers",
+        "Surface pump systems with variable speed drives",
+        "Battery storage for continuous operation",
+        "Smart monitoring and data logging systems"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Surface Pump Installation" },
+        { "label": "Total Beneficiaries", "value": "60 Farmers" },
+        { "label": "Coverage", "value": "3 Regions, 5 Woredas" },
+        { "label": "Partner", "value": "Ministry of Agriculture" },
+        { "label": "Status", "value": "Completed" }
+      ],
+      "testimonial": {
+        "name": "Project Coordinator",
+        "role": "Ministry of Agriculture",
+        "text": "The successful completion of this project demonstrates Agri-Sun Ethiopia's capability in delivering large-scale solar irrigation solutions that create lasting impact for smallholder farmers."
+      },
+      "farmerData": [],
+        "images": [
+        "/assets/projects/diredawa/diredawa-1.png",
+        "/assets/projects/diredawa/diredawa-2.png",
+        "/assets/projects/diredawa/diredawa-3.png",
+        "/assets/projects/diredawa/diredawa-4.png",
+        "/assets/projects/diredawa/diredawa-5.png",
+        "/assets/projects/diredawa/diredawa-6.png",
+        "/assets/projects/diredawa/diredawa-7.png"
+      ]
+    },
+    {
+      "id": "nahom-construction-partnership",
+      "title": "Groundbreaking Solar Water Lifting Partnership: Comprehensive Irrigation Development Project in Shoa Robit, Ethiopia",
+      "location": "Shoa Robit, Ethiopia",
+      "status": "In Progress",
+      "beneficiaries": 120,
+      "area": "350 hectares",
+      "yieldIncrease": "Expected 250%",
+      "image": "/assets/projects/shewa/shewa-1.png",
+      "description": "Partnership project with Nahom Construction for comprehensive solar-powered water lifting systems, pipeline construction, and irrigation development in Shoa Robit.",
+      "fullDescription": "Nahom Construction Pvt. Ltd. Co. and Agri-sun Ethiopia Engineering and Trading Pvt. Ltd. Co. have joined forces to implement a comprehensive project focused on the supply, installation, and commissioning of solar-powered water lifting devices. This project also encompasses the construction of pipelines and canals to facilitate irrigation and household water supply.",
+      "challenges": [
+        "Transportation delays for equipment",
+        "Security concerns affecting mobilization",
+        "Complex integration of multiple systems",
+        "Coordination between construction and solar teams"
+      ],
+      "solutions": [
+        "Strategic partnership with local construction expertise",
+        "Phased implementation approach",
+        "Enhanced security monitoring and protocols",
+        "Integrated project management systems"
+      ],
+      "results": [
+        "Completed mobilization of water tankers and irrigation pipes",
+        "Successful manufacturing and installation of PV modules",
+        "Ongoing canal excavation with community labor",
+        "Workshop testing completed for solar pumping systems"
+      ],
+      "technologies": [
+        "Solar-powered water lifting devices",
+        "Pipeline and canal construction systems",
+        "PV modules with mounting structures",
+        "Irrigation and household water supply systems"
+      ],
+      "specifications": [
+        {
+          "label": "Project Type",
+          "value": "Infrastructure & Solar Integration"
+        },
+        { "label": "Total Beneficiaries", "value": "120 Farmers" },
+        { "label": "Coverage", "value": "350 Hectares" },
+        { "label": "Partner", "value": "Nahom Construction Pvt. Ltd. Co." },
+        { "label": "Status", "value": "In Progress" }
+      ],
+      "testimonial": {
+        "name": "Project Manager",
+        "role": "Nahom Construction Partnership",
+        "text": "The collaboration between Nahom Construction and Agri-Sun Ethiopia has been exceptional. Despite challenges, we're making significant progress in bringing sustainable water solutions to Shoa Robit."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/shewa/shewa-1.png",
+         "/assets/projects/shewa/shewa-2.png",
+         "/assets/projects/shewa/shewa-3.png",
+         "/assets/projects/shewa/shewa-4.png",
+         "/assets/projects/shewa/shewa-5.png"
+      ]
+    },
+    {
+      "id": "sidama-solar-pumps",
+      "title": "Sustainable Solar Irrigation Success: Advanced Rainmaker 2C Solar Pump Installation Project in Sidama Region, Ethiopia",
+      "location": "Sidama Region, Hawassa Zuria Zone",
+      "status": "Completed",
+      "beneficiaries": 10,
+      "area": "8.25 hectares",
+      "yieldIncrease": "Expected 150%",
+      "image": "/logo.png",
+      "description": "Solar pump installation project in Sidama region providing irrigation solutions to 10 farmers in Hawassa Zuria zone with comprehensive farmer data and GPS coordinates.",
+      "fullDescription": "This project in Sidama National Regional State involves the installation of Rainmaker 2C solar pumps with battery backup systems. The project serves 10 farmers across Galo Argisa kebele, providing sustainable irrigation solutions with detailed farmer profiling and geographical mapping.",
+      "farmerData": [
+        {
+          "code": 1,
+          "name": "Ayele Adamo",
+          "sex": "M",
+          "farmArea": 0.5,
+          "phone": "0916032088",
+          "waterSource": "Borehole",
+          "wellDepth": 9.3,
+          "waterDepth": 3.5,
+          "serialNumber": "862846049027223",
+          "familySize": 5,
+          "coordinates": [8.716, 38.316]
+        },
+        {
+          "code": 2,
+          "name": "Elfe Wendimu Negro",
+          "sex": "M",
+          "farmArea": 0.5,
+          "phone": "0926385197",
+          "waterSource": "Borehole",
+          "wellDepth": 7.4,
+          "waterDepth": 2.3,
+          "serialNumber": "826846049095717",
+          "familySize": 4,
+          "coordinates": [8.716, 38.317]
+        },
+        {
+          "code": 3,
+          "name": "EliAs Ameno",
+          "sex": "M",
+          "farmArea": 1.0,
+          "phone": "0964248870",
+          "waterSource": "Borehole",
+          "wellDepth": 7.4,
+          "waterDepth": 2.6,
+          "serialNumber": "860922040228193",
+          "familySize": 6,
+          "coordinates": [8.717, 38.317]
+        },
+        {
+          "code": 4,
+          "name": "Halala Wayso",
+          "sex": "M",
+          "farmArea": 0.5,
+          "phone": "0982069346",
+          "waterSource": "Borehole",
+          "wellDepth": 4.7,
+          "waterDepth": 2.5,
+          "serialNumber": "862846045762500",
+          "familySize": 6,
+          "coordinates": [8.717, 38.318]
+        },
+        {
+          "code": 5,
+          "name": "Betu Dawit",
+          "sex": "M",
+          "farmArea": 2.0,
+          "phone": "0930007974",
+          "waterSource": "Borehole",
+          "wellDepth": 7.5,
+          "waterDepth": 2.5,
+          "serialNumber": "862846048931524",
+          "familySize": 6,
+          "coordinates": [8.717, 38.319]
+        },
+        {
+          "code": 6,
+          "name": "Walitu Wayso",
+          "sex": "M",
+          "farmArea": 1.0,
+          "phone": "0900699091",
+          "waterSource": "Borehole",
+          "wellDepth": 8.2,
+          "waterDepth": 2.7,
+          "serialNumber": "860922040024261",
+          "familySize": 7,
+          "coordinates": [8.716, 38.32]
+        },
+        {
+          "code": 7,
+          "name": "Yohans Wayso",
+          "sex": "M",
+          "farmArea": 0.5,
+          "phone": "0916032206",
+          "waterSource": "Borehole",
+          "wellDepth": 6.5,
+          "waterDepth": 2.4,
+          "serialNumber": "862846048848363",
+          "familySize": 7,
+          "coordinates": [8.716, 38.321]
+        },
+        {
+          "code": 8,
+          "name": "Abebech Elias",
+          "sex": "F",
+          "farmArea": 2.0,
+          "phone": "0941004934",
+          "waterSource": "Borehole",
+          "wellDepth": 10.9,
+          "waterDepth": 3.8,
+          "serialNumber": "882846048971124",
+          "familySize": 4,
+          "coordinates": [8.715, 38.318]
+        },
+        {
+          "code": 9,
+          "name": "Aregash Tamire",
+          "sex": "F",
+          "farmArea": 1.5,
+          "phone": "0961944395",
+          "waterSource": "Borehole",
+          "wellDepth": 8.0,
+          "waterDepth": 4.0,
+          "serialNumber": "862846045755132",
+          "familySize": 6,
+          "coordinates": [8.716, 38.322]
+        },
+        {
+          "code": 10,
+          "name": "Elias Sigiso",
+          "sex": "M",
+          "farmArea": 0.75,
+          "phone": "0916026220",
+          "waterSource": "Borehole",
+          "wellDepth": 5.8,
+          "waterDepth": 2.9,
+          "serialNumber": "8609220400303",
+          "familySize": 5,
+          "coordinates": [8.717, 38.323]
+        }
+      ],
+      "specifications": [
+        { "label": "Pump Type", "value": "Rainmaker 2C with battery" },
+        { "label": "Capacity", "value": "3000L/h @ 20m head" },
+        { "label": "Panel Size", "value": "310W x 1" },
+        { "label": "Installation Period", "value": "Feb 20 - Mar 11, 2023" },
+        { "label": "Total Farm Area", "value": "8.25 hectares" }
+      ],
+      "testimonial": {
+        "name": "Ayele Adamo",
+        "role": "Beneficiary Farmer",
+        "text": "The solar pump has transformed my farming. I can now irrigate my crops consistently and have seen significant improvements in my harvest."
+      },
+      "images": [
+        "/assets/projects/tigray/tigray-1.jpg",
+        "/assets/projects/tigray/tigray-2.jpg",
+        "/assets/projects/tigray/tigray-3.jpg",
+        "/assets/projects/tigray/tigray-4.jpg",
+        "/assets/projects/tigray/tigray-5.jpg",
+        "/assets/projects/tigray/tigray-6.jpg",
+        "/assets/projects/tigray/tigray-7.jpg"
+      ]
+    },
+    {
+      "id": "snnpr-solar-pumps",
+      "title": "Empowering Farmers in Southern Ethiopia: Agricultural Transformation Institute's Solar Pump Initiative in SNNP Region",
+      "location": "SNNP Region",
+      "status": "Completed",
+      "beneficiaries": 6,
+      "area": "Multiple locations",
+      "yieldIncrease": "Expected 180%",
+      "image": "/logo.png",
+      "description": "Agricultural Transformation Institute project in SNNP region installing Rainmaker 2C solar pumps without battery backup for 6 beneficiary farmers.",
+      "fullDescription": "This project, sponsored by the Agricultural Transformation Institute, involves the installation of Rainmaker 2C solar pumps without battery backup systems across multiple locations in the SNNP region. The project focuses on providing sustainable irrigation solutions to enhance agricultural productivity.",
+      "farmerData": [
+        {
+          "code": 1,
+          "name": "Murad Kedir",
+          "coordinates": [8.177733, 37.876167]
+        },
+        {
+          "code": 2,
+          "name": "Tekle Egeza",
+          "coordinates": [8.1473, 37.921417]
+        },
+        {
+          "code": 3,
+          "name": "Yonas Egeza",
+          "coordinates": [8.147283, 37.921433]
+        },
+        {
+          "code": 4,
+          "name": "Melse Tesema",
+          "coordinates": [8.140067, 37.918733]
+        },
+        {
+          "code": 5,
+          "name": "Etenesh Denbu",
+          "coordinates": [8.173611, 37.878417]
+        },
+        {
+          "code": 6,
+          "name": "Siti Shuker",
+          "coordinates": [8.173611, 37.878417]
+        }
+      ],
+      "specifications": [
+        { "label": "Pump Type", "value": "Rainmaker 2C without battery" },
+        { "label": "Capacity", "value": "3000L/h @ 20m head" },
+        { "label": "Panel Size", "value": "620W x 1" },
+        { "label": "Installation Period", "value": "Feb 20 - Mar 11, 2023" },
+        { "label": "Owner", "value": "Agricultural Transformation Institute" }
+      ],
+      "testimonial": {
+        "name": "Murad Kedir",
+        "role": "Beneficiary Farmer",
+        "text": "This solar pump project has made a real difference in our agricultural output. The reliable water supply has helped us increase our crop yields significantly."
+      },
+      "images": [
+        "/logo.png",
+        "/logo.png",
+        "/logo.png",
+        "/logo.png",
+        "/logo.png"
+      ]
+    },
+    {
+      "id": "amhara-solar-pumps",
+      "title": "Transforming Agriculture in Northern Ethiopia: Precision Solar Pump Deployment in Amhara Region's Awi Zone",
+      "location": "Amhara Region, Awi Zone",
+      "status": "Completed",
+      "beneficiaries": 6,
+      "area": "Injibara Woreda",
+      "yieldIncrease": "Expected 200%",
+      "image": "/logo.png",
+      "description": "Agricultural Transformation Institute project in Amhara region installing Rainmaker 2C solar pumps for farmers in Injibara woreda with detailed GPS mapping.",
+      "fullDescription": "This initiative by the Agricultural Transformation Institute focuses on deploying Rainmaker 2C solar pumps without battery backup systems to farmers in the Awi zone of Amhara region, specifically in Injibara woreda. The project includes comprehensive GPS mapping and farmer profiling.",
+      "farmerData": [
+        {
+          "code": 1,
+          "name": "Getachew Mekonen",
+          "sex": "M",
+          "coordinates": [10.81618, 36.83843]
+        },
+        {
+          "code": 2,
+          "name": "Molla Getahun",
+          "sex": "M",
+          "coordinates": [10.81154, 36.83867]
+        },
+        {
+          "code": 3,
+          "name": "Felegush Getahun",
+          "sex": "F",
+          "coordinates": [10.81784, 36.83738]
+        },
+        {
+          "code": 4,
+          "name": "Ashenef Shitaw",
+          "sex": "M",
+          "coordinates": [10.81713, 36.83789]
+        },
+        {
+          "code": 5,
+          "name": "Tilahun Alemneh",
+          "sex": "M",
+          "coordinates": [10.81688, 36.83825]
+        },
+        {
+          "code": 6,
+          "name": "FTC",
+          "sex": "M",
+          "coordinates": [10.81574, 36.83821]
+        }
+      ],
+      "specifications": [
+        { "label": "Pump Type", "value": "Rainmaker 2C without battery" },
+        { "label": "Capacity", "value": "3000L/h @ 20m head" },
+        { "label": "Panel Size", "value": "620W x 1" },
+        { "label": "Region", "value": "Amhara Region" },
+        { "label": "Zone", "value": "Awi Zone" },
+        { "label": "Owner", "value": "Agricultural Transformation Institute" }
+      ],
+      "testimonial": {
+        "name": "Getachew Mekonen",
+        "role": "Beneficiary Farmer",
+        "text": "The solar pump has revolutionized our farming practices. We now have consistent water access throughout the year, leading to better crop yields and improved livelihoods."
+      },
+      "images": [
+        "/logo.png",
+        "/logo.png",
+        "/logo.png",
+        "/logo.png"
+      ]
+    },
+    {
+      "id": "tigray-hober-pumps-1",
+      "title": "Advanced Hober Solar Pump Technology: Revolutionizing Irrigation in Tigray Region's Maychew Woreda, Ethiopia",
+      "location": "Tigray Region, L/Maychew Woreda",
+      "status": "Completed",
+      "beneficiaries": 10,
+      "area": "Multiple farm locations",
+      "yieldIncrease": "Expected 220%",
+      "image": "/assets/projects/tigray/tigray-1.jpg",
+      "description": "Agricultural Transformation Institute project installing Hober solar pumps in Tigray region for enhanced irrigation capabilities and agricultural productivity.",
+      "fullDescription": "This project, supported by the Agricultural Transformation Institute, involves the installation of Hober solar pumps across multiple locations in the L/Maychew woreda of Tigray region. The initiative aims to provide reliable irrigation solutions to improve agricultural productivity and farmer livelihoods.",
+      "farmerData": [
+        {
+          "code": 1,
+          "name": "Zeray G/maryam",
+          "sex": "M",
+          "coordinates": [13.5, 39.5]
+        },
+        {
+          "code": 2,
+          "name": "Leake Teklu",
+          "sex": "M",
+          "coordinates": [13.51, 39.51]
+        },
+        {
+          "code": 3,
+          "name": "Berihu Fisha",
+          "sex": "M",
+          "coordinates": [13.52, 39.52]
+        },
+        {
+          "code": 4,
+          "name": "G/tsadkan Teklu",
+          "sex": "M",
+          "coordinates": [13.53, 39.53]
+        },
+        {
+          "code": 5,
+          "name": "Muzey Haile",
+          "sex": "M",
+          "coordinates": [13.54, 39.54]
+        },
+        {
+          "code": 6,
+          "name": "Gdey Belay",
+          "sex": "M",
+          "coordinates": [13.55, 39.55]
+        },
+        {
+          "code": 7,
+          "name": "Kbra Gebrhet",
+          "sex": "F",
+          "coordinates": [13.56, 39.56]
+        },
+        {
+          "code": 8,
+          "name": "Mebrhit G/her",
+          "sex": "F",
+          "coordinates": [13.57, 39.57]
+        },
+        {
+          "code": 9,
+          "name": "Teklay Syum",
+          "sex": "M",
+          "coordinates": [13.58, 39.58]
+        },
+        {
+          "code": 10,
+          "name": "Tsegay Mekonen",
+          "sex": "M",
+          "coordinates": [13.59, 39.59]
+        }
+      ],
+      "specifications": [
+        { "label": "Pump Type", "value": "Hober Submersible" },
+        { "label": "Capacity", "value": "4500L/h @ 20m head" },
+        { "label": "Panel Size", "value": "550W x 1" },
+        { "label": "Region", "value": "Tigray Region" },
+        { "label": "Owner", "value": "Agricultural Transformation Institute" }
+      ],
+      "testimonial": {
+        "name": "Zeray G/maryam",
+        "role": "Beneficiary Farmer",
+        "text": "The Hober solar pump has been a game-changer for our farming. We now have reliable irrigation throughout the year, which has significantly improved our crop yields."
+      },
+      "images": [
+        "/assets/projects/tigray/tigray-1.jpg",
+        "/assets/projects/tigray/tigray-2.jpg",
+        "/assets/projects/tigray/tigray-3.jpg",
+        "/assets/projects/tigray/tigray-4.jpg",
+        "/assets/projects/tigray/tigray-5.jpg",
+        "/assets/projects/tigray/tigray-6.jpg"
+      ]
+    },
+    {
+      "id": "tigray-hober-pumps-2",
+      "title": "Scaling Solar Success: Phase Two Hober Solar Pump Expansion Project in Tigray Region, Ethiopia",
+      "location": "Tigray Region, L/Maychew Woreda",
+      "status": "Completed",
+      "beneficiaries": 10,
+      "area": "Multiple farm locations",
+      "yieldIncrease": "Expected 220%",
+      "image": "/assets/projects/tigray/tigray-2.jpg",
+      "description": "Second phase of Hober solar pump installations in Tigray region, expanding irrigation access to additional farmers in Maychew woreda.",
+      "fullDescription": "This second phase of the Hober solar pump project continues the successful implementation in Tigray region, providing additional farmers in L/Maychew woreda with reliable solar-powered irrigation solutions. The project builds on the success of the first phase and extends benefits to more agricultural communities.",
+      "farmerData": [
+        {
+          "code": 1,
+          "name": "Zeray G/maryam",
+          "sex": "M",
+          "coordinates": [13.5, 39.5]
+        },
+        {
+          "code": 2,
+          "name": "Leake Teklu",
+          "sex": "M",
+          "coordinates": [13.51, 39.51]
+        },
+        {
+          "code": 3,
+          "name": "Berihu Fisha",
+          "sex": "M",
+          "coordinates": [13.52, 39.52]
+        },
+        {
+          "code": 4,
+          "name": "G/tsadkan Teklu",
+          "sex": "M",
+          "coordinates": [13.53, 39.53]
+        },
+        {
+          "code": 5,
+          "name": "Muzey Haile",
+          "sex": "M",
+          "coordinates": [13.54, 39.54]
+        },
+        {
+          "code": 6,
+          "name": "Gdey Belay",
+          "sex": "M",
+          "coordinates": [13.55, 39.55]
+        },
+        {
+          "code": 7,
+          "name": "Kbra Gebrhet",
+          "sex": "F",
+          "coordinates": [13.56, 39.56]
+        },
+        {
+          "code": 8,
+          "name": "Mebrhit G/her",
+          "sex": "F",
+          "coordinates": [13.57, 39.57]
+        },
+        {
+          "code": 9,
+          "name": "Teklay Syum",
+          "sex": "M",
+          "coordinates": [13.58, 39.58]
+        },
+        {
+          "code": 10,
+          "name": "Tsegay Mekonen",
+          "sex": "M",
+          "coordinates": [13.59, 39.59]
+        }
+      ],
+      "specifications": [
+        { "label": "Pump Type", "value": "Hober Submersible" },
+        { "label": "Capacity", "value": "4500L/h @ 20m head" },
+        { "label": "Panel Size", "value": "550W x 1" },
+        { "label": "Region", "value": "Tigray Region" },
+        { "label": "Phase", "value": "Second Phase" },
+        { "label": "Owner", "value": "Agricultural Transformation Institute" }
+      ],
+      "testimonial": {
+        "name": "Kbra Gebrhet",
+        "role": "Beneficiary Farmer",
+        "text": "As a woman farmer, this solar pump has given me independence in managing my farm irrigation. I can now plan my crops better and have more control over my agricultural activities."
+      },
+      "images": [
+        "/assets/projects/tigray/tigray-1.jpg",
+        "/assets/projects/tigray/tigray-2.jpg",
+        "/assets/projects/tigray/tigray-3.jpg",
+        "/assets/projects/tigray/tigray-4.jpg",
+        "/assets/projects/tigray/tigray-5.jpg",
+        "/assets/projects/tigray/tigray-6.jpg"
+      ]
+    }
+  ],
+  "projectStats": [
+    { "label": "Total Projects", "value": 7, "icon": "Award" },
+    { "label": "Farmers Benefited", "value": 222, "icon": "Users" },
+    {
+      "label": "Hectares Irrigated",
+      "value": 743,
+      "suffix": "+",
+      "icon": "MapPin"
+    },
+    {
+      "label": "Average Yield Increase",
+      "value": 249,
+      "suffix": "%",
+      "icon": "TrendingUp"
+    }
+  ]
+}

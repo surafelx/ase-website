@@ -1,0 +1,52 @@
+{
+  "contact": {
+    "address": {
+      "street": "Nigat Business Center, 11th Floor, 11-04",
+      "city": "Addis Ababa",
+      "country": "Ethiopia"
+    },
+    "phone": "+251 9 41 97 00 26",
+    "email": "contactatagrisunethiopia.com",
+    "businessHours": {
+      "monday": "9:00 AM - 6:00 PM",
+      "tuesday": "9:00 AM - 6:00 PM",
+      "wednesday": "9:00 AM - 6:00 PM",
+      "thursday": "9:00 AM - 6:00 PM",
+      "friday": "9:00 AM - 6:00 PM",
+      "saturday": "9:00 AM - 6:00 PM",
+      "sunday": "10:00 AM - 4:00 PM"
+    },
+    "socialMedia": {
+      "facebook": "#",
+      "twitter": "#",
+      "instagram": "#",
+      "linkedin": "#"
+    }
+  },
+  "company": {
+    "name": "Agri-Sun Ethiopia Engineering and Trading Pvt. Ltd. Co.",
+    "shortName": "Agri-Sun Ethiopia",
+    "tagline": "Dedicated to promoting sustainable agricultural practices through solar-powered water pumps and grain milling systems for small-scale farmers",
+    "founded": "2023",
+    "headquarters": "Addis Ababa, Ethiopia"
+  },
+  "services": [
+    "Borehole Drilling",
+    "Solar-Powered Pump Installation",
+    "Irrigation Systems",
+    "Solar-Powered Grain Milling",
+    "Training & Knowledge Transfer"
+  ],
+  "quickLinks": [
+    { "name": "Home", "path": "#home" },
+    { "name": "Services", "path": "#services" },
+    { "name": "About", "path": "#about" },
+    { "name": "Contact", "path": "#contact" },
+    { "name": "Government Schemes", "path": "#" }
+  ],
+  "legal": [
+    { "name": "Privacy Policy", "path": "#" },
+    { "name": "Terms of Service", "path": "#" },
+    { "name": "Cookie Policy", "path": "#" }
+  ]
+}

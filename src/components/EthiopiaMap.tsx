@@ -1,7 +1,18 @@
 import React, { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const EthiopiaMap = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const navigate = useNavigate();
+
+  // Solar panel locations with project links
+  const solarSites = [
+    { x: 0.3, y: 0.4, projectId: "solar-pumps-moa", region: "Diredewa & Harari" },
+    { x: 0.5, y: 0.35, projectId: "nahom-construction-partnership", region: "Shoa Robit" },
+    { x: 0.7, y: 0.45, projectId: "sidama-solar-pumps", region: "Sidama" },
+    { x: 0.4, y: 0.6, projectId: "snnpr-solar-pumps", region: "SNNP" },
+    { x: 0.6, y: 0.65, projectId: "amhara-solar-pumps", region: "Amhara" }
+  ];
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -22,11 +33,6 @@ const EthiopiaMap = () => {
       [0.15, 0.25], [0.25, 0.2], [0.4, 0.15], [0.6, 0.2], [0.75, 0.25], [0.85, 0.35],
       [0.9, 0.5], [0.85, 0.65], [0.75, 0.75], [0.6, 0.8], [0.4, 0.85], [0.25, 0.8],
       [0.1, 0.7], [0.05, 0.5], [0.1, 0.35], [0.15, 0.25]
-    ];
-
-    // Solar panel locations
-    const solarSites = [
-      [0.3, 0.4], [0.5, 0.35], [0.7, 0.45], [0.4, 0.6], [0.6, 0.65]
     ];
 
     const animate = () => {
@@ -72,10 +78,10 @@ const EthiopiaMap = () => {
 
       // Draw solar panel sites with pulsing effect
       solarSites.forEach((site, index) => {
-        const x = (site[0] - 0.5) * width;
-        const y = (site[1] - 0.5) * height;
+        const x = (site.x - 0.5) * width;
+        const y = (site.y - 0.5) * height;
         const pulseSize = 8 + Math.sin(rotation * 0.02 + index) * 3;
-        
+
         // Solar panel glow
         ctx.beginPath();
         ctx.arc(x, y, pulseSize + 5, 0, Math.PI * 2);
@@ -93,6 +99,15 @@ const EthiopiaMap = () => {
         ctx.strokeStyle = 'hsl(46, 87%, 55%)';
         ctx.lineWidth = 2;
         ctx.stroke();
+
+        // Add tick/check mark
+        ctx.strokeStyle = 'hsl(120, 100%, 30%)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(x - 3, y);
+        ctx.lineTo(x - 1, y + 2);
+        ctx.lineTo(x + 3, y - 2);
+        ctx.stroke();
       });
 
       // Reset shadow
@@ -104,11 +119,11 @@ const EthiopiaMap = () => {
       for (let i = 0; i < solarSites.length - 1; i++) {
         const site1 = solarSites[i];
         const site2 = solarSites[i + 1];
-        const x1 = (site1[0] - 0.5) * width;
-        const y1 = (site1[1] - 0.5) * height;
-        const x2 = (site2[0] - 0.5) * width;
-        const y2 = (site2[1] - 0.5) * height;
-        
+        const x1 = (site1.x - 0.5) * width;
+        const y1 = (site1.y - 0.5) * height;
+        const x2 = (site2.x - 0.5) * width;
+        const y2 = (site2.y - 0.5) * height;
+
         ctx.beginPath();
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
@@ -127,7 +142,33 @@ const EthiopiaMap = () => {
         cancelAnimationFrame(animationId);
       }
     };
-  }, []);
+  }, [navigate]);
+
+  const handleCanvasClick = (event: React.MouseEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const rect = canvas.getBoundingClientRect();
+    const clickX = event.clientX - rect.left;
+    const clickY = event.clientY - rect.top;
+
+    // Scale coordinates to canvas
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    const canvasX = clickX * scaleX;
+    const canvasY = clickY * scaleY;
+
+    // Check if click is on a solar site
+    solarSites.forEach((site) => {
+      const siteX = (site.x - 0.5) * canvas.width + canvas.width / 2;
+      const siteY = (site.y - 0.5) * canvas.height + canvas.height / 2;
+      const distance = Math.sqrt((canvasX - siteX) ** 2 + (canvasY - siteY) ** 2);
+
+      if (distance < 15) { // Click tolerance
+        navigate(`/projects/${site.projectId}`);
+      }
+    });
+  };
 
   return (
     <div className="relative w-full h-80 bg-gradient-to-b from-sky-blue to-agriculture-green-light rounded-2xl overflow-hidden shadow-elegant">
@@ -135,13 +176,14 @@ const EthiopiaMap = () => {
         ref={canvasRef}
         width={400}
         height={320}
-        className="w-full h-full"
+        className="w-full h-full cursor-pointer"
+        onClick={handleCanvasClick}
       />
       <div className="absolute bottom-4 left-4 text-foreground font-semibold">
         AgriSun Ethiopia Coverage
       </div>
       <div className="absolute top-4 right-4 text-sm text-muted-foreground">
-        ☀️ Solar Sites Active
+        ☀️ Click solar sites to view projects
       </div>
     </div>
   );

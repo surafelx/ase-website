@@ -95,8 +95,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Phone</h4>
-                      <p className="text-muted-foreground">+91 98765 43210</p>
-                      <p className="text-muted-foreground">+91 98765 43211</p>
+                      <p className="text-muted-foreground">+251 9 41 97 00 26</p>
                     </div>
                   </div>
 
@@ -106,8 +105,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                      <p className="text-muted-foreground">info@agrosolar.com</p>
-                      <p className="text-muted-foreground">support@agrosolar.com</p>
+                      <p className="text-muted-foreground">contactatagrisunethiopia.com</p>
                     </div>
                   </div>
 
@@ -118,9 +116,8 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Address</h4>
                       <p className="text-muted-foreground">
-                        123 Agriculture Innovation Hub<br />
-                        Green Valley, Maharashtra 411001<br />
-                        India
+                        Nigat Business Center, 11th Floor, 11-04<br />
+                        Addis Ababa, Ethiopia
                       </p>
                     </div>
                   </div>
