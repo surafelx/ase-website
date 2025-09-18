@@ -10,13 +10,22 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Users, TrendingUp, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import projectsData from "@/data/projects.json";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 const Projects = () => {
   const navigate = useNavigate();
 
-  // Use only the first 3 projects from JSON for the home page
-  const projects = projectsData.projects.slice(0, 3);
+  // Fetch featured projects from backend
+  const { data: projectsData, isLoading } = useQuery({
+    queryKey: ['featured-projects'],
+    queryFn: async () => {
+      const response = await axios.get('http://localhost:5000/api/content/featured');
+      return response.data.data;
+    }
+  });
+
+  const projects = projectsData || [];
 
   const getStatusColor = (status) => {
     switch (status) {
@@ -46,7 +55,15 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 max-w-7xl mx-auto">
-          {projects.map((project, index) => (
+          {isLoading ? (
+            // Loading skeleton
+            Array.from({ length: 3 }).map((_, index) => (
+              <div key={index} className="animate-pulse">
+                <div className="bg-gray-300 h-96 rounded-lg"></div>
+              </div>
+            ))
+          ) : (
+            projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 50 }}
@@ -127,7 +144,8 @@ const Projects = () => {
                 </div>
               </Card>
             </motion.div>
-          ))}
+            ))
+          )}
         </div>
 
         {/* CTA */}

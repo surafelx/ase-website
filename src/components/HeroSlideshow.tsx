@@ -20,6 +20,10 @@ import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
+import hero1 from "@/assets/heroes/hero-6.jpg";
+import hero2 from "@/assets/heroes/hero-7.jpg";
+import hero3 from "@/assets/heroes/hero-8.jpg";
+
 
 const HeroSlideshow = () => {
   const plugin = useRef(Autoplay({ delay: 8000, stopOnInteraction: true }));
@@ -92,7 +96,7 @@ const HeroSlideshow = () => {
 
   const slides = [
     {
-      image: logo,
+      image: hero1,
       title: "Turn-Key Solutions for",
       subtitle: "Sustainable Agriculture",
       subtitle2: "From Borehole to Harvest",
@@ -101,7 +105,7 @@ const HeroSlideshow = () => {
       alt: "Agri-Sun Ethiopia Logo",
     },
     {
-      image: logo,
+      image: hero2,
       title: "Solar-Powered Water Pumps",
       subtitle: "Clean Energy Solutions",
       description:
@@ -109,7 +113,7 @@ const HeroSlideshow = () => {
       alt: "Agri-Sun Ethiopia Logo",
     },
     {
-      image: logo,
+      image: hero3,
       title: "Empowering Communities",
       subtitle: "Since January 2023",
       description:

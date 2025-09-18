@@ -14,6 +14,9 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   useEffect(() => {
     setIsLoading(true);
 
+    // Scroll to top when route changes
+    window.scrollTo(0, 0);
+
     // Simulate loading time or wait for actual loading
     const timer = setTimeout(() => {
       setIsLoading(false);

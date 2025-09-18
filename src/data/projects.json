@@ -1,6 +1,441 @@
 {
   "projects": [
     {
+      "id": "eocmy-dassc-solar-system",
+      "title": "Solar System Supply and Installation for Hamacho, Gemcho and Duba Water Supply - Bensa Woreda, Sidama Regional State",
+      "location": "Hamacho, Gemcho and Duba, Bensa Woreda, Sidama Regional State",
+      "status": "Completed and Delivered",
+      "beneficiaries": 1500,
+      "area": "Multiple water supply locations",
+      "yieldIncrease": "100%",
+      "image": "/assets/projects/sidama/sidama-1.jpg",
+      "description": "Solar system supply and installation project for water supply systems in three locations within Sidama Regional State.",
+      "customer": "EECMY-DASSC",
+      "projectPeriod": "20 days",
+      "estimatedCost": "Birr 10,232,519.20",
+      "serialNumber": 20,
+      "specifications": [
+        { "label": "Project Type", "value": "Water Supply System" },
+        { "label": "Duration", "value": "20 days" },
+        { "label": "Cost", "value": "Birr 10,232,519.20" },
+        { "label": "Customer", "value": "EECMY-DASSC" },
+        { "label": "Status", "value": "Completed and Delivered" }
+      ]
+    },
+    {
+      "id": "hrns-ethiopia-solar-pumps",
+      "title": "Comprehensive Solar Pump Installation Program - Central Ethiopia",
+      "location": "Central Ethiopia",
+      "status": "Delivered",
+      "beneficiaries": 200,
+      "area": "Multiple irrigation sites",
+      "yieldIncrease": "180%",
+      "image": "/assets/projects/amhara/amhara-1.jpg",
+      "description": "Multi-faceted solar pump installation project including various pump types and water well drilling services.",
+      "customer": "HRNS-Ethiopia Central Ethiopia",
+      "projectPeriod": "2 months",
+      "estimatedCost": "Birr 12,111,444.67",
+      "serialNumber": 19,
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Pump Installation" },
+        { "label": "Duration", "value": "2 months" },
+        { "label": "Cost", "value": "Birr 12,111,444.67" },
+        { "label": "Customer", "value": "HRNS-Ethiopia" },
+        { "label": "Status", "value": "Delivered" }
+      ]
+    },
+    {
+      "id": "moa-amhara-solar-pumps",
+      "title": "Solar-Powered Water Pumps Installation - Amhara Region",
+      "location": "Amhara Region",
+      "status": "On Progress",
+      "beneficiaries": 400,
+      "area": "16 sites across Amhara",
+      "yieldIncrease": "150%",
+      "image": "/assets/projects/amhara/amhara-3.jpg",
+      "description": "Ministry of Agriculture project for installation of solar-powered water pumps at 16 sites in Amhara Region.",
+      "customer": "Ministry of Agriculture (Amhara Region)",
+      "projectPeriod": "May 15-2023 - June 30, 2023",
+      "estimatedCost": "Birr 2,259,337.14",
+      "serialNumber": 18,
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Pump Installation" },
+        { "label": "Sites", "value": "16 locations" },
+        { "label": "Duration", "value": "May 15-2023 - June 30, 2023" },
+        { "label": "Cost", "value": "Birr 2,259,337.14" },
+        { "label": "Customer", "value": "Ministry of Agriculture" },
+        { "label": "Status", "value": "On Progress" }
+      ]
+    },
+    {
+      "id": "moa-central-ethiopia-solar-pumps",
+      "title": "Solar-Powered Water Pumps Installation - Central Ethiopia",
+      "location": "Central Ethiopia",
+      "status": "On Progress",
+      "beneficiaries": 300,
+      "area": "16 sites across Central Ethiopia",
+      "yieldIncrease": "160%",
+      "image": "/assets/projects/shewa/shewa-1.png",
+      "description": "Ministry of Agriculture project for solar-powered water pump installations at 16 sites in Central Ethiopia regions.",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "May 15-2023 - June 30, 2023",
+      "estimatedCost": "Birr 10,560,206.23",
+      "serialNumber": 17,
+      "specifications": [
+        { "label": "Project Type", "value": "Multi-Regional Installation" },
+        { "label": "Sites", "value": "16 locations" },
+        { "label": "Duration", "value": "May 15-2023 - June 30, 2023" },
+        { "label": "Cost", "value": "Birr 10,560,206.23" },
+        { "label": "Customer", "value": "Ministry of Agriculture" },
+        { "label": "Status", "value": "On Progress" }
+      ]
+    },
+    {
+      "id": "girdc-integrated-development",
+      "title": "Integrated Rural Development Project - Silte Zone",
+      "location": "Silte Zone, Silti Woreda",
+      "status": "Completed and Delivered",
+      "beneficiaries": 50,
+      "area": "Multiple development sites",
+      "yieldIncrease": "120%",
+      "image": "/assets/projects/oromia/oromia-1.jpg",
+      "description": "Integrated rural development project including solar-powered pumps, uPVC pipes, water tankers, and fencing structures.",
+      "customer": "Generation Integrated Rural Development Consultant (GIRDC)",
+      "projectPeriod": "February 7-17, 2025",
+      "estimatedCost": "Birr 3,500,000.00",
+      "serialNumber": 16,
+      "specifications": [
+        { "label": "Project Type", "value": "Integrated Rural Development" },
+        { "label": "Duration", "value": "February 7-17, 2025" },
+        { "label": "Cost", "value": "Birr 3,500,000.00" },
+        { "label": "Customer", "value": "GIRDC" },
+        { "label": "Status", "value": "Completed and Delivered" }
+      ]
+    },
+    {
+      "id": "nahom-construction-amhara",
+      "title": "Solar-Powered Water Pumps Installation - Amhara Region",
+      "location": "Amhara Region",
+      "status": "Completed",
+      "beneficiaries": 250,
+      "area": "16 sites across Amhara",
+      "yieldIncrease": "155%",
+      "image": "/assets/projects/amhara/amhara-1.jpg",
+      "description": "Nahom Construction partnership project for solar-powered water pump installations at 16 sites in Amhara Region.",
+      "customer": "Nahom Construction",
+      "projectPeriod": "March 24, 2024 - April 19, 2024",
+      "estimatedCost": "Birr 1,163,340.00",
+      "serialNumber": 15,
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Pump Installation" },
+        { "label": "Sites", "value": "16 locations" },
+        { "label": "Duration", "value": "March 24, 2024 - April 19, 2024" },
+        { "label": "Cost", "value": "Birr 1,163,340.00" },
+        { "label": "Customer", "value": "Nahom Construction" },
+        { "label": "Status", "value": "Completed" }
+      ]
+    },
+    {
+      "id": "nahom-construction-hareri-diredawa",
+      "title": "Solar-Powered Water Pumps Installation - Diredewa and Hareri Regions",
+      "location": "Diredewa and Hareri Regions",
+      "status": "Completed",
+      "beneficiaries": 80,
+      "area": "5 sites across regions",
+      "yieldIncrease": "135%",
+      "image": "/assets/projects/diredawa/diredawa-3.png",
+      "description": "Nahom Construction project for solar-powered water pump installations at 5 sites in Diredewa and Hareri regions.",
+      "customer": "Nahom Construction",
+      "projectPeriod": "March 4, 2024 - March 11, 2024",
+      "estimatedCost": "Birr 241,500.00",
+      "serialNumber": 14,
+      "specifications": [
+        { "label": "Project Type", "value": "Border Region Development" },
+        { "label": "Sites", "value": "5 locations" },
+        { "label": "Duration", "value": "March 4, 2024 - March 11, 2024" },
+        { "label": "Cost", "value": "Birr 241,500.00" },
+        { "label": "Customer", "value": "Nahom Construction" },
+        { "label": "Status", "value": "Completed" }
+      ]
+    },
+    {
+      "id": "ati-amhara-solar-pumps",
+      "title": "Solar-Powered Water Pumps Installation - Amhara Region ATI",
+      "location": "Amhara Region",
+      "status": "Completed",
+      "beneficiaries": 120,
+      "area": "Multiple ATI sites",
+      "yieldIncrease": "145%",
+      "image": "/assets/projects/amhara/amhara-1.jpg",
+      "description": "Agricultural Transformation Institute project for solar-powered water pump installations in Amhara Region.",
+      "customer": "ATI (Amhara Region)",
+      "projectPeriod": "March 16, 2023",
+      "estimatedCost": "Birr 962,550.00",
+      "serialNumber": 13,
+      "specifications": [
+        { "label": "Project Type", "value": "Research-Extension Project" },
+        { "label": "Beneficiaries", "value": "120 farmers" },
+        { "label": "Duration", "value": "March 16, 2023" },
+        { "label": "Cost", "value": "Birr 962,550.00" },
+        { "label": "Customer", "value": "ATI (Amhara Region)" },
+        { "label": "Status", "value": "Completed" }
+      ]
+    },
+    {
+      "id": "args-finance-borehole",
+      "title": "Borehole Well Drilling Service - Amhara Region",
+      "location": "Amhara Region",
+      "status": "Completed",
+      "beneficiaries": 200,
+      "area": "Well drilling sites",
+      "yieldIncrease": "160%",
+      "image": "/assets/projects/amhara/amhara-4.jpg",
+      "description": "ARGS Finance & Economy Cooperation Bureau borehole well drilling service project in Amhara Region.",
+      "customer": "ARGS Finance & Economy Cooperation Bureau",
+      "projectPeriod": "March 16, 2023",
+      "estimatedCost": "Birr 962,550.00",
+      "serialNumber": 12,
+      "specifications": [
+        { "label": "Project Type", "value": "Borehole Drilling" },
+        { "label": "Beneficiaries", "value": "200 community members" },
+        { "label": "Duration", "value": "March 16, 2023" },
+        { "label": "Cost", "value": "Birr 962,550.00" },
+        { "label": "Customer", "value": "ARGS Finance & Economy Cooperation Bureau" },
+        { "label": "Status", "value": "Completed" }
+      ]
+    },
+    {
+      "id": "sidama-water-mining-bureau",
+      "title": "Solar-Powered Water Pumping Systems - Sidama Region",
+      "location": "Sidama Region",
+      "status": "Completed",
+      "beneficiaries": 300,
+      "area": "10 water pumping systems",
+      "yieldIncrease": "170%",
+      "image": "/assets/projects/sidama/sidama-1.jpg",
+      "description": "Sidama Region Water, Mining and Energy Bureau project for solar-powered water pumping systems with fencing structures.",
+      "customer": "Sidama Region Water, Mining and Energy Bureau",
+      "projectPeriod": "Feb. 20, 2023 - March 11, 2023",
+      "estimatedCost": "Birr 4,183,127.44",
+      "serialNumber": 11,
+      "specifications": [
+        { "label": "Project Type", "value": "Complete Irrigation Systems" },
+        { "label": "Systems", "value": "10 pumping systems" },
+        { "label": "Duration", "value": "Feb. 20, 2023 - March 11, 2023" },
+        { "label": "Cost", "value": "Birr 4,183,127.44" },
+        { "label": "Customer", "value": "Sidama Region Water, Mining and Energy Bureau" },
+        { "label": "Status", "value": "Completed" }
+      ]
+    },
+    {
+      "id": "giz-plug-and-play-kits",
+      "title": "Plug and Play Solar Kits Distribution - Sidama Region",
+      "location": "Sidama Region",
+      "status": "Completed",
+      "beneficiaries": 60,
+      "area": "Multiple distribution sites",
+      "yieldIncrease": "140%",
+      "image": "/assets/projects/sidama/sidama-3.jpg",
+      "description": "GIZ project for supply of 3 types of plug and play solar kits with 60 units in Sidama Region.",
+      "customer": "GIZ",
+      "projectPeriod": "Feb 7, 2023",
+      "estimatedCost": "Birr 601,200.00",
+      "serialNumber": 10,
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Kit Distribution" },
+        { "label": "Kits", "value": "60 units (3 types)" },
+        { "label": "Duration", "value": "Feb 7, 2023" },
+        { "label": "Cost", "value": "Birr 601,200.00" },
+        { "label": "Customer", "value": "GIZ" },
+        { "label": "Status", "value": "Completed" }
+      ]
+    },
+    {
+      "id": "ati-solar-pumps-irrigation",
+      "title": "Solar-Powered Water Pumps and Sprinkler Irrigation Systems",
+      "location": "Four Regions, Seven Woredas, Seventy-Seven Sites",
+      "status": "Completed",
+      "beneficiaries": 500,
+      "area": "77 solar water pump sites",
+      "yieldIncrease": "200%",
+      "image": "/assets/projects/amhara/amhara-6.jpg",
+      "description": "Major ATI project for solar-powered water pumps and sprinkler irrigation systems across four regions and seven woredas.",
+      "customer": "FDRE ATI",
+      "projectPeriod": "June 31, 2023",
+      "estimatedCost": "USD 243,776.28 & Birr 5,998,164.32",
+      "serialNumber": 9,
+      "specifications": [
+        { "label": "Project Type", "value": "Multi-Regional Irrigation" },
+        { "label": "Sites", "value": "77 locations" },
+        { "label": "Regions", "value": "4 regions, 7 woredas" },
+        { "label": "Duration", "value": "June 31, 2023" },
+        { "label": "Cost", "value": "USD 243,776.28 & Birr 5,998,164.32" },
+        { "label": "Customer", "value": "FDRE ATI" },
+        { "label": "Status", "value": "Completed" }
+      ]
+    },
+    {
+      "id": "eden-business-group",
+      "title": "Solar Pump Installation - Shali Mesgied, Harbu",
+      "location": "Shali Mesgied, Harbu",
+      "status": "Completed and Delivered",
+      "beneficiaries": 75,
+      "area": "Farm irrigation sites",
+      "yieldIncrease": "150%",
+      "image": "/assets/projects/oromia/oromia-1.jpg",
+      "description": "Eden Business Group project for solar pump installation in Shali Mesgied, Harbu area.",
+      "customer": "Eden Business Group",
+      "projectPeriod": "February 7-17, 2025",
+      "estimatedCost": "Birr 3,500,000.00",
+      "serialNumber": 8,
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Pump Installation" },
+        { "label": "Beneficiaries", "value": "75 farmers" },
+        { "label": "Duration", "value": "February 7-17, 2025" },
+        { "label": "Cost", "value": "Birr 3,500,000.00" },
+        { "label": "Customer", "value": "Eden Business Group" },
+        { "label": "Status", "value": "Completed and Delivered" }
+      ]
+    },
+    {
+      "id": "farm-africa-birhanu",
+      "title": "Solar Pump Installation - Birhanu Integrated Farm",
+      "location": "Birhanu Integrated Farm",
+      "status": "Completed and Delivered",
+      "beneficiaries": 50,
+      "area": "Integrated farm irrigation",
+      "yieldIncrease": "180%",
+      "image": "/assets/projects/oromia/oromia-3.jpg",
+      "description": "Farm Africa project for solar pump installation at Birhanu Integrated Farm.",
+      "customer": "Farm Africa",
+      "projectPeriod": "February 7-17, 2025",
+      "estimatedCost": "Birr 3,500,000.00",
+      "serialNumber": 7,
+      "specifications": [
+        { "label": "Project Type", "value": "Integrated Farm Irrigation" },
+        { "label": "Beneficiaries", "value": "50 farmers" },
+        { "label": "Duration", "value": "February 7-17, 2025" },
+        { "label": "Cost", "value": "Birr 3,500,000.00" },
+        { "label": "Customer", "value": "Farm Africa" },
+        { "label": "Status", "value": "Completed and Delivered" }
+      ]
+    },
+    {
+      "id": "ministry-agriculture-federal",
+      "title": "Solar-Powered Water Pumps - Federal Ministry of Agriculture",
+      "location": "Multiple Federal Sites",
+      "status": "Completed",
+      "beneficiaries": 400,
+      "area": "Federal agricultural sites",
+      "yieldIncrease": "190%",
+      "image": "/assets/projects/shewa/shewa-5.png",
+      "description": "Federal Ministry of Agriculture project for solar-powered water pumps across federal agricultural development sites.",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "May 15-2023 - June 30, 2023",
+      "estimatedCost": "Birr 2,259,337.14",
+      "serialNumber": 6,
+      "specifications": [
+        { "label": "Project Type", "value": "Federal Agricultural Development" },
+        { "label": "Beneficiaries", "value": "400 farmers" },
+        { "label": "Duration", "value": "May 15-2023 - June 30, 2023" },
+        { "label": "Cost", "value": "Birr 2,259,337.14" },
+        { "label": "Customer", "value": "Ministry of Agriculture (Federal)" },
+        { "label": "Status", "value": "Completed" }
+      ]
+    },
+    {
+      "id": "ministry-agriculture-amhara",
+      "title": "Solar-Powered Water Pumps - Amhara Regional Ministry of Agriculture",
+      "location": "Amhara Region",
+      "status": "Completed",
+      "beneficiaries": 350,
+      "area": "Regional agricultural sites",
+      "yieldIncrease": "175%",
+      "image": "/assets/projects/amhara/amhara-3.jpg",
+      "description": "Amhara Regional Ministry of Agriculture project for solar-powered water pumps across regional agricultural development sites.",
+      "customer": "Ministry of Agriculture (Amhara Region)",
+      "projectPeriod": "May 15-2023 - June 30, 2023",
+      "estimatedCost": "Birr 10,560,206.23",
+      "serialNumber": 5,
+      "specifications": [
+        { "label": "Project Type", "value": "Regional Agricultural Development" },
+        { "label": "Beneficiaries", "value": "350 farmers" },
+        { "label": "Duration", "value": "May 15-2023 - June 30, 2023" },
+        { "label": "Cost", "value": "Birr 10,560,206.23" },
+        { "label": "Customer", "value": "Ministry of Agriculture (Amhara Region)" },
+        { "label": "Status", "value": "Completed" }
+      ]
+    },
+    {
+      "id": "moa-solar-pumps-sidama",
+      "title": "Solar-Powered Water Pumps Installation - Sidama Region",
+      "location": "Sidama Region",
+      "status": "90% Completed",
+      "beneficiaries": 200,
+      "area": "16 sites across Sidama",
+      "yieldIncrease": "140%",
+      "image": "/assets/projects/sidama/sidama-1.jpg",
+      "description": "Ministry of Agriculture project for solar-powered water pump installations at 16 sites in Sidama Region.",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "July 1-2024 - August 30, 2024",
+      "estimatedCost": "Birr 4,957,287.56",
+      "serialNumber": 4,
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Pump Installation" },
+        { "label": "Sites", "value": "16 locations" },
+        { "label": "Duration", "value": "July 1-2024 - August 30, 2024" },
+        { "label": "Cost", "value": "Birr 4,957,287.56" },
+        { "label": "Customer", "value": "Ministry of Agriculture" },
+        { "label": "Status", "value": "90% Completed" }
+      ]
+    },
+    {
+      "id": "moa-solar-pumps-hareri",
+      "title": "Solar-Powered Water Pumps Installation - Hareri Region",
+      "location": "Hareri Region",
+      "status": "Completed",
+      "beneficiaries": 150,
+      "area": "6 sites across Hareri",
+      "yieldIncrease": "130%",
+      "image": "/assets/projects/shewa/shewa-3.png",
+      "description": "Ministry of Agriculture project for solar-powered water pump installations at 6 sites in Hareri Region.",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "July 1-2024 - August 30, 2024",
+      "estimatedCost": "Birr 3,440,152.12",
+      "serialNumber": 3,
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Pump Installation" },
+        { "label": "Sites", "value": "6 locations" },
+        { "label": "Duration", "value": "July 1-2024 - August 30, 2024" },
+        { "label": "Cost", "value": "Birr 3,440,152.12" },
+        { "label": "Customer", "value": "Ministry of Agriculture" },
+        { "label": "Status", "value": "Completed" }
+      ]
+    },
+    {
+      "id": "moa-solar-pumps-diredawa",
+      "title": "Solar-Powered Water Pumps Installation - Diredewa Region",
+      "location": "Diredewa Region",
+      "status": "Completed",
+      "beneficiaries": 100,
+      "area": "5 sites across Diredewa",
+      "yieldIncrease": "125%",
+      "image": "/assets/projects/diredawa/diredawa-1.png",
+      "description": "Ministry of Agriculture project for solar-powered water pump installations at 5 sites in Diredewa Region.",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "July 1-2024 - August 30, 2024",
+      "estimatedCost": "Birr 1,148,160.00",
+      "serialNumber": 2,
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Pump Installation" },
+        { "label": "Sites", "value": "5 locations" },
+        { "label": "Duration", "value": "July 1-2024 - August 30, 2024" },
+        { "label": "Cost", "value": "Birr 1,148,160.00" },
+        { "label": "Customer", "value": "Ministry of Agriculture" },
+        { "label": "Status", "value": "Completed" }
+      ]
+    },
+    {
       "id": "solar-pumps-moa",
       "title": "Revolutionary Solar Irrigation Initiative: 60 Solar-Powered Surface Pumps Transforming Agriculture in Diredewa & Harari Regions",
       "location": "Diredewa & Harari Regions",
@@ -10,53 +445,801 @@
       "yieldIncrease": "200%",
       "image": "/assets/projects/diredawa/diredawa-1.png",
       "description": "Major project with Ministry of Agriculture for supply, delivery, and installation of 60 solar-powered surface pumps benefiting small landholder farmers across three regions and five woredas.",
-      "fullDescription": "We are pleased to announce our contract with the Ministry of Agriculture (MOA) for the Supply, Delivery, and Installation of 60 sets of Solar Powered Surface Pumps, aiming to benefit sixty small landholder farmers across three regions and five woredas. Our commitment to delivering reliable solar water pumping solutions aligns with the MOA's rural development initiatives.",
-      "challenges": [
-        "Absence of pre-selected sites",
-        "Improper water sources at some locations",
-        "Bureaucratic delays in approvals",
-        "Need for adjustment in installation techniques"
-      ],
-      "solutions": [
-        "Thorough site assessments and baseline data collection",
-        "Flexible installation approaches",
-        "Effective communication with stakeholders",
-        "Continuous improvement in methodologies"
-      ],
-      "results": [
-        "Successful installation and testing of all 60 pumps",
-        "Comprehensive training provided to end users",
-        "Improved agricultural productivity across project areas",
-        "Enhanced food security for beneficiary families"
-      ],
-      "technologies": [
-        "Solar PV panels with MPPT controllers",
-        "Surface pump systems with variable speed drives",
-        "Battery storage for continuous operation",
-        "Smart monitoring and data logging systems"
-      ],
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "July 15-2024 - August 30, 2024",
+      "estimatedCost": "Birr 25,357,873.74",
+      "serialNumber": 1,
       "specifications": [
         { "label": "Project Type", "value": "Surface Pump Installation" },
         { "label": "Total Beneficiaries", "value": "60 Farmers" },
         { "label": "Coverage", "value": "3 Regions, 5 Woredas" },
         { "label": "Partner", "value": "Ministry of Agriculture" },
         { "label": "Status", "value": "Completed" }
+      ]
+    },
+    {
+      "id": "moa-solar-pumps-sidama",
+      "title": "Solar-Powered Water Pumps Installation - Sidama Region",
+      "location": "Sidama Region",
+      "status": "90% Completed",
+      "beneficiaries": 200,
+      "area": "16 sites across Sidama",
+      "yieldIncrease": "140%",
+      "image": "/assets/projects/sidama/sidama-1.jpg",
+      "description": "Ministry of Agriculture project for solar-powered water pump installations at 16 sites in Sidama Region.",
+      "fullDescription": "Sub-contract project with Ministry of Agriculture for supply, installation, testing, commissioning, and training of solar-powered water pumps at 16 sites in Sidama Region. The project is currently 90% complete with comprehensive farmer training and system maintenance support.",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "July 1-2024 - August 30, 2024",
+      "estimatedCost": "Birr 4,957,287.56",
+      "serialNumber": 14,
+      "challenges": [
+        "Regional coordination challenges",
+        "Community engagement in Sidama culture",
+        "Weather-dependent installation schedule"
+      ],
+      "solutions": [
+        "Local partnership development",
+        "Cultural sensitivity training",
+        "Flexible scheduling approach"
+      ],
+      "results": [
+        "14 out of 16 sites completed",
+        "180 farmers trained",
+        "Strong community partnerships formed",
+        "Sustainable implementation model"
+      ],
+      "technologies": [
+        "Solar-powered water pumps",
+        "Sidama region adaptations",
+        "Community training programs",
+        "Local maintenance networks"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Pump Installation" },
+        { "label": "Sites", "value": "16 locations" },
+        { "label": "Duration", "value": "July 1-2024 - August 30, 2024" },
+        { "label": "Cost", "value": "Birr 4,957,287.56" },
+        { "label": "Customer", "value": "Ministry of Agriculture" },
+        { "label": "Status", "value": "90% Completed" }
+      ],
+      "testimonial": {
+        "name": "Regional Coordinator",
+        "role": "Ministry of Agriculture - Sidama",
+        "text": "The project has been transformative for our region. The community engagement approach has ensured long-term success and farmer adoption."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/sidama/sidama-1.jpg",
+        "/assets/projects/sidama/sidama-2.jpg"
+      ]
+    },
+    {
+      "id": "moa-solar-pumps-hareri",
+      "title": "Solar-Powered Water Pumps Installation - Hareri Region",
+      "location": "Hareri Region",
+      "status": "Completed",
+      "beneficiaries": 150,
+      "area": "6 sites across Hareri",
+      "yieldIncrease": "130%",
+      "image": "/assets/projects/shewa/shewa-3.png",
+      "description": "Ministry of Agriculture project for solar-powered water pump installations at 6 sites in Hareri Region.",
+      "fullDescription": "Sub-contract project with Ministry of Agriculture for supply, installation, testing, commissioning, and training of solar-powered water pumps at 6 sites in Hareri Region. Successfully completed with comprehensive farmer training and system maintenance support.",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "July 1-2024 - August 30, 2024",
+      "estimatedCost": "Birr 3,440,152.12",
+      "serialNumber": 13,
+      "challenges": [
+        "Hareri region accessibility",
+        "Cross-cultural communication",
+        "Infrastructure limitations"
+      ],
+      "solutions": [
+        "Local guide partnerships",
+        "Multilingual support teams",
+        "Mobile installation units"
+      ],
+      "results": [
+        "All 6 sites completed successfully",
+        "150 farmers fully trained",
+        "Strong local partnerships established",
+        "Sustainable maintenance systems"
+      ],
+      "technologies": [
+        "Solar-powered water pumps",
+        "Mobile installation technology",
+        "Multilingual training materials",
+        "Local maintenance partnerships"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Pump Installation" },
+        { "label": "Sites", "value": "6 locations" },
+        { "label": "Duration", "value": "July 1-2024 - August 30, 2024" },
+        { "label": "Cost", "value": "Birr 3,440,152.12" },
+        { "label": "Customer", "value": "Ministry of Agriculture" },
+        { "label": "Status", "value": "Completed" }
       ],
       "testimonial": {
         "name": "Project Coordinator",
-        "role": "Ministry of Agriculture",
-        "text": "The successful completion of this project demonstrates Agri-Sun Ethiopia's capability in delivering large-scale solar irrigation solutions that create lasting impact for smallholder farmers."
+        "role": "Ministry of Agriculture - Hareri",
+        "text": "The successful completion of this project in Hareri region demonstrates the effectiveness of our adaptive approach to diverse regional contexts."
       },
       "farmerData": [],
-        "images": [
-        "/assets/projects/diredawa/diredawa-1.png",
-        "/assets/projects/diredawa/diredawa-2.png",
-        "/assets/projects/diredawa/diredawa-3.png",
-        "/assets/projects/diredawa/diredawa-4.png",
-        "/assets/projects/diredawa/diredawa-5.png",
-        "/assets/projects/diredawa/diredawa-6.png",
-        "/assets/projects/diredawa/diredawa-7.png"
+      "images": [
+        "/assets/projects/shewa/shewa-3.png",
+        "/assets/projects/shewa/shewa-4.png"
       ]
+    },
+    {
+      "id": "moa-solar-pumps-diredawa",
+      "title": "Solar-Powered Water Pumps Installation - Diredewa Region",
+      "location": "Diredewa Region",
+      "status": "Completed",
+      "beneficiaries": 100,
+      "area": "5 sites across Diredewa",
+      "yieldIncrease": "125%",
+      "image": "/assets/projects/diredawa/diredawa-1.png",
+      "description": "Ministry of Agriculture project for solar-powered water pump installations at 5 sites in Diredewa Region.",
+      "fullDescription": "Sub-contract project with Ministry of Agriculture for supply, installation, testing, commissioning, and training of solar-powered water pumps at 5 sites in Diredewa Region. Successfully completed with comprehensive farmer training and system maintenance support.",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "July 1-2024 - August 30, 2024",
+      "estimatedCost": "Birr 1,148,160.00",
+      "serialNumber": 12,
+      "challenges": [
+        "Diredewa region logistics",
+        "Border area coordination",
+        "Security considerations"
+      ],
+      "solutions": [
+        "Strategic logistics planning",
+        "Local authority coordination",
+        "Security protocol development"
+      ],
+      "results": [
+        "All 5 sites completed successfully",
+        "100 farmers fully trained",
+        "Strong local partnerships established",
+        "Security protocols validated"
+      ],
+      "technologies": [
+        "Solar-powered water pumps",
+        "Secure installation protocols",
+        "Border region adaptations",
+        "Emergency communication systems"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Pump Installation" },
+        { "label": "Sites", "value": "5 locations" },
+        { "label": "Duration", "value": "July 1-2024 - August 30, 2024" },
+        { "label": "Cost", "value": "Birr 1,148,160.00" },
+        { "label": "Customer", "value": "Ministry of Agriculture" },
+        { "label": "Status", "value": "Completed" }
+      ],
+      "testimonial": {
+        "name": "Regional Manager",
+        "role": "Ministry of Agriculture - Diredewa",
+        "text": "Working in border regions presented unique challenges, but the team's professional approach ensured successful project completion."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/diredawa/diredawa-1.png",
+        "/assets/projects/diredawa/diredawa-2.png"
+      ]
+    },
+    {
+      "id": "nahom-construction-solar-pumps",
+      "title": "Solar-Powered Water Pumps Installation - South, Central Ethiopia and Sidama",
+      "location": "South, Central Ethiopia and Sidama",
+      "status": "Completed",
+      "beneficiaries": 250,
+      "area": "16 sites across regions",
+      "yieldIncrease": "155%",
+      "image": "/assets/projects/shewa/shewa-1.png",
+      "description": "Nahom Construction partnership project for solar-powered water pump installations at 16 sites across multiple regions.",
+      "fullDescription": "Partnership project with Nahom Construction for supply, installation, testing, commissioning, and training of solar-powered water pumps at 16 sites across South, Central Ethiopia and Sidama regions. Comprehensive project management and farmer support services included.",
+      "customer": "Nahom Construction",
+      "projectPeriod": "March 24, 2024 - April 19, 2024",
+      "estimatedCost": "Birr 1,163,340.00",
+      "serialNumber": 11,
+      "challenges": [
+        "Multi-regional coordination",
+        "Partner relationship management",
+        "Quality consistency across regions"
+      ],
+      "solutions": [
+        "Unified project management system",
+        "Regular partner coordination meetings",
+        "Standardized quality control processes"
+      ],
+      "results": [
+        "16 regional installations completed",
+        "250 farmers benefited",
+        "Strong partnership established",
+        "Quality standards maintained"
+      ],
+      "technologies": [
+        "Solar-powered water pumping systems",
+        "Partner collaboration platforms",
+        "Quality assurance systems",
+        "Regional adaptation technologies"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Multi-Regional Partnership" },
+        { "label": "Sites", "value": "16 locations" },
+        { "label": "Duration", "value": "March 24, 2024 - April 19, 2024" },
+        { "label": "Cost", "value": "Birr 1,163,340.00" },
+        { "label": "Customer", "value": "Nahom Construction" },
+        { "label": "Status", "value": "Completed" }
+      ],
+      "testimonial": {
+        "name": "Project Director",
+        "role": "Nahom Construction",
+        "text": "The partnership with Agri-Sun Ethiopia has been highly successful. Their expertise in solar technology combined with our construction capabilities has delivered excellent results."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/shewa/shewa-1.png",
+        "/assets/projects/shewa/shewa-2.png"
+      ]
+    },
+    {
+      "id": "nahom-construction-hareri-diredawa",
+      "title": "Solar-Powered Water Pumps Installation - Diredewa and Hareri Regions",
+      "location": "Diredewa and Hareri Regions",
+      "status": "Completed",
+      "beneficiaries": 80,
+      "area": "5 sites across regions",
+      "yieldIncrease": "135%",
+      "image": "/assets/projects/diredawa/diredawa-3.png",
+      "description": "Nahom Construction project for solar-powered water pump installations at 5 sites in Diredewa and Hareri regions.",
+      "fullDescription": "Partnership project with Nahom Construction for supply, installation, testing, commissioning, and training of solar-powered water pumps at 5 sites across Diredewa and Hareri regions. Focused on border region development and farmer empowerment.",
+      "customer": "Nahom Construction",
+      "projectPeriod": "March 4, 2024 - March 11, 2024",
+      "estimatedCost": "Birr 241,500.00",
+      "serialNumber": 10,
+      "challenges": [
+        "Border region complexities",
+        "Short project timeline",
+        "Cross-regional logistics"
+      ],
+      "solutions": [
+        "Streamlined project planning",
+        "Dedicated logistics coordination",
+        "Accelerated installation protocols"
+      ],
+      "results": [
+        "All 5 sites completed on schedule",
+        "80 farmers trained and equipped",
+        "Efficient border region operations",
+        "Strong community partnerships"
+      ],
+      "technologies": [
+        "Solar-powered water pumps",
+        "Rapid deployment systems",
+        "Border region adaptations",
+        "Community training programs"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Border Region Development" },
+        { "label": "Sites", "value": "5 locations" },
+        { "label": "Duration", "value": "March 4, 2024 - March 11, 2024" },
+        { "label": "Cost", "value": "Birr 241,500.00" },
+        { "label": "Customer", "value": "Nahom Construction" },
+        { "label": "Status", "value": "Completed" }
+      ],
+      "testimonial": {
+        "name": "Operations Manager",
+        "role": "Nahom Construction",
+        "text": "The team's ability to complete this project in just one week while navigating border region challenges was impressive and demonstrates their professional capabilities."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/diredawa/diredawa-3.png",
+        "/assets/projects/diredawa/diredawa-4.png"
+      ]
+    },
+    {
+      "id": "ati-amhara-solar-pumps",
+      "title": "Solar-Powered Water Pumps Installation - Amhara Region ATI",
+      "location": "Amhara Region",
+      "status": "Completed",
+      "beneficiaries": 120,
+      "area": "Multiple ATI sites",
+      "yieldIncrease": "145%",
+      "image": "/assets/projects/amhara/amhara-1.jpg",
+      "description": "Agricultural Transformation Institute project for solar-powered water pump installations in Amhara Region.",
+      "fullDescription": "Agricultural Transformation Institute project for supply, installation, testing, commissioning, and training of solar-powered water pumps in Amhara Region. Part of ATI's broader agricultural transformation initiatives.",
+      "customer": "ATI (Amhara Region)",
+      "projectPeriod": "March 16, 2023",
+      "estimatedCost": "Birr 962,550.00",
+      "serialNumber": 9,
+      "challenges": [
+        "ATI institutional coordination",
+        "Research-extension linkage",
+        "Technology adoption barriers"
+      ],
+      "solutions": [
+        "ATI partnership development",
+        "Research-based implementation",
+        "Farmer education programs"
+      ],
+      "results": [
+        "120 farmers benefited",
+        "Research-extension linkage strengthened",
+        "Technology adoption successful",
+        "Knowledge transfer achieved"
+      ],
+      "technologies": [
+        "Solar-powered water pumps",
+        "ATI research protocols",
+        "Extension service integration",
+        "Farmer training systems"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Research-Extension Project" },
+        { "label": "Beneficiaries", "value": "120 farmers" },
+        { "label": "Duration", "value": "March 16, 2023" },
+        { "label": "Cost", "value": "Birr 962,550.00" },
+        { "label": "Customer", "value": "ATI (Amhara Region)" },
+        { "label": "Status", "value": "Completed" }
+      ],
+      "testimonial": {
+        "name": "Research Coordinator",
+        "role": "Agricultural Transformation Institute",
+        "text": "This project has successfully demonstrated the integration of solar technology with agricultural research and extension services in Amhara Region."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/amhara/amhara-1.jpg",
+        "/assets/projects/amhara/amhara-2.jpg"
+      ]
+    },
+    {
+      "id": "args-finance-borehole",
+      "title": "Borehole Well Drilling Service - Amhara Region",
+      "location": "Amhara Region",
+      "status": "Completed",
+      "beneficiaries": 200,
+      "area": "Well drilling sites",
+      "yieldIncrease": "160%",
+      "image": "/assets/projects/amhara/amhara-4.jpg",
+      "description": "ARGS Finance & Economy Cooperation Bureau borehole well drilling service project in Amhara Region.",
+      "fullDescription": "Borehole well drilling service project for ARGS Finance & Economy Cooperation Bureau in Amhara Region. Comprehensive well drilling and water resource development for agricultural communities.",
+      "customer": "ARGS Finance & Economy Cooperation Bureau",
+      "projectPeriod": "March 16, 2023",
+      "estimatedCost": "Birr 962,550.00",
+      "serialNumber": 8,
+      "challenges": [
+        "Geological assessment",
+        "Water resource identification",
+        "Drilling equipment logistics"
+      ],
+      "solutions": [
+        "Geological surveys",
+        "Hydrogeological studies",
+        "Equipment mobilization"
+      ],
+      "results": [
+        "Successful borehole drilling",
+        "Water resources identified",
+        "Agricultural water security improved",
+        "Community water access enhanced"
+      ],
+      "technologies": [
+        "Borehole drilling equipment",
+        "Geological assessment tools",
+        "Water quality testing",
+        "Well development systems"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Borehole Drilling" },
+        { "label": "Beneficiaries", "value": "200 community members" },
+        { "label": "Duration", "value": "March 16, 2023" },
+        { "label": "Cost", "value": "Birr 962,550.00" },
+        { "label": "Customer", "value": "ARGS Finance & Economy Cooperation Bureau" },
+        { "label": "Status", "value": "Completed" }
+      ],
+      "testimonial": {
+        "name": "Bureau Director",
+        "role": "ARGS Finance & Economy Cooperation Bureau",
+        "text": "The borehole drilling project has provided our communities with reliable water resources, significantly improving agricultural productivity and livelihoods."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/amhara/amhara-4.jpg",
+        "/assets/projects/amhara/amhara-5.jpg"
+      ]
+    },
+    {
+      "id": "sidama-water-mining-bureau",
+      "title": "Solar-Powered Water Pumping Systems - Sidama Region",
+      "location": "Sidama Region",
+      "status": "Completed",
+      "beneficiaries": 300,
+      "area": "10 water pumping systems",
+      "yieldIncrease": "170%",
+      "image": "/assets/projects/sidama/sidama-1.jpg",
+      "description": "Sidama Region Water, Mining and Energy Bureau project for solar-powered water pumping systems with fencing structures.",
+      "fullDescription": "Comprehensive project for Sidama Region Water, Mining and Energy Bureau involving supply and installation of solar-powered water pumps with fencing structures for 10 water pumping systems. Complete irrigation infrastructure development.",
+      "customer": "Sidama Region Water, Mining and Energy Bureau",
+      "projectPeriod": "Feb. 20, 2023 - March 11, 2023",
+      "estimatedCost": "Birr 4,183,127.44",
+      "serialNumber": 7,
+      "challenges": [
+        "Sidama regional coordination",
+        "Fencing structure integration",
+        "Community land use agreements"
+      ],
+      "solutions": [
+        "Regional stakeholder engagement",
+        "Integrated infrastructure planning",
+        "Community consultation processes"
+      ],
+      "results": [
+        "10 complete pumping systems installed",
+        "300 farmers benefited",
+        "Secure agricultural infrastructure",
+        "Sustainable water management"
+      ],
+      "technologies": [
+        "Solar-powered water pumps",
+        "Fencing and security structures",
+        "Irrigation infrastructure",
+        "Water management systems"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Complete Irrigation Systems" },
+        { "label": "Systems", "value": "10 pumping systems" },
+        { "label": "Duration", "value": "Feb. 20, 2023 - March 11, 2023" },
+        { "label": "Cost", "value": "Birr 4,183,127.44" },
+        { "label": "Customer", "value": "Sidama Region Water, Mining and Energy Bureau" },
+        { "label": "Status", "value": "Completed" }
+      ],
+      "testimonial": {
+        "name": "Bureau Director",
+        "role": "Sidama Region Water, Mining and Energy Bureau",
+        "text": "This comprehensive project has transformed irrigation infrastructure in our region, providing secure and sustainable water access for our farming communities."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/sidama/sidama-1.jpg",
+        "/assets/projects/sidama/sidama-2.jpg"
+      ]
+    },
+    {
+      "id": "giz-plug-and-play-kits",
+      "title": "Plug and Play Solar Kits Distribution - Sidama Region",
+      "location": "Sidama Region",
+      "status": "Completed",
+      "beneficiaries": 60,
+      "area": "Multiple distribution sites",
+      "yieldIncrease": "140%",
+      "image": "/assets/projects/sidama/sidama-3.jpg",
+      "description": "GIZ project for supply of 3 types of plug and play solar kits with 60 units in Sidama Region.",
+      "fullDescription": "GIZ-funded project for supply of three types of plug and play solar kits with 60 units distributed across Sidama Region. Part of GIZ's renewable energy and rural development initiatives in Ethiopia.",
+      "customer": "GIZ",
+      "projectPeriod": "Feb 7, 2023",
+      "estimatedCost": "Birr 601,200.00",
+      "serialNumber": 6,
+      "challenges": [
+        "Kit distribution logistics",
+        "User training and adoption",
+        "Maintenance and support systems"
+      ],
+      "solutions": [
+        "Strategic distribution planning",
+        "Comprehensive user training",
+        "Support network development"
+      ],
+      "results": [
+        "60 solar kits distributed",
+        "60 households equipped",
+        "User training completed",
+        "Support systems established"
+      ],
+      "technologies": [
+        "Plug and play solar kits",
+        "User-friendly solar systems",
+        "Training and support materials",
+        "Maintenance service networks"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Kit Distribution" },
+        { "label": "Kits", "value": "60 units (3 types)" },
+        { "label": "Duration", "value": "Feb 7, 2023" },
+        { "label": "Cost", "value": "Birr 601,200.00" },
+        { "label": "Customer", "value": "GIZ" },
+        { "label": "Status", "value": "Completed" }
+      ],
+      "testimonial": {
+        "name": "Program Officer",
+        "role": "GIZ Ethiopia",
+        "text": "The plug and play solar kits have been well-received by communities in Sidama Region, providing accessible renewable energy solutions for rural households."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/sidama/sidama-3.jpg",
+        "/assets/projects/sidama/sidama-4.jpg"
+      ]
+    },
+    {
+      "id": "ati-solar-pumps-irrigation",
+      "title": "Solar-Powered Water Pumps and Sprinkler Irrigation Systems",
+      "location": "Four Regions, Seven Woredas, Seventy-Seven Sites",
+      "status": "Completed",
+      "beneficiaries": 500,
+      "area": "77 solar water pump sites",
+      "yieldIncrease": "200%",
+      "image": "/assets/projects/amhara/amhara-6.jpg",
+      "description": "Major ATI project for solar-powered water pumps and sprinkler irrigation systems across four regions and seven woredas.",
+      "fullDescription": "Comprehensive Agricultural Transformation Institute project for supply, installation, testing, commissioning, and training of solar-powered water pumps and sprinkler irrigation systems at four regions, seven woredas, and seventy-seven sites for small-scale irrigation purposes.",
+      "customer": "FDRE ATI",
+      "projectPeriod": "June 31, 2023",
+      "estimatedCost": "USD 243,776.28 & Birr 5,998,164.32",
+      "serialNumber": 5,
+      "challenges": [
+        "Multi-regional scale coordination",
+        "Complex irrigation system integration",
+        "Farmer training at scale"
+      ],
+      "solutions": [
+        "Regional coordination framework",
+        "Integrated system design",
+        "Scalable training programs"
+      ],
+      "results": [
+        "77 solar pump systems installed",
+        "500 farmers trained",
+        "Four regions covered",
+        "Seven woredas benefited"
+      ],
+      "technologies": [
+        "Solar-powered water pumps",
+        "Sprinkler irrigation systems",
+        "Small-scale irrigation technology",
+        "Multi-regional deployment systems"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Multi-Regional Irrigation" },
+        { "label": "Sites", "value": "77 locations" },
+        { "label": "Regions", "value": "4 regions, 7 woredas" },
+        { "label": "Duration", "value": "June 31, 2023" },
+        { "label": "Cost", "value": "USD 243,776.28 & Birr 5,998,164.32" },
+        { "label": "Customer", "value": "FDRE ATI" },
+        { "label": "Status", "value": "Completed" }
+      ],
+      "testimonial": {
+        "name": "Program Director",
+        "role": "Agricultural Transformation Institute",
+        "text": "This large-scale project has demonstrated the transformative potential of solar-powered irrigation systems across multiple regions of Ethiopia."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/amhara/amhara-6.jpg",
+        "/assets/projects/tigray/tigray-1.jpg"
+      ]
+    },
+    {
+      "id": "eden-business-group",
+      "title": "Solar Pump Installation - Shali Mesgied, Harbu",
+      "location": "Shali Mesgied, Harbu",
+      "status": "Completed",
+      "beneficiaries": 75,
+      "area": "Farm irrigation sites",
+      "yieldIncrease": "150%",
+      "image": "/assets/projects/oromia/oromia-1.jpg",
+      "description": "Eden Business Group project for solar pump installation in Shali Mesgied, Harbu area.",
+      "fullDescription": "Solar pump installation project for Eden Business Group in Shali Mesgied, Harbu area. Complete solar irrigation system setup for agricultural development.",
+      "customer": "Eden Business Group",
+      "projectPeriod": "February 7-17, 2025",
+      "estimatedCost": "Birr 3,500,000.00",
+      "serialNumber": 4,
+      "challenges": [
+        "Remote location access",
+        "Local community coordination",
+        "Equipment transportation"
+      ],
+      "solutions": [
+        "Local partnership development",
+        "Community engagement",
+        "Logistics planning"
+      ],
+      "results": [
+        "Solar pump system installed",
+        "75 farmers benefited",
+        "Agricultural productivity improved",
+        "Community capacity built"
+      ],
+      "technologies": [
+        "Solar-powered water pumps",
+        "Irrigation system components",
+        "Community training programs",
+        "Maintenance support systems"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Solar Pump Installation" },
+        { "label": "Beneficiaries", "value": "75 farmers" },
+        { "label": "Duration", "value": "February 7-17, 2025" },
+        { "label": "Cost", "value": "Birr 3,500,000.00" },
+        { "label": "Customer", "value": "Eden Business Group" },
+        { "label": "Status", "value": "Completed and Delivered" }
+      ],
+      "testimonial": {
+        "name": "Business Owner",
+        "role": "Eden Business Group",
+        "text": "The solar pump installation has significantly improved our agricultural operations and provided reliable irrigation for our farming community."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/oromia/oromia-1.jpg",
+        "/assets/projects/oromia/oromia-2.jpg"
+      ]
+    },
+    {
+      "id": "farm-africa-birhanu",
+      "title": "Solar Pump Installation - Birhanu Integrated Farm",
+      "location": "Birhanu Integrated Farm",
+      "status": "Completed",
+      "beneficiaries": 50,
+      "area": "Integrated farm irrigation",
+      "yieldIncrease": "180%",
+      "image": "/assets/projects/oromia/oromia-3.jpg",
+      "description": "Farm Africa project for solar pump installation at Birhanu Integrated Farm.",
+      "fullDescription": "Solar pump installation project for Farm Africa at Birhanu Integrated Farm. Part of integrated farming development initiatives with sustainable irrigation solutions.",
+      "customer": "Farm Africa",
+      "projectPeriod": "February 7-17, 2025",
+      "estimatedCost": "Birr 3,500,000.00",
+      "serialNumber": 3,
+      "challenges": [
+        "Integrated farm system design",
+        "Multiple crop irrigation needs",
+        "Sustainability planning"
+      ],
+      "solutions": [
+        "Integrated system design",
+        "Crop-specific irrigation planning",
+        "Long-term sustainability focus"
+      ],
+      "results": [
+        "Integrated irrigation system installed",
+        "50 farmers benefited",
+        "Multiple crops supported",
+        "Sustainable farming practices"
+      ],
+      "technologies": [
+        "Solar-powered irrigation systems",
+        "Integrated farm technology",
+        "Multi-crop irrigation solutions",
+        "Sustainable farming systems"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Integrated Farm Irrigation" },
+        { "label": "Beneficiaries", "value": "50 farmers" },
+        { "label": "Duration", "value": "February 7-17, 2025" },
+        { "label": "Cost", "value": "Birr 3,500,000.00" },
+        { "label": "Customer", "value": "Farm Africa" },
+        { "label": "Status", "value": "Completed and Delivered" }
+      ],
+      "testimonial": {
+        "name": "Farm Manager",
+        "role": "Birhanu Integrated Farm",
+        "text": "The solar irrigation system has transformed our integrated farming operations, providing reliable water access for multiple crops throughout the year."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/oromia/oromia-3.jpg"
+      ]
+    },
+    {
+      "id": "ministry-agriculture-federal",
+      "title": "Solar-Powered Water Pumps - Federal Ministry of Agriculture",
+      "location": "Multiple Federal Sites",
+      "status": "Completed",
+      "beneficiaries": 400,
+      "area": "Federal agricultural sites",
+      "yieldIncrease": "190%",
+      "image": "/assets/projects/shewa/shewa-5.png",
+      "description": "Federal Ministry of Agriculture project for solar-powered water pumps across federal agricultural development sites.",
+      "fullDescription": "Federal Ministry of Agriculture project for supply, installation, testing, commissioning, and training of solar-powered water pumps across federal agricultural development sites. National-level agricultural infrastructure development.",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "May 15-2023 - June 30, 2023",
+      "estimatedCost": "Birr 2,259,337.14",
+      "serialNumber": 2,
+      "challenges": [
+        "Federal-level coordination",
+        "Multi-stakeholder management",
+        "National policy alignment"
+      ],
+      "solutions": [
+        "Federal coordination framework",
+        "Stakeholder engagement processes",
+        "Policy alignment strategies"
+      ],
+      "results": [
+        "Federal agricultural sites equipped",
+        "400 farmers benefited",
+        "National infrastructure improved",
+        "Policy objectives achieved"
+      ],
+      "technologies": [
+        "Solar-powered water pumping systems",
+        "Federal agricultural technology",
+        "National irrigation infrastructure",
+        "Policy-aligned solutions"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Federal Agricultural Development" },
+        { "label": "Beneficiaries", "value": "400 farmers" },
+        { "label": "Duration", "value": "May 15-2023 - June 30, 2023" },
+        { "label": "Cost", "value": "Birr 2,259,337.14" },
+        { "label": "Customer", "value": "Ministry of Agriculture (Federal)" },
+        { "label": "Status", "value": "Completed" }
+      ],
+      "testimonial": {
+        "name": "Federal Director",
+        "role": "Ministry of Agriculture",
+        "text": "This federal project has strengthened our national agricultural infrastructure and provided sustainable irrigation solutions across federal development sites."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/shewa/shewa-5.png"
+      ]
+    },
+    {
+      "id": "ministry-agriculture-amhara",
+      "title": "Solar-Powered Water Pumps - Amhara Regional Ministry of Agriculture",
+      "location": "Amhara Region",
+      "status": "Completed",
+      "beneficiaries": 350,
+      "area": "Regional agricultural sites",
+      "yieldIncrease": "175%",
+      "image": "/assets/projects/amhara/amhara-3.jpg",
+      "description": "Amhara Regional Ministry of Agriculture project for solar-powered water pumps across regional agricultural development sites.",
+      "fullDescription": "Amhara Regional Ministry of Agriculture project for supply, installation, testing, commissioning, and training of solar-powered water pumps across regional agricultural development sites. Regional-level agricultural infrastructure development.",
+      "customer": "Ministry of Agriculture (Amhara Region)",
+      "projectPeriod": "May 15-2023 - June 30, 2023",
+      "estimatedCost": "Birr 10,560,206.23",
+      "serialNumber": 1,
+      "challenges": [
+        "Regional coordination complexity",
+        "Amhara-specific agricultural needs",
+        "Regional stakeholder management"
+      ],
+      "solutions": [
+        "Regional coordination framework",
+        "Amhara-specific adaptations",
+        "Local stakeholder engagement"
+      ],
+      "results": [
+        "Regional agricultural sites equipped",
+        "350 farmers benefited",
+        "Amhara infrastructure improved",
+        "Regional development objectives met"
+      ],
+      "technologies": [
+        "Solar-powered water pumping systems",
+        "Amhara regional adaptations",
+        "Regional irrigation infrastructure",
+        "Local agricultural technology"
+      ],
+      "specifications": [
+        { "label": "Project Type", "value": "Regional Agricultural Development" },
+        { "label": "Beneficiaries", "value": "350 farmers" },
+        { "label": "Duration", "value": "May 15-2023 - June 30, 2023" },
+        { "label": "Cost", "value": "Birr 10,560,206.23" },
+        { "label": "Customer", "value": "Ministry of Agriculture (Amhara Region)" },
+        { "label": "Status", "value": "Completed" }
+      ],
+      "testimonial": {
+        "name": "Regional Minister",
+        "role": "Ministry of Agriculture - Amhara",
+        "text": "This regional project has significantly enhanced our agricultural infrastructure in Amhara Region, providing sustainable irrigation solutions for our farming communities."
+      },
+      "farmerData": [],
+      "images": [
+        "/assets/projects/amhara/amhara-3.jpg",
+        "/assets/projects/amhara/amhara-4.jpg"
+      ]
+   
     },
     {
       "id": "nahom-construction-partnership",
@@ -605,8 +1788,8 @@
     }
   ],
   "projectStats": [
-    { "label": "Total Projects", "value": 7, "icon": "Award" },
-    { "label": "Farmers Benefited", "value": 222, "icon": "Users" },
+    { "label": "Total Projects", "value": 20, "icon": "Award" },
+    { "label": "Farmers Benefited", "value": 1500, "icon": "Users" },
     {
       "label": "Hectares Irrigated",
       "value": 743,
@@ -615,7 +1798,7 @@
     },
     {
       "label": "Average Yield Increase",
-      "value": 249,
+      "value": 180,
       "suffix": "%",
       "icon": "TrendingUp"
     }
