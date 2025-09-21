@@ -42,7 +42,7 @@ const HeroSlideshow = () => {
     if (isInView) {
       // For 100+
       let current1 = 0;
-      const target1 = 500;
+      const target1 = 100;
       const suffix1 = "+";
       const steps = 40;
       const increment1 = target1 / steps;
