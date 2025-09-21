@@ -1,0 +1,224 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "location": "",
+      "customer": "Central Ethiopia Silte Zone, Silti Woreda",
+      "project": "Supply and Installation of 3 Units 2.2Kw Solar Powered Submersible Pumps",
+      "projectPeriod": "April 20, 2025",
+      "estimated_cost": "Birr 3,400,000.00",
+      "status": "On Progress",
+      "title": "Solar Submersible Pump Installation in Silti Woreda, Ethiopia",
+      "description": "Deployment of three 2.2Kw solar-powered submersible pumps to improve sustainable irrigation and water supply in Central Ethiopia’s Silti Woreda."
+    },
+    {
+      "id": 2,
+      "location": "",
+      "customer": "Generation Integrated Rural Development Consultant",
+      "project": "Supply & Installation of Solar Surface Pump, Fence and Related Works",
+      "projectPeriod": "Feb 2025",
+      "estimated_cost": "Birr 3,500,000.00",
+      "status": "Successfully Completed",
+      "title": "Solar Pump and Infrastructure Project for Rural Development",
+      "description": "Completed installation of solar-powered surface pumps with fencing and related works to support rural infrastructure and agricultural development."
+    },
+    {
+      "id": 3,
+      "location": "",
+      "customer": "Eden Business Group",
+      "project": "Supply and Installation of 2.2Kw Solar Powered Surface Pump and Submersible Pump",
+      "projectPeriod": "December 23-27, 2024",
+      "estimated_cost": "Birr 2,000,000.00",
+      "status": "On Progress",
+      "title": "Dual Solar Pump Installation for Eden Business Group",
+      "description": "Ongoing project involving the installation of both a 2.2Kw solar-powered surface pump and submersible pump for Eden Business Group operations."
+    },
+    {
+      "id": 4,
+      "location": "",
+      "customer": "Farm Africa",
+      "project": "Supply and Installation of 750w Solar Powered Submersible Pumps",
+      "projectPeriod": "December 31, 2024 - January 5, 2025",
+      "estimated_cost": "Birr 450,000.00",
+      "status": "On Progress",
+      "title": "Farm Africa Solar Irrigation System Installation",
+      "description": "Installation of 750w solar-powered submersible pumps to boost irrigation and agricultural output for Farm Africa’s sustainable farming projects."
+    },
+    {
+      "id": 5,
+      "location": "",
+      "customer": "Birhanu Integrated Farm",
+      "project": "Integrated Farm Solar Water Solutions",
+      "projectPeriod": "2024",
+      "estimated_cost": "Birr 2,000,000.00",
+      "status": "Successfully Completed",
+      "title": "Solar Water Systems for Birhanu Integrated Farm",
+      "description": "Implementation of solar-powered water solutions to improve agricultural productivity and ensure long-term sustainability at Birhanu Integrated Farm."
+    },
+    {
+      "id": 6,
+      "location": "",
+      "customer": "Shali Mesgied, Harbu",
+      "project": "Water Well Drilling 80m for Irrigation and Drinking Water",
+      "projectPeriod": "December 25-31, 2024",
+      "estimated_cost": "Birr 2,500,000.00",
+      "status": "Successfully Completed",
+      "title": "80m Water Well Drilling for Harbu Community",
+      "description": "Drilling of an 80-meter deep water well to provide reliable irrigation and clean drinking water supply for the Shali Mesgied community in Harbu."
+    },
+    {
+      "id": 7,
+      "location": "",
+      "customer": "Ministry of Agriculture (Federal)",
+      "project": "Supply and Installation of 16 Solar-Powered Submersible Pumps 5.5Kw",
+      "projectPeriod": "July 15, 2024 – August 30, 2024",
+      "estimated_cost": "Birr 25,357,873.74",
+      "status": "On Progress",
+      "title": "Large-Scale Solar Pump Installation for Federal Ministry of Agriculture",
+      "description": "Nationwide project to install sixteen 5.5Kw solar-powered submersible pumps, supporting sustainable irrigation and food security initiatives."
+    },
+    {
+      "id": 8,
+      "location": "",
+      "customer": "Ministry of Agriculture (Federal)",
+      "project": "Supply and Installation of 6 Solar-Powered Surface Pumps 750w, 1500w and 2.2Kw",
+      "projectPeriod": "July 1, 2024 – August 30, 2024",
+      "estimated_cost": "Birr 4,957,287.56",
+      "status": "90% Completed",
+      "title": "Solar Surface Pump Installation for Ministry of Agriculture",
+      "description": "Implementation of six solar-powered surface pumps of varying capacities to enhance irrigation and agricultural water management."
+    },
+    {
+      "id": 9,
+      "location": "",
+      "customer": "Ministry of Agriculture (Amhara Region)",
+      "project": "Supply Drilling Machine Accessories",
+      "projectPeriod": "July 1 – July 7, 2024",
+      "estimated_cost": "Birr 3,440,152.12",
+      "status": "Successfully Completed",
+      "title": "Supply of Drilling Machine Accessories for Amhara Region",
+      "description": "Provision of drilling machine accessories to support water well drilling and agricultural irrigation initiatives in the Amhara Region."
+    },
+    {
+      "id": 10,
+      "location": "",
+      "customer": "Nahom Construction",
+      "project": "MOA Supply, Installation, Testing, Commissioning, and Training of Solar-Powered Water Pumps – Sub Contract Amhara Region 16 Sites Pump Installation",
+      "projectPeriod": "July 1, 2024 – July 30, 2024",
+      "estimated_cost": "Birr 1,148,160.00",
+      "status": "Successfully Completed",
+      "title": "Solar Pump Project for 16 Sites in Amhara Region",
+      "description": "Turnkey solar pump installation across 16 sites in Amhara Region, including training, commissioning, and handover under the Ministry of Agriculture."
+    },
+    {
+      "id": 11,
+      "location": "",
+      "customer": "Nahom Construction",
+      "project": "MOA Supply, Installation, Testing, Commissioning, and Training of Solar-Powered Water Pumps – Sub Contract South, Central Ethiopia and Sidama Region 16 Sites Pump Installation",
+      "projectPeriod": "March 24, 2024 – April 19, 2024",
+      "estimated_cost": "Birr 1,163,340.00",
+      "status": "Successfully Completed",
+      "title": "Solar Water Pump Installations in South, Central Ethiopia and Sidama",
+      "description": "Comprehensive solar-powered pump installations across 16 sites in multiple Ethiopian regions under Ministry of Agriculture projects."
+    },
+    {
+      "id": 12,
+      "location": "",
+      "customer": "Nahom Construction",
+      "project": "MOA Supply, Installation, Testing, Commissioning, and Training of Solar-Powered Water Pumps – Sub Contract Dire Dewa and Hareri Region 5 Sites Installation",
+      "projectPeriod": "March 4, 2024 – March 11, 2024",
+      "estimated_cost": "Birr 241,500.00",
+      "status": "Successfully Completed",
+      "title": "Solar Pump Installations in Dire Dewa and Hareri Region",
+      "description": "Delivery of solar-powered water pumps across five sites in Dire Dewa and Hareri, enhancing access to irrigation and clean water systems."
+    },
+    {
+      "id": 13,
+      "location": "",
+      "customer": "ATI (Amhara Region)",
+      "project": "Supply and Installation of Solar-Powered Water Lifting Technology",
+      "projectPeriod": "May 15, 2023 – June 30, 2023",
+      "estimated_cost": "Birr 2,259,337.14",
+      "status": "Successfully Completed",
+      "title": "Solar Water Lifting Technology for Amhara Region",
+      "description": "Deployment of solar-powered water lifting systems to improve irrigation, water accessibility, and agricultural productivity in the Amhara Region."
+    },
+    {
+      "id": 14,
+      "location": "",
+      "customer": "ATI (Amhara Region)",
+      "project": "Solar-Powered Water Lifting Supply, Installation and Commission Including Pipeline",
+      "projectPeriod": "May 15, 2023 – June 30, 2023",
+      "estimated_cost": "Birr 10,560,206.23",
+      "status": "Successfully Completed",
+      "title": "Solar Water Supply and Pipeline Commissioning in Amhara",
+      "description": "Comprehensive solar-powered water lifting and pipeline installation project to expand irrigation and water supply infrastructure in Amhara."
+    },
+    {
+      "id": 15,
+      "location": "",
+      "customer": "ARGS Finance & Economy Cooperation Bureau",
+      "project": "Borehole Well Drilling Service",
+      "projectPeriod": "March 16, 2023",
+      "estimated_cost": "Birr 962,550.00",
+      "status": "Successfully Completed",
+      "title": "Borehole Drilling for ARGS Finance & Economy Cooperation Bureau",
+      "description": "Borehole well drilling service delivered to ARGS Bureau to support sustainable water access for communities and agricultural projects."
+    },
+    {
+      "id": 16,
+      "location": "",
+      "customer": "Sidama Region Water, Mining and Energy Bureau",
+      "project": "Supply and Install Solar-Powered Water Pumps with PV Fencing Structures for 10 Water Pumping Systems",
+      "projectPeriod": "Feb 20, 2023 – March 11, 2023",
+      "estimated_cost": "Birr 4,183,127.44",
+      "status": "Successfully Completed",
+      "title": "Solar Pumping Systems with PV Fencing in Sidama",
+      "description": "Implementation of ten solar-powered water pumping systems with PV fencing to enhance security and water distribution in Sidama Region."
+    },
+    {
+      "id": 17,
+      "location": "",
+      "customer": "GIZ",
+      "project": "Supply Three Types of Plug and Play Solar Kits 60 Units",
+      "projectPeriod": "Feb 7, 2023",
+      "estimated_cost": "Birr 601,200.00",
+      "status": "Successfully Completed",
+      "title": "Supply of 60 Plug-and-Play Solar Kits for GIZ",
+      "description": "Provision of 60 plug-and-play solar kits in three variants to support renewable energy access and community development under GIZ initiatives."
+    },
+    {
+      "id": 18,
+      "location": "",
+      "customer": "FDRE ATI",
+      "project": "Supply, Installation, Testing, Commissioning, and Training of Solar-Powered Water Pumps and Sprinkler Irrigation Systems at Four Regions, Seven Woredas, Seventy-Seven Solar Water Pumps for Small Scale Irrigation Purposes",
+      "projectPeriod": "June 31, 2023",
+      "estimated_cost": "USD 243,76.28 & Birr 5,998,164.32",
+      "status": "On Progress (90% Completed)",
+      "title": "Nationwide Solar Pump and Sprinkler Irrigation Project for FDRE ATI",
+      "description": "Large-scale project delivering seventy-seven solar-powered water pumps and sprinkler irrigation systems across four regions and seven Woredas."
+    },
+    {
+      "id": 19,
+      "location": "",
+      "customer": "HRNS-Ethiopia",
+      "project": "Supply and Installation of Solar Powered Pumps",
+      "projectPeriod": "2 months",
+      "estimated_cost": "Birr 12,111,444.67",
+      "status": "Delivered",
+      "title": "Solar Pump Installation Project for HRNS-Ethiopia",
+      "description": "Successful supply and delivery of solar-powered pumping systems to strengthen agricultural irrigation capacity under HRNS Ethiopia programs."
+    },
+    {
+      "id": 20,
+      "location": "",
+      "customer": "EECMY-DASSC",
+      "project": "Solarization, Solar System Supply and Installation for Hamacho, Gemcho and Duba Water Supply, Bensa Woreda, Sidama Regional State",
+      "projectPeriod": "30 days",
+      "estimated_cost": "Birr 10,232,519.20",
+      "status": "Completed",
+      "title": "Solarization of Water Supply Systems in Sidama Region",
+      "description": "Comprehensive solar system installation for water supply in Hamacho, Gemcho, and Duba, ensuring sustainable access in Bensa Woreda, Sidama State."
+    }
+  ]
+}

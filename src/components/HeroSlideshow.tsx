@@ -40,7 +40,7 @@ const HeroSlideshow = () => {
 
   useEffect(() => {
     if (isInView) {
-      // For 500+
+      // For 100+
       let current1 = 0;
       const target1 = 500;
       const suffix1 = "+";

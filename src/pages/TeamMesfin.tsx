@@ -159,7 +159,7 @@ const TeamMesfinPage = () => {
               <Card className="border-0 shadow-elegant text-center">
                 <CardHeader>
                   <Users className="w-12 h-12 mx-auto mb-4 text-primary" />
-                  <CardTitle className="text-2xl font-bold text-primary">500+</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-primary">100+</CardTitle>
                   <CardDescription>Farmers Trained</CardDescription>
                 </CardHeader>
                 <CardContent>

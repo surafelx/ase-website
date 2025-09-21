@@ -1,0 +1,5 @@
+There's a white button with white text, in the call to action section fix that, 
+and also for the admin dashboard, make all the information related to Agri-Sun Ethiopia, and make sure it looks good and flows good with mock data and no authentication for nwo
+
+
+For the website I have added testiomines of a4 paper sized pngs, i will link them just create a component I can reuse in the home, about and projects page, remove the current one first though

@@ -6,7 +6,7 @@ const VideoSection = () => {
   const videoStats = [
     {
       icon: Users,
-      number: "500+",
+      number: "100+",
       label: "Farmers Trained",
       description: "Comprehensive training programs"
     },

@@ -19,7 +19,7 @@ const About = () => {
   const achievements = [
     {
       icon: Users,
-      number: "500+",
+      number: "100+",
       label: "Farmers Empowered"
     },
     {

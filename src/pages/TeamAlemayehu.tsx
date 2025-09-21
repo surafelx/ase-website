@@ -56,7 +56,7 @@ const TeamAlemayehuPage = () => {
       role: "Training Program Director",
       year: "2019-2023",
       description: "Developed comprehensive training programs for farmers and technicians",
-      impact: "500+ farmers trained, improved project sustainability"
+      impact: "100+ farmers trained, improved project sustainability"
     }
   ];
 

@@ -1,0 +1,19 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Amhara National State Bureau of Agriculture",
+      "date": "July 20, 2024"
+    },
+    {
+      "id": 2,
+      "name": " Ethiopian Agricultural Transformation Institute",
+      "date": "May 5, 2023"
+    },
+    {
+      "id": 3,
+      "name": "Solar Village Ethiopia",
+      "date": "Feb 13, 2023"
+    }
+  ]
+}

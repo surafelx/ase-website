@@ -10,22 +10,13 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Users, TrendingUp, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import projectsData from "@/data/projects.json";
 
 const Projects = () => {
   const navigate = useNavigate();
 
-  // Fetch featured projects from backend
-  const { data: projectsData, isLoading } = useQuery({
-    queryKey: ['featured-projects'],
-    queryFn: async () => {
-      const response = await axios.get('http://localhost:5000/api/content/featured');
-      return response.data.data;
-    }
-  });
-
-  const projects = projectsData || [];
+  // Use local projects data
+  const projects = projectsData.projects.slice(0, 3); // Show only first 3 projects as featured
 
   const getStatusColor = (status) => {
     switch (status) {
@@ -55,15 +46,7 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 max-w-7xl mx-auto">
-          {isLoading ? (
-            // Loading skeleton
-            Array.from({ length: 3 }).map((_, index) => (
-              <div key={index} className="animate-pulse">
-                <div className="bg-gray-300 h-96 rounded-lg"></div>
-              </div>
-            ))
-          ) : (
-            projects.map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 50 }}
@@ -81,7 +64,7 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-agriculture-green-dark/70 group-hover:bg-agriculture-green-dark/80 transition-all duration-500"></div>
                   <motion.img
                     className="h-full w-full object-cover"
-                    src={project.image}
+                    src="/assets/projects/amhara/amhara-1.jpg"
                   />
                   {/* Status Badge */}
                   <Badge
@@ -112,27 +95,20 @@ const Projects = () => {
                   </p>
 
                   {/* Key Metrics */}
-                  <div className="grid grid-cols-3 gap-3 mb-4">
+                  <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="text-center bg-white/10 rounded-lg p-2 backdrop-blur-sm">
                       <Users className="w-4 h-4 mx-auto mb-1 text-white" />
                       <div className="text-sm font-bold text-white">
-                        {project.beneficiaries}
+                        {project.serialNumber}
                       </div>
-                      <div className="text-xs text-white/80">Farmers</div>
-                    </div>
-                    <div className="text-center bg-white/10 rounded-lg p-2 backdrop-blur-sm">
-                      <MapPin className="w-4 h-4 mx-auto mb-1 text-white" />
-                      <div className="text-sm font-bold text-white">
-                        {project.area.split(" ")[0]}
-                      </div>
-                      <div className="text-xs text-white/80">Hectares</div>
+                      <div className="text-xs text-white/80">Project #</div>
                     </div>
                     <div className="text-center bg-white/10 rounded-lg p-2 backdrop-blur-sm">
                       <TrendingUp className="w-4 h-4 mx-auto mb-1 text-white" />
                       <div className="text-sm font-bold text-white">
-                        {project.yieldIncrease}
+                        {project.estimatedCost}
                       </div>
-                      <div className="text-xs text-white/80">Increase</div>
+                      <div className="text-xs text-white/80">Cost</div>
                     </div>
                   </div>
 
@@ -144,8 +120,7 @@ const Projects = () => {
                 </div>
               </Card>
             </motion.div>
-            ))
-          )}
+          ))}
         </div>
 
         {/* CTA */}

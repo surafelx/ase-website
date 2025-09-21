@@ -39,7 +39,7 @@ import {
   Calendar,
   DollarSign,
 } from "lucide-react";
-import heroAgriculture from "@/assets/team/team-3.jpg";
+import heroAgriculture from "@/assets/services/maintenance-and-support.jpg";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";

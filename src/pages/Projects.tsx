@@ -38,7 +38,7 @@ import {
 import { motion } from "framer-motion";
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import projectsData from "@/data/projects.json";
+import projectsData from "@/data/projects/projects.json";
 
 const ProjectsPage = () => {
   const navigate = useNavigate();
@@ -49,12 +49,12 @@ const ProjectsPage = () => {
 
   const projects = projectsData.projects;
 
-  // Collect all project images for the carousel
+  // Collect all project images for the carousel - use default image since images not in raw data
   const allProjectImages = projects.map((project) => ({
-    src: project.image,
+    src: "/assets/projects/amhara/amhara-1.jpg", // Default image
     projectTitle: project.title,
     projectId: project.id,
-    location: project.location,
+    location: "",
   }));
 
   useEffect(() => {
@@ -67,33 +67,20 @@ const ProjectsPage = () => {
   const projectStats = [
     { label: "Total Projects", value: projects.length, icon: Award },
     {
-      label: "Farmers Benefited",
-      value: projects.reduce((sum, project) => sum + project.beneficiaries, 0),
+      label: "Projects Completed",
+      value: projects.filter(p => p.status === "Completed").length,
       icon: Users,
     },
     {
-      label: "Hectares Irrigated",
-      value: Math.round(
-        projects.reduce((sum, project) => {
-          const area = parseFloat(project.area.split(" ")[0]) || 0;
-          return sum + area;
-        }, 0)
-      ),
-      suffix: "+",
+      label: "Projects In Progress",
+      value: projects.filter(p => p.status === "In Progress").length,
+      suffix: "",
       icon: MapPin,
     },
     {
-      label: "Average Yield Increase",
-      value: Math.round(
-        projects.reduce((sum, project) => {
-          const increase =
-            parseInt(
-              project.yieldIncrease.replace("%", "").replace("Expected ", "")
-            ) || 0;
-          return sum + increase;
-        }, 0) / projects.length
-      ),
-      suffix: "%",
+      label: "Total Investment",
+      value: "Birr 100M+",
+      suffix: "",
       icon: TrendingUp,
     },
   ];
@@ -117,9 +104,7 @@ const ProjectsPage = () => {
         project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         project.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        project.technologies.some((tech) =>
-          tech.toLowerCase().includes(searchTerm.toLowerCase())
-        );
+        project.customer.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesStatus =
         statusFilter === "all" || project.status === statusFilter;
@@ -566,9 +551,9 @@ const ProjectsPage = () => {
                     {/* Full Card Background Image */}
 
                     <div className="absolute inset-0 bg-gradient-primary">
-                      <motion.img 
+                      <motion.img
                       className="h-full w-full object-cover"
-                      src={project.image} />
+                      src="/assets/projects/amhara/amhara-1.jpg" />
                       <div className="absolute inset-0 bg-agriculture-green-dark/60"></div>
                     </div>
 
@@ -602,27 +587,20 @@ const ProjectsPage = () => {
                       </p>
 
                       {/* Key Metrics */}
-                      <div className="grid grid-cols-3 gap-4 mb-6">
+                      <div className="grid grid-cols-2 gap-4 mb-6">
                         <div className="text-center bg-white/10 rounded-lg p-3 backdrop-blur-sm">
-                          <Users className="w-6 h-6 mx-auto mb-2 text-white" />
+                          <Award className="w-6 h-6 mx-auto mb-2 text-white" />
                           <div className="text-lg font-bold text-white">
-                            {project.beneficiaries}
+                            {project.id}
                           </div>
-                          <div className="text-sm text-white/80">Farmers</div>
+                          <div className="text-sm text-white/80">Project #</div>
                         </div>
                         <div className="text-center bg-white/10 rounded-lg p-3 backdrop-blur-sm">
-                          <MapPin className="w-6 h-6 mx-auto mb-2 text-white" />
+                          <Calendar className="w-6 h-6 mx-auto mb-2 text-white" />
                           <div className="text-lg font-bold text-white">
-                            {project.area.split(" ")[0]}
+                            {project.projectPeriod || "Ongoing"}
                           </div>
-                          <div className="text-sm text-white/80">Hectares</div>
-                        </div>
-                        <div className="text-center bg-white/10 rounded-lg p-3 backdrop-blur-sm">
-                          <TrendingUp className="w-6 h-6 mx-auto mb-2 text-white" />
-                          <div className="text-lg font-bold text-white">
-                            {project.yieldIncrease}
-                          </div>
-                          <div className="text-sm text-white/80">Increase</div>
+                          <div className="text-sm text-white/80">Period</div>
                         </div>
                       </div>
 

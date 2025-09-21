@@ -74,7 +74,6 @@ const Projects = () => {
       beneficiaries: 90,
       yieldIncrease: '30% increase',
       area: '22 hectares',
-      area: '22 hectares',
       description: 'Solar battery storage system installation for reliable power supply in remote Afar region farming communities.',
       createdAt: '2024-08-28'
     }

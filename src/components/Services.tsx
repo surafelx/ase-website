@@ -82,9 +82,9 @@ const Services = () => {
 
       <div className="container mx-auto px-8 relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground  mb-6">
             Turn-Key Solutions for
-            <span className="block text-transparent bg-gradient-primary bg-clip-text">
+            <span className="block text-transparent bg-gradient-primary pb-6 bg-clip-text">
               Sustainable Agriculture
             </span>
           </h2>
