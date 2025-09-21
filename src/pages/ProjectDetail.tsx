@@ -12,44 +12,17 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
-import {
-  Calendar,
   User,
   MapPin,
-  TrendingUp,
-  CheckCircle,
-  X,
   ExternalLink,
-  Clock,
-  Target,
   Award,
-  Users,
-  Wrench,
-  Phone,
   Mail,
   ArrowLeft,
   Globe,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-
-import tigray1 from "@/assets/projects/tigray/tigray-1.jpg";
-import tigray2 from "@/assets/projects/tigray/tigray-2.jpg";
-import tigray3 from "@/assets/projects/tigray/tigray-3.jpg";
-import tigray4 from "@/assets/projects/tigray/tigray-4.jpg";
-import tigray5 from "@/assets/projects/tigray/tigray-5.jpg";
-import tigray6 from "@/assets/projects/tigray/tigray-6.jpg";
-
-import amhara1 from "@/assets/projects/amhara/amhara-1.jpg";
+import { useState } from "react";
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
@@ -113,7 +86,7 @@ const ProjectDetail = () => {
       >
         <div className="absolute inset-0 overflow-hidden">
           <motion.img
-            src="/assets/projects/amhara/amhara-1.jpg"
+            src=""
             alt={project.title}
             className="w-full h-full object-cover"
             animate={{ scale: [1, 1.1, 1] }}

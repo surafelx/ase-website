@@ -6,9 +6,9 @@ import moaLogo from "@//assets/clients/Ministry of Agriculture Ethiopia.png";
 import srwmebLogo from "@/assets/clients/Sidama Region Water, Mining and Energy Bureau.png";
 import preciseLogo from "@/assets/clients/Precise Ethiopia Growth Accelerator.svg";
 import crownLogo from "@/assets/clients/Crown Micro Global.png";
-
+import hoberLogo from "@/assets/clients/Hober Pumps.png";
+import diffulLogo from "@/assets/clients/Difful.png"
 import {
-
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -24,9 +24,9 @@ const clients = [
     alt: "GIZ - Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH",
   },
   {
-    name: "Ethiopian Agricultural Transformation Agency",
+    name: "Ethiopian Agricultural Transformation Institute",
     logo: atiLogo,
-    alt: "Ethiopian Agricultural Transformation Agency Logo",
+    alt: "Ethiopian Agricultural Transformation Institute Logo",
   },
   {
     name: "Ministry of Agriculture Ethiopia",
@@ -47,6 +47,11 @@ const clients = [
     name: "Crown Micro Global",
     logo: crownLogo,
     alt: "Crown Micro Global",
+  },
+  {
+    name: "Difful Pump",
+    logo: diffulLogo,
+    alt: "Difful Pump",
   },
 ];
 

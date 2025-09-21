@@ -1,9 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useNavigate } from "react-router-dom";
 import acknowledgmentsData from "@/data/acknowledgments/acknowledgments.json";
 
 const Testimonials = () => {
+  const navigate = useNavigate();
+
   // Transform acknowledgments data to testimonials format
   const testimonials = acknowledgmentsData.testimonials.map((ack) => {
     // Create appropriate testimonial data based on the acknowledgment
@@ -39,7 +42,7 @@ const Testimonials = () => {
   });
 
   return (
-    <section className="py-20 bg-agriculture-green-light/20">
+    <section id="testimonials" className="py-20 bg-agriculture-green-light/20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -101,10 +104,22 @@ const Testimonials = () => {
             Join the ranks of recognized institutions and organizations working with AgriSun Ethiopia for sustainable agricultural development.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-agriculture-green hover:bg-agriculture-green-dark text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-agriculture">
+            <button
+              onClick={() => navigate("/contact")}
+              className="bg-agriculture-green hover:bg-agriculture-green-dark text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-agriculture"
+            >
               Partner With Us
             </button>
-            <button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button
+              onClick={() => {
+                // Scroll to the testimonials section
+                const testimonialsSection = document.getElementById('testimonials');
+                if (testimonialsSection) {
+                  testimonialsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
               View Acknowledgments
             </button>
           </div>

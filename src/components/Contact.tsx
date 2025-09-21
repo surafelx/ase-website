@@ -3,8 +3,29 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    setTimeout(() => {
+      alert("Thank you for your inquiry! We'll contact you within 24 hours.");
+      setIsSubmitting(false);
+      // Reset form
+      (e.target as HTMLFormElement).reset();
+    }, 1000);
+  };
+
+  const handleScheduleVisit = () => {
+    // For now, just show an alert. In a real app, this would open a calendar or contact form
+    alert("Site visit scheduling coming soon! Please use the contact form above to get started.");
+  };
+
   return (
     <section id="contact" className="py-20 bg-sky-blue">
       <div className="container mx-auto px-6">
@@ -24,7 +45,7 @@ const Contact = () => {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-foreground mb-6">Request Free Consultation</h3>
               
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
@@ -71,12 +92,13 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  size="lg" 
+                <Button
+                  type="submit"
+                  size="lg"
                   className="w-full bg-primary hover:bg-agriculture-green-dark text-white shadow-agriculture"
+                  disabled={isSubmitting}
                 >
-                  Get Free Consultation
+                  {isSubmitting ? "Sending..." : "Get Free Consultation"}
                 </Button>
               </form>
             </CardContent>
@@ -143,10 +165,11 @@ const Contact = () => {
               <p className="text-white/90 mb-6">
                 Join hundreds of farmers who have already transformed their operations with our solar irrigation solutions.
               </p>
-              <Button 
-                variant="secondary" 
-                size="lg" 
+              <Button
+                variant="secondary"
+                size="lg"
                 className="bg-white text-agriculture-green hover:bg-white/90"
+                onClick={handleScheduleVisit}
               >
                 Schedule Site Visit
               </Button>

@@ -62,10 +62,10 @@ const Projects = () => {
                 {/* Large Image Background */}
                 <div className="relative h-[44rem] bg-gradient-primary overflow-hidden">
                   <div className="absolute inset-0 bg-agriculture-green-dark/70 group-hover:bg-agriculture-green-dark/80 transition-all duration-500"></div>
-                  <motion.img
+                  {/* <motion.img
                     className="h-full w-full object-cover"
-                    src="/assets/projects/amhara/amhara-1.jpg"
-                  />
+                    src=""
+                  /> */}
                   {/* Status Badge */}
                   <Badge
                     className={`absolute top-4 right-4 ${getStatusColor(

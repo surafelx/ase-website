@@ -24,7 +24,6 @@ import hero1 from "@/assets/heroes/hero-6.jpg";
 import hero2 from "@/assets/heroes/hero-7.jpg";
 import hero3 from "@/assets/heroes/hero-8.jpg";
 
-
 const HeroSlideshow = () => {
   const plugin = useRef(Autoplay({ delay: 8000, stopOnInteraction: true }));
   const ref = useRef(null);
@@ -100,7 +99,7 @@ const HeroSlideshow = () => {
       title: "Turn-Key Solutions for",
       subtitle: "Sustainable Agriculture",
       subtitle2: "From Borehole to Harvest",
-            description:
+      description:
         "Comprehensive solar-powered solutions for small-scale farmers, from borehole drilling to grain milling systems.",
       alt: "Agri-Sun Ethiopia Logo",
     },
@@ -196,31 +195,28 @@ const HeroSlideshow = () => {
                     </motion.p>
 
                     <motion.div
-                      className="flex flex-col sm:flex-row gap-4 mb-12 z-20 relative"
+                      className="flex flex-col sm:flex-row gap-6 mb-12 z-20 relative"
                       initial={{ opacity: 0, y: 30 }}
                       animate={
                         isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
                       }
                       transition={{ duration: 0.8, delay: 0.8 }}
                     >
-                      <Button
-                        size="lg"
-                        className="bg-solar-gold hover:bg-agriculture-green-dark text-white text-lg px-8 py-4 shadow-agriculture z-[50]"
-                        onClick={() => navigate("/get-started")}
+                      <Link
+                        to="/get-started"
+                        className="flex rounded-xl bg-solar-gold hover:bg-agriculture-green-dark text-white text-lg px-10 py-4 shadow-agriculture z-[50]"
                       >
                         Start Your Project
                         <ArrowRight className="ml-2 w-5 h-5" />
-                      </Button>
+                      </Link>
 
-                      <Button
-                        variant="secondary"
-                        size="lg"
-                        className="bg-white/10 text-white hover:bg-white/20 border-white/30 text-lg px-8 py-4"
-                        onClick={() => navigate("/projects")}
+                      <Link
+                        to="/projects"
+                        className="flex rounded-xl bg-white/10 text-white hover:bg-white/20 border-white/30 text-lg px-8 py-4"
                       >
                         <Play className="mr-2 w-5 h-5" />
                         View Our Work
-                      </Button>
+                      </Link>
                     </motion.div>
 
                     {/* Stats - Only show on first slide */}

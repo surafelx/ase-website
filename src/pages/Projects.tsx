@@ -160,126 +160,7 @@ const ProjectsPage = () => {
         </div>
       </motion.div>
 
-      {/* Project Images Carousel */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.25 }}
-        viewport={{ once: true }}
-        className="py-16 bg-gradient-to-br from-background via-agriculture-green-light/5 to-background"
-      >
-        <div className="container mx-auto px-6">
-          <div className="relative max-w-6xl mx-auto">
-            {/* Main Carousel Image */}
-            <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              <motion.div
-                key={currentImageIndex}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
-                className="w-full h-full"
-              >
-                <img
-                  src={allProjectImages[currentImageIndex]?.src}
-                  alt={allProjectImages[currentImageIndex]?.projectTitle}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              </motion.div>
-
-              {/* Project Info Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <motion.div
-                  key={`info-${currentImageIndex}`}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                    {allProjectImages[currentImageIndex]?.projectTitle}
-                  </h3>
-                  <div className="flex items-center text-white/90 mb-4">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    {allProjectImages[currentImageIndex]?.location}
-                  </div>
-                  <Button
-                    onClick={() =>
-                      navigate(
-                        `/projects/${allProjectImages[currentImageIndex]?.projectId}`
-                      )
-                    }
-                    className="bg-white/20 hover:bg-white text-white border border-white/30 backdrop-blur-sm"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Project
-                  </Button>
-                </motion.div>
-              </div>
-
-              {/* Navigation Arrows */}
-              <button
-                onClick={() =>
-                  setCurrentImageIndex(
-                    (prev) =>
-                      (prev - 1 + allProjectImages.length) %
-                      allProjectImages.length
-                  )
-                }
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={() =>
-                  setCurrentImageIndex(
-                    (prev) => (prev + 1) % allProjectImages.length
-                  )
-                }
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Thumbnail Navigation */}
-            <div className="flex justify-center mt-8 space-x-4 overflow-x-auto pb-2 px-4">
-              {allProjectImages.map((image, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden border-3 transition-all duration-300 ${
-                    currentImageIndex === index
-                      ? "border-primary scale-110 shadow-xl ring-2 ring-primary/20"
-                      : "border-white/40 hover:border-white/80 hover:scale-105"
-                  }`}
-                >
-                  <img
-                    src={image.src}
-                    alt={image.projectTitle}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
-            </div>
-
-            {/* Slide Indicators */}
-            <div className="flex justify-center mt-4 space-x-2">
-              {allProjectImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentImageIndex === index
-                      ? "bg-primary scale-125"
-                      : "bg-gray-300 hover:bg-gray-400"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
+     
       {/* Advanced Search and Filter Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -551,9 +432,9 @@ const ProjectsPage = () => {
                     {/* Full Card Background Image */}
 
                     <div className="absolute inset-0 bg-gradient-primary">
-                      <motion.img
+                      {/* <motion.img
                       className="h-full w-full object-cover"
-                      src="/assets/projects/amhara/amhara-1.jpg" />
+                      src="" /> */}
                       <div className="absolute inset-0 bg-agriculture-green-dark/60"></div>
                     </div>
 
