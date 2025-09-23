@@ -11,6 +11,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import NewYearBanner from "@/components/NewYearBanner";
 import EthiopiaMap from "@/components/EthiopiaMap";
+import AIChatPopup from "@/components/AIChatPopup";
 import { motion } from "framer-motion";
 
 const Index = () => {
@@ -37,7 +38,7 @@ const Index = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.6 }}
+        transition={{ delay: 1.2, duration: 0.6 }}
         viewport={{ once: true }}
         className="mb-16"
       >
@@ -46,7 +47,7 @@ const Index = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
+        transition={{ delay: 1.5, duration: 0.6 }}
         viewport={{ once: true }}
         className="mb-16"
       >
@@ -115,6 +116,9 @@ const Index = () => {
       >
         <Footer />
       </motion.div>
+      
+      {/* AI Chat Popup */}
+      <AIChatPopup />
     </div>
   );
 };

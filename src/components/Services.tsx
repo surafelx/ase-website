@@ -69,7 +69,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
+    <section id="services" className="py-16 relative overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -81,8 +81,8 @@ const Services = () => {
       </div>
 
       <div className="container mx-auto px-8 relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground  mb-6">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Turn-Key Solutions for
             <span className="block text-transparent bg-gradient-primary pb-6 bg-clip-text">
               Sustainable Agriculture
@@ -94,76 +94,59 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Services Grid - Alternating Layout */}
-        <div className="space-y-20">
+        {/* Services Grid - Compact Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
-            >
-              {/* Card */}
-              <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                <Card className="border-0 shadow-elegant hover:shadow-agriculture transition-all duration-500 group bg-white/80 backdrop-blur-sm">
-                  <CardHeader>
-                    <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-agriculture">
-                     
-                      <service.icon className="w-8 h-8 text-white" />
+            <Card key={index} className="border-0 shadow-elegant hover:shadow-agriculture transition-all duration-500 group bg-white/80 backdrop-blur-sm h-full">
+              <div className="aspect-video relative overflow-hidden rounded-t-lg">
+                {service.image ? (
+                  <>
+                    <motion.img
+                      src={service.image}
+                      alt={service.alt || service.title}
+                      className="w-full h-full object-cover"
+                      animate={{ scale: [1, 1.05, 1] }}
+                      transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                    />
+                    <div className="absolute inset-0 bg-agriculture-green-dark/40"></div>
+                    <div className="absolute top-4 left-4 w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-6 h-6 text-white" />
                     </div>
-                    <CardTitle className="text-2xl font-bold text-foreground mb-4">
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-muted-foreground leading-relaxed text-lg">
-                      {service.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
+                  </>
+                ) : (
+                  <div className="w-full h-full bg-gradient-primary flex items-center justify-center">
+                    <service.icon className="w-12 h-12 text-white" />
+                  </div>
+                )}
               </div>
-
-              {/* Visual Element */}
-              <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                <div className="h-64 rounded-2xl shadow-agriculture flex items-center justify-center relative overflow-hidden">
-                  {service.image ? (
-                    <>
-                       <motion.img
-                        src={service.image}
-                        alt={service.alt || service.title}
-                        className="absolute inset-0 w-full h-full object-cover"
-                         animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                      />
-                      <div className="absolute inset-0 bg-agriculture-green-dark/50"></div>
-                      <service.icon className="w-16 h-16 text-white relative z-10" />
-                    </>
-                  ) : (
-                    <>
-                      <div className="absolute inset-0 bg-gradient-primary rounded-2xl"></div>
-                      <service.icon className="w-16 h-16 text-white opacity-30 relative z-10" />
-                    </>
-                  )}
-                </div>
-              </div>
-            </div>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-lg font-bold text-foreground">
+                  {service.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground leading-relaxed text-sm">
+                  {service.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
         {/* Call to Action */}
-        <div className="mt-24 text-center bg-gradient-hero rounded-2xl p-16 text-white shadow-2xl">
-          <h3 className="text-3xl font-bold mb-4">
+        <div className="text-center bg-gradient-hero rounded-2xl p-12 text-white shadow-2xl">
+          <h3 className="text-2xl font-bold mb-3">
             Ready to Transform Your Farm?
           </h3>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+          <p className="text-lg mb-6 text-white/90 max-w-2xl mx-auto">
             Join hundreds of Ethiopian farmers who have already revolutionized
             their agriculture with our solar irrigation solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-solar-gold hover:bg-solar-gold-dark text-agriculture-green-dark px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-solar">
+            <button className="bg-solar-gold hover:bg-solar-gold-dark text-agriculture-green-dark px-6 py-3 rounded-lg font-semibold transition-colors shadow-solar">
               Get Free Consultation
             </button>
-            <button className="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-lg font-semibold text-lg transition-colors backdrop-blur-sm">
+            <button className="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-6 py-3 rounded-lg font-semibold transition-colors backdrop-blur-sm">
               Download Brochure
             </button>
           </div>

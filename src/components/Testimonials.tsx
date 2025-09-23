@@ -18,16 +18,16 @@ const Testimonials = () => {
     // Customize based on the acknowledgment name
     if (ack.name.includes("Amhara")) {
       location = "Amhara Region";
-      crop = "Cereals & Vegetables";
-      quote = "The Amhara National State Bureau of Agriculture acknowledges AgriSun Ethiopia's outstanding contribution to agricultural development through innovative solar irrigation solutions.";
+      crop = "Agricultural Development";
+      quote = "We acknowledge AgriSun Ethiopia's outstanding contribution to agricultural development in our region through innovative solar irrigation solutions that have transformed farming practices.";
     } else if (ack.name.includes("Agricultural Transformation Institute")) {
       location = "Federal Level";
-      crop = "Research & Development";
-      quote = "The Ethiopian Agricultural Transformation Institute recognizes AgriSun Ethiopia's pioneering work in solar-powered water lifting technology for small-scale irrigation.";
+      crop = "Technology Innovation";
+      quote = "We recognize AgriSun Ethiopia's pioneering work in solar-powered water lifting technology for small-scale irrigation, contributing significantly to agricultural transformation in Ethiopia.";
     } else if (ack.name.includes("Solar Village")) {
       location = "National Level";
-      crop = "Sustainable Agriculture";
-      quote = "Solar Village Ethiopia acknowledges AgriSun Ethiopia's commitment to sustainable agricultural development through renewable energy solutions.";
+      crop = "Sustainable Energy";
+      quote = "We commend AgriSun Ethiopia's commitment to sustainable agricultural development through renewable energy solutions that align with our vision for a greener Ethiopia.";
     }
 
     return {
@@ -81,10 +81,9 @@ const Testimonials = () => {
                         {testimonial.name}
                       </h4>
                       <p className="text-agriculture-green font-medium text-sm mb-2">
-                        {testimonial.location}
+                        {testimonial.location} • {testimonial.crop}
                       </p>
-                      <div className="flex justify-between text-xs text-muted-foreground">
-                        <span>Focus: {testimonial.crop}</span>
+                      <div className="text-xs text-muted-foreground">
                         <span>Acknowledged: {testimonial.date}</span>
                       </div>
                     </div>

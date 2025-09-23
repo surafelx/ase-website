@@ -86,8 +86,13 @@ const AboutPage = () => {
     },
     {
       year: "2024",
-      title: "Grain Milling Systems",
-      description: "Expanded services to include solar-powered grain milling systems",
+      title: "Workshop Establishment",
+      description: "Established a comprehensive workshop on the assembly of control boxes, manufacturing solar panels, PV fencing structures, and solar pump maintenance",
+    },
+    {
+      year: "2024",
+      title: "Solarization Initiative",
+      description: "Replacing traditional diesel or electric-powered water pumps with solar-powered systems",
     },
     {
       year: "2024",
@@ -95,9 +100,9 @@ const AboutPage = () => {
       description: "Extended operations across multiple Ethiopian regions with over 20 staff",
     },
     {
-      year: "2024",
-      title: "Community Impact",
-      description: "Transformed agricultural productivity and enhanced food security for communities",
+      year: "2025",
+      title: "Grain Milling System",
+      description: "Expanded services to include solar-powered grain milling systems for enhanced agricultural processing",
     },
   ];
 
@@ -107,43 +112,47 @@ const AboutPage = () => {
       title: "Community First",
       description:
         "We prioritize the needs and traditions of Ethiopian farming communities in everything we do.",
+      impact: "Empowered over 200 farmers across 8 regions with sustainable solar solutions"
     },
     {
       icon: Lightbulb,
       title: "Innovation",
       description:
         "We continuously innovate to bring the best solar technology solutions to Ethiopian agriculture.",
+      impact: "Developed comprehensive workshop for solar panel manufacturing and maintenance"
     },
     {
       icon: Shield,
       title: "Reliability",
       description:
         "Our systems are built to last, with comprehensive warranties and ongoing support.",
+      impact: "98% customer satisfaction rate with comprehensive after-sales service"
     },
     {
       icon: Target,
       title: "Sustainability",
       description:
         "We are committed to environmentally sustainable practices that benefit future generations.",
+      impact: "Replaced traditional diesel pumps with clean solar-powered systems across Ethiopia"
     },
   ];
 
   const teamMembers = [
     {
       name: "Yimam Kebede",
-      role: "General Manager of Agrisun Ethiopia Engineering and Trading Plc and Leader of the Joint Venture",
+      role: "CEO of Agrisun Ethiopia Engineering and Trading Plc and Leader of the Joint Venture",
       image: yimamKebede,
-      bio: "Postgraduate in Computer Science with 25+ years experience in Financial Sector, Argo industry, Information Technology and Solar Technology Industry.",
+      bio: "A seasoned professional with over 25 years of experience spanning the Financial Sector, Agriculture, Automotive, and Solar Technology Industries. Holds a Bachelor of Science in Business Education and a Postgraduate degree in Computer Science. Proven expertise in driving innovative solutions and enhancing operational efficiencies across diverse sectors.",
       expertise: [
-        "Computer Science",
         "Financial Sector",
-        "Information Technology",
+        "Agriculture",
+        "Automotive Industry",
         "Solar Technology",
       ],
       achievements: [
         "25+ years experience",
-        "Postgraduate Computer Science",
         "BSc Business Education",
+        "Postgraduate Computer Science",
         "Diploma Banking & Finance",
       ],
     },
@@ -672,9 +681,13 @@ const AboutPage = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-muted-foreground leading-relaxed">
+                  <CardDescription className="text-muted-foreground leading-relaxed mb-4">
                     {value.description}
                   </CardDescription>
+                  <div className="bg-primary/10 rounded-lg p-3">
+                    <h4 className="font-semibold text-primary text-sm mb-1">Impact:</h4>
+                    <p className="text-xs text-muted-foreground">{value.impact}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -729,8 +742,8 @@ const AboutPage = () => {
                 <h3 className="text-2xl font-bold text-foreground mb-4">Management Team</h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-foreground">General Manager</h4>
-                    <p className="text-muted-foreground text-sm">ICT background, 25+ years experience</p>
+                    <h4 className="font-semibold text-foreground">CEO</h4>
+                    <p className="text-muted-foreground text-sm">25+ years experience across Financial Sector, Agriculture, and Solar Technology</p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Deputy Manager</h4>
@@ -873,11 +886,255 @@ const AboutPage = () => {
         </div>
       </motion.div>
 
-      {/* Our Partners */}
+      {/* Team Photo Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.75 }}
+        viewport={{ once: true }}
+        className="py-20 bg-background"
+      >
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-6">
+              Our Team in Action
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Meet the dedicated professionals who make AgriSun Ethiopia's mission possible
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="rounded-2xl overflow-hidden shadow-elegant">
+              <img
+                src={teamEthiopia2}
+                alt="AgriSun Ethiopia team at work"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-foreground mb-2">Field Operations Team</h3>
+                <p className="text-muted-foreground text-sm">Our technical experts working directly with farmers</p>
+              </div>
+            </div>
+            
+            <div className="rounded-2xl overflow-hidden shadow-elegant">
+              <img
+                src={teamEthiopia3}
+                alt="AgriSun Ethiopia office team"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-foreground mb-2">Management Team</h3>
+                <p className="text-muted-foreground text-sm">Strategic planning and project coordination</p>
+              </div>
+            </div>
+            
+            <div className="rounded-2xl overflow-hidden shadow-elegant">
+              <img
+                src={heroAgriculture}
+                alt="AgriSun Ethiopia project team"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-foreground mb-2">Project Implementation</h3>
+                <p className="text-muted-foreground text-sm">Installation and maintenance specialists</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Project Team Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8 }}
+        viewport={{ once: true }}
+        className="py-20 bg-agriculture-green-light/10"
+      >
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-6">
+              Project Team Structure
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Our specialized project teams ensure successful implementation and ongoing support
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="border-0 shadow-elegant">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold text-foreground">
+                  Technical Implementation Team
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• Electrical Engineers</li>
+                  <li>• Mechanical Engineers</li>
+                  <li>• Solar System Specialists</li>
+                  <li>• Borehole Drilling Experts</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-elegant">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold text-foreground">
+                  Project Management Team
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• Project Managers</li>
+                  <li>• Site Supervisors</li>
+                  <li>• Quality Control Specialists</li>
+                  <li>• Timeline Coordinators</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-elegant">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold text-foreground">
+                  Support & Training Team
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• Training Specialists</li>
+                  <li>• Customer Support</li>
+                  <li>• Maintenance Technicians</li>
+                  <li>• Knowledge Transfer Experts</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* After Sales Service Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.85 }}
+        viewport={{ once: true }}
+        className="py-20 bg-background"
+      >
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-6">
+              After Sales Service
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Comprehensive support and maintenance services to ensure optimal performance
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="bg-primary/5 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Maintenance & Support</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Regular Maintenance</h4>
+                      <p className="text-muted-foreground text-sm">Scheduled maintenance visits to ensure optimal system performance</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">24/7 Support</h4>
+                      <p className="text-muted-foreground text-sm">Round-the-clock technical support for urgent issues</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Performance Monitoring</h4>
+                      <p className="text-muted-foreground text-sm">Continuous monitoring of system performance and efficiency</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-solar-gold/10 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Warranty & Insurance</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Comprehensive Warranty</h4>
+                      <p className="text-muted-foreground text-sm">Extended warranty coverage on all solar components</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Insurance Coverage</h4>
+                      <p className="text-muted-foreground text-sm">Protection against weather damage and equipment failure</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Replacement Guarantee</h4>
+                      <p className="text-muted-foreground text-sm">Quick replacement of faulty components</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-gradient-primary rounded-2xl p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Training & Knowledge Transfer</h3>
+                <p className="text-white/90 mb-6">
+                  We provide comprehensive training to farmers and local technicians to ensure
+                  sustainable operation and maintenance of solar irrigation systems.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-white/90">Farmer training programs</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-white/90">Technical skill development</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-white/90">Local technician certification</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-white/90">Ongoing knowledge support</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-agriculture-green-light/10 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Contact After Sales</h3>
+                <p className="text-muted-foreground mb-4">
+                  Need support or have questions about your solar irrigation system?
+                </p>
+                <Button className="w-full bg-primary hover:bg-agriculture-green-dark">
+                  Contact Support Team
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Our Partners */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.9 }}
         viewport={{ once: true }}
       >
         <ClientLogos />

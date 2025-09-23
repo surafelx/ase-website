@@ -31,11 +31,11 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Get Started Today
+            Transforming Agriculture in Ethiopia
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to transform your farming operations? Contact us for a free consultation 
-            and personalized solar irrigation solution.
+            Ready to transform your farming operations? Contact us for a free consultation
+            and personalized solar irrigation solution. Join us in revolutionizing Ethiopian agriculture with sustainable solar technology.
           </p>
         </div>
 
@@ -173,6 +173,95 @@ const Contact = () => {
               >
                 Schedule Site Visit
               </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* After Sales Service Section */}
+        <div className="mt-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-6">
+              After Sales Service
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Comprehensive support and maintenance services to ensure optimal performance
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-elegant">
+              <h3 className="text-xl font-bold text-foreground mb-4">Maintenance & Support</h3>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="font-semibold text-foreground text-sm">Regular Maintenance</h4>
+                    <p className="text-muted-foreground text-xs">Scheduled maintenance visits</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="font-semibold text-foreground text-sm">24/7 Support</h4>
+                    <p className="text-muted-foreground text-xs">Round-the-clock technical support</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="font-semibold text-foreground text-sm">Performance Monitoring</h4>
+                    <p className="text-muted-foreground text-xs">Continuous system monitoring</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-elegant">
+              <h3 className="text-xl font-bold text-foreground mb-4">Warranty & Insurance</h3>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="font-semibold text-foreground text-sm">Comprehensive Warranty</h4>
+                    <p className="text-muted-foreground text-xs">Extended warranty coverage</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="font-semibold text-foreground text-sm">Insurance Coverage</h4>
+                    <p className="text-muted-foreground text-xs">Protection against damage</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="font-semibold text-foreground text-sm">Replacement Guarantee</h4>
+                    <p className="text-muted-foreground text-xs">Quick component replacement</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-primary rounded-2xl p-8 text-white">
+              <h3 className="text-xl font-bold mb-4">Training & Knowledge Transfer</h3>
+              <p className="text-white/90 mb-4 text-sm">
+                Comprehensive training for farmers and local technicians.
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                  <span className="text-white/90 text-xs">Farmer training programs</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                  <span className="text-white/90 text-xs">Technical skill development</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                  <span className="text-white/90 text-xs">Local technician certification</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
