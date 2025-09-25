@@ -140,7 +140,7 @@ const AboutPage = () => {
   const teamMembers = [
     {
       name: "Yimam Kebede",
-      role: "CEO of Agrisun Ethiopia Engineering and Trading Plc and Leader of the Joint Venture",
+      role: "CEO",
       image: yimamKebede,
       bio: "A seasoned professional with over 25 years of experience spanning the Financial Sector, Agriculture, Automotive, and Solar Technology Industries. Holds a Bachelor of Science in Business Education and a Postgraduate degree in Computer Science. Proven expertise in driving innovative solutions and enhancing operational efficiencies across diverse sectors.",
       expertise: [
@@ -876,9 +876,7 @@ const AboutPage = () => {
                     </div>
                   </div>
 
-                  <Button className="w-full mt-6 bg-primary hover:bg-agriculture-green-dark">
-                    Learn More
-                  </Button>
+                
                 </CardContent>
               </Card>
             ))}
