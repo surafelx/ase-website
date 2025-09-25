@@ -31,7 +31,7 @@ const Index = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.6 }}
         viewport={{ once: true }}
-        className="mb-16"
+        className="mb-8"
       >
         <HeroSlideshow />
       </motion.div>
@@ -40,7 +40,7 @@ const Index = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.6 }}
         viewport={{ once: true }}
-        className="mb-16"
+        className="mb-8"
       >
         <ClientLogos />
       </motion.div>
@@ -49,7 +49,7 @@ const Index = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.6 }}
         viewport={{ once: true }}
-        className="mb-16"
+        className="mb-8"
       >
         <Services />
       </motion.div>
@@ -57,29 +57,11 @@ const Index = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.8, duration: 0.6 }}
+        transition={{ delay: 1.5, duration: 0.6 }}
         viewport={{ once: true }}
-        className="mb-16"
+        className="mb-8"
       >
         <Projects />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.1, duration: 0.6 }}
-        viewport={{ once: true }}
-        className="mb-16"
-      >
-        <EthiopiaMap />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.4, duration: 0.6 }}
-        viewport={{ once: true }}
-        className="mb-16"
-      >
-        <VideoSection />
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}

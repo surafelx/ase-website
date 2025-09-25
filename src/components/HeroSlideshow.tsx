@@ -2,20 +2,12 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   Play,
+  ChevronDown,
   ChevronLeft,
   ChevronRight,
-  ChevronDown,
 } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import logo from "@/assets/logo.png";
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -25,11 +17,9 @@ import hero2 from "@/assets/heroes/hero-7.jpg";
 import hero3 from "@/assets/heroes/hero-8.jpg";
 
 const HeroSlideshow = () => {
-  const plugin = useRef(Autoplay({ delay: 8000, stopOnInteraction: true }));
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const [api, setApi] = useState<any>(null);
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -88,15 +78,17 @@ const HeroSlideshow = () => {
   }, [isInView]);
 
   useEffect(() => {
-    if (!api) return;
-    setSelectedIndex(api.selectedScrollSnap());
-    api.on("select", () => setSelectedIndex(api.selectedScrollSnap()));
-  }, [api]);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
 
   const slides = [
     {
       image: hero1,
-      title: "Turn-Key Solutions for",
+      location: "Amhara Region",
+      title: "Turnkey Solutions for",
       subtitle: "Sustainable Agriculture",
       subtitle2: "From Borehole to Harvest",
       description:
@@ -105,173 +97,136 @@ const HeroSlideshow = () => {
     },
     {
       image: hero2,
+      location: "Oromia Region",
       title: "Solar-Powered Water Pumps",
       subtitle: "Clean Energy Solutions",
       description:
         "Reliable solar-powered pump systems that reduce physical burden and increase agricultural productivity.",
       alt: "Agri-Sun Ethiopia Logo",
     },
-    {
-      image: hero3,
-      title: "Empowering Communities",
-      subtitle: "Since January 2023",
-      description:
-        "Transforming rural communities through sustainable solar technology and comprehensive agricultural solutions.",
-      alt: "Agri-Sun Ethiopia Logo",
-    },
+   
   ];
 
   return (
     <section
       id="home"
-      className="relative h-[100vh] z-[-1] flex items-center mt-[-10]"
+      className="relative h-screen z-0 flex items-center mt-[-10]"
       ref={ref}
     >
-      <Carousel
-        plugins={[plugin.current]}
-        className="w-full h-screen"
-        setApi={setApi}
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}
-      >
-        <CarouselContent>
-          {slides.map((slide, index) => (
-            <CarouselItem key={index}>
-              <div className="relative h-screen flex items-center mt-[-20]">
-                {/* Background Image */}
-                <div className="absolute inset-0 z-0 overflow-hidden">
-                  <motion.img
-                    src={slide.image}
-                    alt={slide.alt}
-                    className="w-full h-full object-cover"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{
-                      duration: 8,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-agriculture-green-dark/50"></div>
+      <div className="relative w-full h-screen flex items-center mt-[-20]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <motion.img
+            key={currentSlide}
+            src={slides[currentSlide].image}
+            alt={slides[currentSlide].alt}
+            className="w-full h-full object-cover"
+            initial={{ scale: 1 }}
+            animate={{ scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-transparent z-10"></div>
+          <div className="absolute bottom-4 left-4 text-white text-sm bg-black/50 px-2 py-1 rounded">
+            {slides[currentSlide].location}
+          </div>
+        </div>
+
+        {/* Fixed Content */}
+        <motion.div
+          className="container relative z-20 mx-auto px-12 py-8 pt-40"
+          initial={{ opacity: 0, y: 50 }}
+          animate={
+            isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+          }
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="max-w-full text-white">
+            <motion.h1
+              className="text-3xl md:text-6xl  font-bold mb-4"
+              initial={{ opacity: 0, y: 30 }}
+              animate={
+                isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+              }
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <span className="block pb-2">{slides[0].title}</span>
+              <span className="block pb-2 text-white">
+                {slides[0].subtitle}
+              </span>
+              {slides[0].subtitle2 && (
+                <span className="block pb-2 text-white">
+                  {slides[0].subtitle2}
+                </span>
+              )}
+            </motion.h1>
+
+            <motion.p
+              className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl"
+              initial={{ opacity: 0, y: 30 }}
+              animate={
+                isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+              }
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              {slides[0].description}
+            </motion.p>
+
+            {/* Stats */}
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-white/20"
+              initial={{ opacity: 0, y: 30 }}
+              animate={
+                isInView
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 30 }
+              }
+              transition={{ duration: 0.8, delay: 1.0 }}
+            >
+              <div>
+                <div className="text-3xl font-bold text-solar-gold mb-2">
+                  {count1}
                 </div>
-
-                {/* Content */}
-                <motion.div
-                  className="container relative z-10 mx-auto px-12 py-8"
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={
-                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
-                  }
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                  <div className="max-w-full text-white">
-                    <motion.h1
-                      className="text-3xl md:text-6xl  font-bold mb-4"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={
-                        isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-                      }
-                      transition={{ duration: 0.8, delay: 0.4 }}
-                    >
-                      <span className="block pb-2">{slide.title}</span>
-                      <span className="block pb-2 text-white">
-                        {slide.subtitle}
-                      </span>
-                      {slide.subtitle2 && (
-                        <span className="block pb-2 text-white">
-                          {slide.subtitle2}
-                        </span>
-                      )}
-                    </motion.h1>
-
-                    <motion.p
-                      className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={
-                        isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-                      }
-                      transition={{ duration: 0.8, delay: 0.6 }}
-                    >
-                      {slide.description}
-                    </motion.p>
-
-                    <motion.div
-                      className="flex flex-col sm:flex-row gap-6 mb-12 z-20 relative"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={
-                        isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-                      }
-                      transition={{ duration: 0.8, delay: 0.8 }}
-                    >
-                      <Link
-                        to="/get-started"
-                        className="flex rounded-xl bg-solar-gold hover:bg-agriculture-green-dark text-white text-lg px-10 py-4 shadow-agriculture z-[50]"
-                      >
-                        Start Your Project
-                        <ArrowRight className="ml-2 w-5 h-5" />
-                      </Link>
-
-                      <Link
-                        to="/projects"
-                        className="flex rounded-xl bg-white/10 text-white hover:bg-white/20 border-white/30 text-lg px-8 py-4"
-                      >
-                        <Play className="mr-2 w-5 h-5" />
-                        View Our Work
-                      </Link>
-                    </motion.div>
-
-                    {/* Stats - Only show on first slide */}
-                    {index === 0 && (
-                      <motion.div
-                        className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-white/20"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={
-                          isInView
-                            ? { opacity: 1, y: 0 }
-                            : { opacity: 0, y: 30 }
-                        }
-                        transition={{ duration: 0.8, delay: 1.0 }}
-                      >
-                        <div>
-                          <div className="text-3xl font-bold text-solar-gold mb-2">
-                            {count1}
-                          </div>
-                          <div className="text-white/80">Farmers Served</div>
-                        </div>
-                        <div>
-                          <div className="text-3xl font-bold text-solar-gold mb-2">
-                            {count2}
-                          </div>
-                          <div className="text-white/80">Cost Reduction</div>
-                        </div>
-                        <div>
-                          <div className="text-3xl font-bold text-solar-gold mb-2">
-                            {count3}
-                          </div>
-                          <div className="text-white/80">Yield Increase</div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </div>
-                </motion.div>
+                <div className="text-white/80">Farmers Served</div>
               </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
+              <div>
+                <div className="text-3xl font-bold text-solar-gold mb-2">
+                  {count2}
+                </div>
+                <div className="text-white/80">Cost Reduction</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-solar-gold mb-2">
+                  {count3}
+                </div>
+                <div className="text-white/80">Yield Increase</div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
 
-        {/* Custom Navigation */}
-        <CarouselPrevious className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white z-30" />
-        <CarouselNext className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white z-30" />
-      </Carousel>
+      {/* Custom Navigation */}
+      <button
+        onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
+        className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white z-30 p-2 rounded"
+      >
+        <ChevronLeft className="w-6 h-6" />
+      </button>
+      <button
+        onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+        className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white z-30 p-2 rounded"
+      >
+        <ChevronRight className="w-6 h-6" />
+      </button>
 
       {/* Carousel Dots */}
       <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === selectedIndex ? "bg-white" : "bg-white/50"
-            }`}
-            onClick={() => api?.scrollTo(index)}
+            className={`w-3 h-3 rounded-full transition-colors ${index === currentSlide ? "bg-white" : "bg-white/50"
+              }`}
+            onClick={() => setCurrentSlide(index)}
           />
         ))}
       </div>

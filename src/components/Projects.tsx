@@ -60,7 +60,7 @@ const Projects = () => {
                 onClick={() => navigate(`/projects/${project.id}`)}
               >
                 {/* Large Image Background */}
-                <div className="relative h-[44rem] bg-gradient-primary overflow-hidden">
+                <div className="relative h-[24rem] bg-gradient-primary overflow-hidden">
                   <div className="absolute inset-0 bg-agriculture-green-dark/70 group-hover:bg-agriculture-green-dark/80 transition-all duration-500"></div>
                   {/* <motion.img
                     className="h-full w-full object-cover"
@@ -88,24 +88,24 @@ const Projects = () => {
                 </div>
 
                 {/* Hover Details Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 flex flex-col justify-end p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 flex flex-col justify-end p-4">
                   {/* Description */}
-                  <p className="text-white/90 mb-4 line-clamp-3 text-sm leading-relaxed">
+                  <p className="text-white/90 mb-3 line-clamp-2 text-xs leading-relaxed">
                     {project.description}
                   </p>
 
                   {/* Key Metrics */}
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    <div className="text-center bg-white/10 rounded-lg p-2 backdrop-blur-sm">
-                      <Users className="w-4 h-4 mx-auto mb-1 text-white" />
-                      <div className="text-sm font-bold text-white">
+                  <div className="grid grid-cols-2 gap-2 mb-3">
+                    <div className="text-center bg-white/10 rounded-lg p-1 backdrop-blur-sm">
+                      <Users className="w-3 h-3 mx-auto mb-1 text-white" />
+                      <div className="text-xs font-bold text-white">
                         {project.serialNumber}
                       </div>
                       <div className="text-xs text-white/80">Project #</div>
                     </div>
-                    <div className="text-center bg-white/10 rounded-lg p-2 backdrop-blur-sm">
-                      <TrendingUp className="w-4 h-4 mx-auto mb-1 text-white" />
-                      <div className="text-sm font-bold text-white">
+                    <div className="text-center bg-white/10 rounded-lg p-1 backdrop-blur-sm">
+                      <TrendingUp className="w-3 h-3 mx-auto mb-1 text-white" />
+                      <div className="text-xs font-bold text-white">
                         {project.estimatedCost}
                       </div>
                       <div className="text-xs text-white/80">Cost</div>
@@ -113,8 +113,8 @@ const Projects = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <Button className="w-full bg-white/20 hover:bg-white text-white hover:text-agriculture-green-dark border border-white/30 backdrop-blur-sm transition-all duration-300">
-                    <ExternalLink className="w-4 h-4 mr-2" />
+                  <Button className="w-full bg-white/20 hover:bg-white text-white hover:text-agriculture-green-dark border border-white/30 backdrop-blur-sm transition-all duration-300 text-sm py-2">
+                    <ExternalLink className="w-3 h-3 mr-2" />
                     View Project Details
                   </Button>
                 </div>

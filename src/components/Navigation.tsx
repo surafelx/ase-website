@@ -31,7 +31,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-4">
             <img src="/logo.png" alt="Agri-Sun Ethiopia Logo" className=" rounded-full p-2 w-12 h-12 object-contain" />
-            <span className={`text-2xl font-bold ${isScrolled ? 'text-agriculture-green-dark' : 'text-white'}`}>Agri-Sun Ethiopia</span>
+            <span className={`text-2xl font-bold ${isScrolled ? 'text-agriculture-green-dark' : 'text-agriculture-green-dark'}`}>AgriSun Ethiopia</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -40,7 +40,7 @@ const Navigation = () => {
               <Link
                 key={item.to}
                 to={item.to}
-                className={`${isScrolled ? 'text-agriculture-green-dark' : 'text-white'} hover:text-solar-gold transition-colors font-bold uppercase text-sm tracking-wide`}
+                className={`${isScrolled ? 'text-agriculture-green-dark' : 'text-agriculture-green-dark'} hover:text-solar-gold transition-colors font-bold uppercase text-sm tracking-wide`}
               >
                 {item.label}
               </Link>
