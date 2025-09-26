@@ -13,10 +13,6 @@ import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import Blog from "./pages/Blog";
 import Products from "./pages/Products";
-import TeamMesfin from "./pages/TeamMesfin";
-import TeamHiwot from "./pages/TeamHiwot";
-import TeamAlemayehu from "./pages/TeamAlemayehu";
-import BlogOromia from "./pages/BlogOromia";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,10 +34,6 @@ const App = () => (
             <Route path="/projects/:projectId" element={<ProjectDetail />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/team/mesfin" element={<TeamMesfin />} />
-            <Route path="/team/hiwot" element={<TeamHiwot />} />
-            <Route path="/team/alemayehu" element={<TeamAlemayehu />} />
-            <Route path="/blog/oromia" element={<BlogOromia />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

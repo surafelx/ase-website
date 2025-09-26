@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import heroAgriculture from "@/assets/team/team-3.jpg";
-import gizLogo from "@/assets/clients/Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH.webp";
+import snvLogo from "@/assets/clients/SNV.png";
+import samkingLogo from "@/assets/clients/SAMKING.png";
 import atiLogo from "@/assets/clients/Ethiopian Agricultural Transformation Agency Logo (2).png";
 import moaLogo from "@//assets/clients/Ministry of Agriculture Ethiopia.png";
 import srwmebLogo from "@/assets/clients/Sidama Region Water, Mining and Energy Bureau.png";
@@ -19,14 +20,20 @@ import { useRef } from "react";
 // Client logos data
 const clients = [
   {
-    name: "Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH",
-    logo: gizLogo,
-    alt: "GIZ - Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH",
+    name: "SNV Netherlands Development Organization",
+    logo: snvLogo,
+    alt: "SNV Netherlands Development Organization",
   },
+  
   {
     name: "Ethiopian Agricultural Transformation Institute",
     logo: atiLogo,
     alt: "Ethiopian Agricultural Transformation Institute Logo",
+  },
+    {
+    name: "Hober Pumps",
+    logo: hoberLogo,
+    alt: "Hober Pumps",
   },
   {
     name: "Ministry of Agriculture Ethiopia",
@@ -47,6 +54,11 @@ const clients = [
     name: "Crown Micro Global",
     logo: crownLogo,
     alt: "Crown Micro Global",
+  },
+   {
+    name: "SAMKING Solar Water Pumps",
+    logo: samkingLogo,
+    alt: "SAMKING Solar Water Pumps",
   },
   {
     name: "Difful Pump",

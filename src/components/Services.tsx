@@ -118,13 +118,13 @@ const Services = () => {
                   </div>
                 )}
               </div>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-lg font-bold text-foreground">
+              <CardHeader className="pb-1">
+                <CardTitle className="text-base font-bold text-foreground">
                   {service.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground leading-relaxed text-sm">
+              <CardContent className="pt-0">
+                <CardDescription className="text-muted-foreground leading-relaxed text-xs">
                   {service.description}
                 </CardDescription>
               </CardContent>

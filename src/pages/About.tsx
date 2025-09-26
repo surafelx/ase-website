@@ -22,25 +22,21 @@ import {
   Shield,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import heroAgriculture from "@/assets/team/team-3.jpg";
-import teamEthiopia2 from "@/assets/team-ethiopia-2.jpg";
-import teamEthiopia3 from "@/assets/team-ethiopia-3.jpg";
+import heroAgriculture from "@/assets/team/team-2.jpg";
+import teamEthiopia2 from "@/assets/team/team-2.jpg";
+import teamEthiopia3 from "@/assets/team/team-3.jpg";
+import teamEthiopia4 from "@/assets/team/team-4.jpg";
 import logo from "@/assets/logo.png";
 import yimamKebede from "@/assets/about/yimam-kebede.jpg";
 import ClientLogos from "@/components/ClientLogos";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { useState, useEffect } from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
+import { useState, useEffect, useCallback } from "react";
 
 const AboutPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [api, setApi] = useState<CarouselApi>();
 
   const heroImages = [
-    {
-      src: heroAgriculture,
-      alt: "Ethiopian agriculture landscape",
-      title: "Sustainable Agriculture",
-      description: "Transforming Ethiopian farming with solar technology"
-    },
     {
       src: teamEthiopia2,
       alt: "Ethiopian agricultural fields",
@@ -52,15 +48,35 @@ const AboutPage = () => {
       alt: "Ethiopian farmers",
       title: "Empowering Communities",
       description: "Building a sustainable future for Ethiopian farmers"
+    },
+     {
+      src: teamEthiopia4,
+      alt: "Ethiopian farmers",
+      title: "Empowering Communities",
+      description: "Building a sustainable future for Ethiopian farmers"
     }
   ];
 
+  const onSelect = useCallback(() => {
+    if (!api) return;
+    setCurrentSlide(api.selectedScrollSnap());
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api, onSelect]);
+
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+      api?.scrollNext();
     }, 5000);
     return () => clearInterval(timer);
-  }, [heroImages.length]);
+  }, [api]);
   const milestones = [
     {
       year: "2023",
@@ -69,18 +85,18 @@ const AboutPage = () => {
         "Agri-Sun Ethiopia established in January 2023 with 3 million startup capital",
     },
     {
-      year: "2023",
+      year: "",
       title: "First Projects",
       description:
         "Successfully implemented initial solar-powered water pump installations",
     },
     {
-      year: "2023",
+      year: "",
       title: "Borehole Drilling Services",
       description: "Launched borehole drilling services with rigs capable of 60m depth",
     },
     {
-      year: "2023",
+      year: "",
       title: "Irrigation Systems",
       description: "Introduced modern water-saving irrigation kits for small-scale farmers",
     },
@@ -90,12 +106,12 @@ const AboutPage = () => {
       description: "Established a comprehensive workshop on the assembly of control boxes, manufacturing solar panels, PV fencing structures, and solar pump maintenance",
     },
     {
-      year: "2024",
+      year: "",
       title: "Solarization Initiative",
       description: "Replacing traditional diesel or electric-powered water pumps with solar-powered systems",
     },
     {
-      year: "2024",
+      year: "",
       title: "Regional Expansion",
       description: "Extended operations across multiple Ethiopian regions with over 20 staff",
     },
@@ -142,7 +158,7 @@ const AboutPage = () => {
       name: "Yimam Kebede",
       role: "CEO",
       image: yimamKebede,
-      bio: "A seasoned professional with over 25 years of experience spanning the Financial Sector, Agriculture, Automotive, and Solar Technology Industries. Holds a Bachelor of Science in Business Education and a Postgraduate degree in Computer Science. Proven expertise in driving innovative solutions and enhancing operational efficiencies across diverse sectors.",
+      bio: "A seasoned professional with over 25 years of experience spanning the Financial Sector, Agriculture, Automotive, Information Technology, and Solar Technology Industries. Holds a Bachelor of Science in Business Education and a Postgraduate degree in Computer Science. Proven expertise in driving innovative solutions and enhancing operational efficiencies across diverse sectors.",
       expertise: [
         "Financial Sector",
         "Agriculture",
@@ -159,7 +175,7 @@ const AboutPage = () => {
 
     {
       name: "Nebiyleul Tadesse",
-      role: "Operations Manager",
+      role: "Business Development Adviser",
       image: logo,
       bio: "BSc in Agricultural Economics, Diploma in Microfinance and Community Development. 20+ years in agricultural technologies extension, project planning, and microfinance management.",
       expertise: [
@@ -176,26 +192,8 @@ const AboutPage = () => {
       ],
     },
     {
-      name: "Ayele Seleshi",
-      role: "Research and Development Manager",
-      image: logo,
-      bio: "MA Rural Development, BA Business Management, BSc Plant Sciences. 20+ years as senior agriculture expert with comprehensive understanding of rural development strategies.",
-      expertise: [
-        "Rural Development",
-        "Agricultural Engineering",
-        "Plant Sciences",
-        "Business Management",
-      ],
-      achievements: [
-        "20+ years experience",
-        "MA Rural Development",
-        "BA Business Management",
-        "BSc Plant Sciences",
-      ],
-    },
-    {
       name: "Tamerat Yohannes",
-      role: "Technical Department Head",
+      role: "Technical Department Adviser",
       image: logo,
       bio: "BSc Agricultural Engineering and Mechanization, MSc Soil Science. Strong foundation in engineering principles and agricultural practices with 15+ years experience.",
       expertise: [
@@ -211,204 +209,7 @@ const AboutPage = () => {
         "Technical department leadership",
       ],
     },
-    {
-      name: "Marta Teshome",
-      role: "Project Manager",
-      image: logo,
-      bio: "MA Project Management, MSc Civil Engineering. Highly responsible and committed professional with 5+ years experience in successful project delivery.",
-      expertise: [
-        "Project Management",
-        "Civil Engineering",
-        "Project Delivery",
-        "Quality Control",
-      ],
-      achievements: [
-        "5+ years experience",
-        "MA Project Management",
-        "MSc Civil Engineering",
-        "Successful project delivery",
-      ],
-    },
-    {
-      name: "Takele Getachew",
-      role: "Research Team Leader",
-      image: logo,
-      bio: "BSc Chemical Engineering with 5+ years experience in extensive experimentation with organic liquid fertilizers production from household waste.",
-      expertise: [
-        "Chemical Engineering",
-        "Organic Fertilizer Production",
-        "Waste Management",
-        "Sustainable Agriculture",
-      ],
-      achievements: [
-        "5+ years experience",
-        "BSc Chemical Engineering",
-        "Organic fertilizer research",
-        "Household waste utilization",
-      ],
-    },
-    {
-      name: "Yohas Kifle",
-      role: "Electrical Engineer",
-      image: logo,
-      bio: "BSc Electrical Engineering with 4+ years experience in solar-powered pumps and irrigation systems installation and maintenance.",
-      expertise: [
-        "Electrical Engineering",
-        "Solar System Installation",
-        "Irrigation Systems",
-        "Maintenance",
-      ],
-      achievements: [
-        "4+ years experience",
-        "BSc Electrical Engineering",
-        "Solar pump installation",
-        "Irrigation system maintenance",
-      ],
-    },
-    {
-      name: "Andualem Tesfaye",
-      role: "Electrician",
-      image: logo,
-      bio: "Diploma in Basic Electrical Installation, General Metal Fabrication, Automotive Servicing. 10+ years in electromechanical works, solar water pumping, and borehole drilling.",
-      expertise: [
-        "Electrical Installation",
-        "Metal Fabrication",
-        "Solar Water Pumping",
-        "Borehole Drilling",
-      ],
-      achievements: [
-        "10+ years experience",
-        "Electrical installation diploma",
-        "Metal fabrication diploma",
-        "Solar system specialist",
-      ],
-    },
-    {
-      name: "Anewar Khalid",
-      role: "Mechanics",
-      image: logo,
-      bio: "BSc Mechanical Engineering with 3 years experience in electromechanical works, solar water pumping systems installation, metal structure works, and borehole drilling.",
-      expertise: [
-        "Mechanical Engineering",
-        "Solar System Installation",
-        "Metal Structure Works",
-        "Borehole Drilling",
-      ],
-      achievements: [
-        "3 years experience",
-        "BSc Mechanical Engineering",
-        "Solar pumping systems",
-        "Metal structure fabrication",
-      ],
-    },
-    {
-      name: "Abey Yimam",
-      role: "Architect",
-      image: logo,
-      bio: "BSc Architecture with 3 years experience in designing solar energy products installation, surface and submersible solar water pumping systems, and PV stand modeling.",
-      expertise: [
-        "Architecture",
-        "Solar System Design",
-        "PV Stand Modeling",
-        "Water Pumping Design",
-      ],
-      achievements: [
-        "3 years experience",
-        "BSc Architecture",
-        "Solar energy design",
-        "PV system modeling",
-      ],
-    },
-    {
-      name: "Hirut Teferi",
-      role: "Human Resource and Finance Manager",
-      image: logo,
-      bio: "BA Accounting, Diploma Accounting with 10 years experience in financial management, statements preparation, HR management, auditing, and pitch tree accounting.",
-      expertise: [
-        "Financial Management",
-        "Human Resources",
-        "Accounting",
-        "Auditing",
-      ],
-      achievements: [
-        "10 years experience",
-        "BA Accounting",
-        "Diploma Accounting",
-        "HR & Finance management",
-      ],
-    },
-    {
-      name: "Yimam Mohammed",
-      role: "Borehole Drilling Expert",
-      image: logo,
-      bio: "Diploma Mechanical Engineering with 3+ years experience responsible for S.Wollo site borehole drilling activities.",
-      expertise: [
-        "Mechanical Engineering",
-        "Borehole Drilling",
-        "Site Management",
-        "Technical Operations",
-      ],
-      achievements: [
-        "3+ years experience",
-        "Diploma Mechanical Engineering",
-        "S.Wollo site management",
-        "Borehole drilling operations",
-      ],
-    },
-    {
-      name: "Zelalem Gethun",
-      role: "Borehole Drilling Expert",
-      image: logo,
-      bio: "Certificate in Automotive Service and Engine Machine with 3 years experience as water well drilling expert.",
-      expertise: [
-        "Automotive Service",
-        "Engine Machine",
-        "Water Well Drilling",
-        "Technical Operations",
-      ],
-      achievements: [
-        "3 years experience",
-        "Automotive service certificate",
-        "Water well drilling",
-        "Technical expertise",
-      ],
-    },
-    {
-      name: "Yimam Ejigu",
-      role: "Borehole Drilling Expert",
-      image: logo,
-      bio: "Certificate in Water Drilling with 3 years experience as water well drilling expert.",
-      expertise: [
-        "Water Drilling",
-        "Well Drilling",
-        "Technical Operations",
-        "Site Management",
-      ],
-      achievements: [
-        "3 years experience",
-        "Water drilling certificate",
-        "Well drilling expertise",
-        "Technical operations",
-      ],
-    },
-    {
-      name: "Other Support Staff",
-      role: "Support Team",
-      image: logo,
-      bio: "Dedicated support staff with extensive practical experience in various fields, providing essential operational and technical support to AgriSun Ethiopia's initiatives.",
-      expertise: [
-        "Operational Support",
-        "Technical Assistance",
-        "Field Operations",
-        "Administrative Support",
-      ],
-      achievements: [
-        "Practical field experience",
-        "Operational support",
-        "Technical assistance",
-        "Team collaboration",
-      ],
-    },
+
   ];
 
   const impactStats = [
@@ -435,27 +236,19 @@ const AboutPage = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
         viewport={{ once: true }}
-        className="relative min-h-[70vh] text-white py-20 pt-36 overflow-hidden"
+        className="relative min-h-[40vh] text-white py-20 pt-36 overflow-hidden"
       >
         {/* Image Carousel */}
         <div className="absolute inset-0">
-          <Carousel className="w-full h-full">
+          <Carousel className="w-full h-full" setApi={setApi}>
             <CarouselContent>
               {heroImages.map((image, index) => (
                 <CarouselItem key={index} className="relative">
-                  <motion.div
-                    className="relative h-full"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: currentSlide === index ? 1 : 0 }}
-                    transition={{ duration: 1 }}
-                  >
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-agriculture-green-dark/80 via-agriculture-green-dark/60 to-transparent"></div>
-                  </motion.div>
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover "
+                  />
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -465,8 +258,8 @@ const AboutPage = () => {
         </div>
 
         {/* Content Overlay */}
-        <div className="absolute inset-0 bg-agriculture-green-dark/40"></div>
-        <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
+ <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-transparent z-10"></div>
+        <div className="container mx-auto px-6 relative z-10 h-full flex items-end mt-20 ">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               key={currentSlide}
@@ -506,11 +299,11 @@ const AboutPage = () => {
             </div>
 
             {/* Slide Indicators */}
-            <div className="flex justify-center mt-8 space-x-2">
+            <div className="flex justify-center mt-8 space-x-2 mt-10">
               {heroImages.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentSlide(index)}
+                  onClick={() => api?.scrollTo(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     currentSlide === index
                       ? 'bg-solar-gold scale-125'
@@ -540,7 +333,7 @@ const AboutPage = () => {
             <div className="space-y-8">
               <div className="prose prose-lg max-w-none text-muted-foreground">
                 <p className="text-xl leading-relaxed pb-8">
-                  Agri-Sun Ethiopia Engineering and Trading Pvt. Ltd. Co. is dedicated to promoting
+                  AgriSun Ethiopia Engineering and Trading Pvt. Ltd. Co. is dedicated to promoting
                   sustainable agricultural practices and renewable energy solutions, specifically through
                   solar-powered water pumps and solar-powered grain milling systems for small-scale
                   farmers. Our goal is to provide comprehensive turn-key solutions, from borehole
@@ -595,6 +388,10 @@ const AboutPage = () => {
                     </div>
                   </div>
                   <div className="space-y-2">
+                     <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span className="text-muted-foreground">Solarization</span>
+                    </div>
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
                       <span className="text-muted-foreground">Solar-Powered Grain Milling Systems</span>
@@ -629,7 +426,7 @@ const AboutPage = () => {
               {milestones.map((milestone, index) => (
                 <div key={index} className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                    <div className={`${milestone.year ? ("w-16 h-16") : ("w-8 h-8 ml-10")} bg-primary rounded-full flex items-center justify-center text-white font-bold`}>
                       {milestone.year}
                     </div>
                   </div>
@@ -845,37 +642,6 @@ const AboutPage = () => {
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     {member.bio}
                   </p>
-
-                  <div className="space-y-3">
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">
-                        Expertise:
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {member.expertise.map((skill, idx) => (
-                          <Badge
-                            key={idx}
-                            variant="secondary"
-                            className="text-xs"
-                          >
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">
-                        Key Achievements:
-                      </h4>
-                      <ul className="text-sm text-muted-foreground space-y-1">
-                        {member.achievements.map((achievement, idx) => (
-                          <li key={idx}>• {achievement}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
                 
                 </CardContent>
               </Card>
@@ -884,63 +650,6 @@ const AboutPage = () => {
         </div>
       </motion.div>
 
-      {/* Team Photo Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.75 }}
-        viewport={{ once: true }}
-        className="py-20 bg-background"
-      >
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-6">
-              Our Team in Action
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Meet the dedicated professionals who make AgriSun Ethiopia's mission possible
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="rounded-2xl overflow-hidden shadow-elegant">
-              <img
-                src={teamEthiopia2}
-                alt="AgriSun Ethiopia team at work"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Field Operations Team</h3>
-                <p className="text-muted-foreground text-sm">Our technical experts working directly with farmers</p>
-              </div>
-            </div>
-            
-            <div className="rounded-2xl overflow-hidden shadow-elegant">
-              <img
-                src={teamEthiopia3}
-                alt="AgriSun Ethiopia office team"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Management Team</h3>
-                <p className="text-muted-foreground text-sm">Strategic planning and project coordination</p>
-              </div>
-            </div>
-            
-            <div className="rounded-2xl overflow-hidden shadow-elegant">
-              <img
-                src={heroAgriculture}
-                alt="AgriSun Ethiopia project team"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Project Implementation</h3>
-                <p className="text-muted-foreground text-sm">Installation and maintenance specialists</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
 
       {/* Project Team Section */}
       <motion.div
