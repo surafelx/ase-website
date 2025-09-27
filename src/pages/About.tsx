@@ -29,12 +29,11 @@ import teamEthiopia4 from "@/assets/team/team-4.jpg";
 import logo from "@/assets/logo.png";
 import yimamKebede from "@/assets/about/yimam-kebede.jpg";
 import ClientLogos from "@/components/ClientLogos";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const AboutPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [api, setApi] = useState<CarouselApi>();
 
   const heroImages = [
     {
@@ -49,7 +48,7 @@ const AboutPage = () => {
       title: "Empowering Communities",
       description: "Building a sustainable future for Ethiopian farmers"
     },
-     {
+      {
       src: teamEthiopia4,
       alt: "Ethiopian farmers",
       title: "Empowering Communities",
@@ -57,26 +56,12 @@ const AboutPage = () => {
     }
   ];
 
-  const onSelect = useCallback(() => {
-    if (!api) return;
-    setCurrentSlide(api.selectedScrollSnap());
-  }, [api]);
-
   useEffect(() => {
-    if (!api) return;
-
-    api.on("select", onSelect);
-    return () => {
-      api.off("select", onSelect);
-    };
-  }, [api, onSelect]);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      api?.scrollNext();
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [api]);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
   const milestones = [
     {
       year: "2023",
@@ -236,30 +221,25 @@ const AboutPage = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
         viewport={{ once: true }}
-        className="relative min-h-[40vh] text-white py-20 pt-36 overflow-hidden"
+        className="relative h-[80vh] text-white py-20 pt-24 sm:pt-36 overflow-hidden"
       >
-        {/* Image Carousel */}
-        <div className="absolute inset-0">
-          <Carousel className="w-full h-full" setApi={setApi}>
-            <CarouselContent>
-              {heroImages.map((image, index) => (
-                <CarouselItem key={index} className="relative">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover "
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-4 bg-white/20 border-white/30 text-white hover:bg-white/30" />
-            <CarouselNext className="right-4 bg-white/20 border-white/30 text-white hover:bg-white/30" />
-          </Carousel>
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <motion.img
+            key={currentSlide}
+            src={heroImages[currentSlide].src}
+            alt={heroImages[currentSlide].alt}
+            className="w-full h-full object-cover object-center"
+            initial={{ scale: 1 }}
+            animate={{ scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-transparent z-10"></div>
         </div>
 
         {/* Content Overlay */}
  <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-transparent z-10"></div>
-        <div className="container mx-auto px-6 relative z-10 h-full flex items-end mt-20 ">
+        <div className="container mx-auto px-6 relative z-10 h-full flex items-end  ">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               key={currentSlide}
@@ -267,13 +247,13 @@ const AboutPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-solar-gold">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 text-solar-gold">
                 {heroImages[currentSlide].title}
               </h2>
-              <h1 className="text-5xl md:text-6xl font-bold mb-4 mt-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 mt-4">
                 About AgriSun Ethiopia
               </h1>
-              <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed">
                 {heroImages[currentSlide].description}
               </p>
             </motion.div>
@@ -298,22 +278,10 @@ const AboutPage = () => {
               ))}
             </div>
 
-            {/* Slide Indicators */}
-            <div className="flex justify-center mt-8 space-x-2 mt-10">
-              {heroImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => api?.scrollTo(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentSlide === index
-                      ? 'bg-solar-gold scale-125'
-                      : 'bg-white/50 hover:bg-white/75'
-                  }`}
-                />
-              ))}
-            </div>
           </div>
         </div>
+
+      
       </motion.div>
 
       {/* Our Story */}
