@@ -28,6 +28,19 @@ const specificationSchema = new mongoose.Schema({
   value: String
 });
 
+const imageSchema = new mongoose.Schema({
+  url: {
+    type: String,
+    required: true
+  },
+  alt: {
+    type: String,
+    required: true
+  },
+  filename: String,
+  publicId: String
+});
+
 const projectSchema = new mongoose.Schema({
   id: {
     type: String,
@@ -67,7 +80,7 @@ const projectSchema = new mongoose.Schema({
   specifications: [specificationSchema],
   testimonial: testimonialSchema,
   farmerData: [farmerDataSchema],
-  images: [String],
+  images: [imageSchema],
   region: {
     type: String,
     enum: ['Amhara', 'Oromia', 'Tigray', 'Sidama', 'SNNP', 'Diredewa', 'Harari', 'Shewa', 'Other']

@@ -2,7 +2,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import EthiopiaMap from "@/components/EthiopiaMap";
-import projectsData from "@/data/projects.json";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -22,16 +23,54 @@ import {
   Globe,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
   const navigate = useNavigate();
   const [selectedFarmer, setSelectedFarmer] = useState(null);
+  const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const projects = projectsData.projects;
+  useEffect(() => {
+    const fetchProject = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(`http://localhost:5000/api/content/projects/${projectId}`);
+        setProject(response.data.data);
+        setError(null);
+      } catch (err) {
+        console.error('Error fetching project:', err);
+        setError('Failed to load project');
+        // Fallback to static data if API fails
+        try {
+          const projectsData = await import("@/data/projects.json");
+          const foundProject = projectsData.default.projects.find((p) => p.id === projectId);
+          setProject(foundProject);
+        } catch (fallbackErr) {
+          console.error('Fallback data also failed:', fallbackErr);
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const project = projects.find((p) => p.id === projectId);
+    if (projectId) {
+      fetchProject();
+    }
+  }, [projectId]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen">
+        <Navigation />
+        <div className="container mx-auto px-6 py-20 text-center">
+          <p className="text-muted-foreground">Loading project...</p>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   if (!project) {
     return (
@@ -85,15 +124,25 @@ const ProjectDetail = () => {
         className="relative min-h-[60vh] text-white py-20 pt-36"
       >
         <div className="absolute inset-0 overflow-hidden">
-          <motion.img
-            src=""
-            alt={project.title}
-            className="w-full h-full object-cover"
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <div className="absolute inset-0 bg-agriculture-green-dark/70"></div>
-        </div>
+           {project.images && project.images.length > 0 ? (
+             <motion.img
+               src={project.images[0].url}
+               alt={project.images[0].alt}
+               className="w-full h-full object-cover"
+               animate={{ scale: [1, 1.1, 1] }}
+               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+             />
+           ) : (
+             <motion.img
+               src=""
+               alt={project.title}
+               className="w-full h-full object-cover"
+               animate={{ scale: [1, 1.1, 1] }}
+               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+             />
+           )}
+           <div className="absolute inset-0 bg-agriculture-green-dark/70"></div>
+         </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className={`mb-4 ${getStatusColor(project.status)}`}>

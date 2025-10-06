@@ -2,8 +2,16 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
+const cloudinary = require('cloudinary').v2;
 const connectDB = require('./config/database');
 require('dotenv').config();
+
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+});
 
 const app = express();
 
@@ -53,6 +61,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/admin', require('./routes/admin'));
+app.use('/api/projects', require('./routes/projects'));
 app.use('/api/inventory', require('./routes/inventory'));
 app.use('/api/content', require('./routes/content'));
 app.use('/api/crm', require('./routes/crm'));

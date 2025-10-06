@@ -28,7 +28,7 @@ const Services = () => {
     },
     {
       icon: Droplets,
-      image: services2,
+      image: services4,
       title: "Solar-Powered Pump Installation",
       description:
         "Supply and install complete sets of solar-powered pumps designed for small landholders with reliable, clean energy solutions.",
@@ -36,7 +36,7 @@ const Services = () => {
     },
     {
       icon: Users,
-      image: services3,
+      image: services2,
       title: "Irrigation Systems",
       description:
         "Supply and install efficient irrigation solutions optimized for crops, soil type, and land size to maximize water efficiency.",
@@ -44,7 +44,7 @@ const Services = () => {
     },
     {
       icon: Wrench,
-      image: services4,
+      image: services6,
       title: "Solar-Powered Grain Milling",
       description:
         "Offer solar-powered grain milling systems utilizing excess power from solar irrigation setups for complete agricultural solutions.",
@@ -52,7 +52,7 @@ const Services = () => {
     },
     {
       icon: BarChart,
-      image: services5,
+      image: services3,
       title: "Training & Knowledge Transfer",
       description:
         "Provide comprehensive training programs to ensure farmers can effectively operate and maintain their solar irrigation systems.",
@@ -60,7 +60,7 @@ const Services = () => {
     },
     {
       icon: Shield,
-      image: services6,
+      image: services5,
       title: "Maintenance & Technical Support",
       description:
         "Ongoing technical support and maintenance services to keep solar irrigation systems running at peak performance.",

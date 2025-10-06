@@ -234,11 +234,11 @@ const AboutPage = () => {
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-transparent z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-white z-10"></div>
         </div>
 
         {/* Content Overlay */}
- <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-transparent z-10"></div>
+ <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-white z-10"></div>
         <div className="container mx-auto px-6 relative z-10 h-full flex items-end  ">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div

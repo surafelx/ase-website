@@ -38,7 +38,7 @@ import {
 import { motion } from "framer-motion";
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import projectsData from "@/data/projects/projects.json";
+import axios from "axios";
 
 const ProjectsPage = () => {
   const navigate = useNavigate();
@@ -46,23 +46,72 @@ const ProjectsPage = () => {
   const [statusFilter, setStatusFilter] = useState("all");
   const [regionFilter, setRegionFilter] = useState("all");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const projects = projectsData.projects;
+  const heroImages = [
+    {
+      src: "/assets/projects/amhara/amhara-1.jpg",
+      alt: "Amhara region agricultural project",
+      title: "Transforming Agriculture",
+      description: "Innovative solar solutions across Ethiopian regions"
+    },
+    {
+      src: "/assets/projects/oromia/oromia-1.jpg",
+      alt: "Oromia region farming community",
+      title: "Empowering Farmers",
+      description: "Sustainable irrigation systems for better yields"
+    },
+    {
+      src: "/assets/projects/tigray/tigray-1.jpg",
+      alt: "Tigray region solar installation",
+      title: "Solar Innovation",
+      description: "Clean energy powering agricultural transformation"
+    }
+  ];
 
-  // Collect all project images for the carousel - use default image since images not in raw data
+  // Collect all project images for the carousel
   const allProjectImages = projects.map((project) => ({
-    src: "/assets/projects/amhara/amhara-1.jpg", // Default image
+    src: project.images && project.images.length > 0 ? project.images[0].url : "/assets/projects/amhara/amhara-1.jpg",
     projectTitle: project.title,
-    projectId: project.id,
-    location: "",
+    projectId: project._id || project.id,
+    location: project.location,
   }));
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % allProjectImages.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [allProjectImages.length]);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
+  // Fetch projects from API
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get('http://localhost:5000/api/content/projects');
+        setProjects(response.data.data);
+        setError(null);
+      } catch (err) {
+        console.error('Error fetching projects:', err);
+        setError('Failed to load projects');
+        // Fallback to static data if API fails
+        try {
+          const projectsData = await import("@/data/projects/projects.json");
+          setProjects(projectsData.default.projects);
+        } catch (fallbackErr) {
+          console.error('Fallback data also failed:', fallbackErr);
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
   const projectStats = [
     { label: "Total Projects", value: projects.length, icon: Award },
@@ -84,6 +133,14 @@ const ProjectsPage = () => {
       icon: TrendingUp,
     },
   ];
+
+  // Update hero images to use project images if available
+  const dynamicHeroImages = projects.length > 0 ? projects.slice(0, 3).map((project, index) => ({
+    src: project.images && project.images.length > 0 ? project.images[0].url : heroImages[index % heroImages.length].src,
+    alt: project.images && project.images.length > 0 ? project.images[0].alt : heroImages[index % heroImages.length].alt,
+    title: project.title,
+    description: project.description || heroImages[index % heroImages.length].description
+  })) : heroImages;
 
   const getStatusColor = (status) => {
     switch (status) {
@@ -126,38 +183,98 @@ const ProjectsPage = () => {
         <Navigation />
       </motion.div>
 
-      {/* Hero Section */}
+      {/* Hero Section with Carousel */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
         viewport={{ once: true }}
-        className="bg-gradient-hero text-white py-20"
+        className="relative h-screen text-white py-20 pt-24 sm:pt-36 overflow-hidden"
       >
-        <div className="container mx-auto px-6 mt-10">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <motion.img
+            key={currentSlide}
+            src={heroImages[currentSlide].src}
+            alt={heroImages[currentSlide].alt}
+            className="w-full h-full object-cover"
+            initial={{ scale: 1 }}
+            animate={{ scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-white z-10"></div>
+        </div>
+
+        {/* Content Overlay */}
+        <div className="container mx-auto px-6 relative z-10 h-full flex items-end mt-10 sm:mt-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our Projects
-            </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Discover how AgriSun Ethiopia is transforming agriculture across
-              Ethiopia through innovative solar irrigation projects that deliver
-              real results for farmers.
-            </p>
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 text-solar-gold">
+                {heroImages[currentSlide].title}
+              </h2>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 mt-4">
+                Our Projects
+              </h1>
+              <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed">
+                {heroImages[currentSlide].description}
+              </p>
+            </motion.div>
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
               {projectStats.map((stat, index) => (
-                <div key={index} className="text-center">
+                <motion.div
+                  key={index}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index }}
+                  viewport={{ once: true }}
+                >
                   <stat.icon className="w-8 h-8 mx-auto mb-2 text-solar-gold" />
                   <div className="text-3xl font-bold text-solar-gold">
                     {stat.value}
                     {stat.suffix}
                   </div>
                   <div className="text-sm text-white/80">{stat.label}</div>
-                </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Slide Indicators */}
+            <div className="flex mt-6 sm:mt-8 space-x-2">
+              {heroImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    currentSlide === index
+                      ? 'bg-solar-gold'
+                      : 'bg-solar-gold/50'
+                  }`}
+                />
               ))}
             </div>
           </div>
         </div>
+
+        {/* Custom Navigation */}
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length)}
+          className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white z-30 p-2 rounded"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev + 1) % heroImages.length)}
+          className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white z-30 p-2 rounded"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
       </motion.div>
 
      
@@ -430,11 +547,14 @@ const ProjectsPage = () => {
                     onClick={() => navigate(`/projects/${project.id}`)}
                   >
                     {/* Full Card Background Image */}
-
                     <div className="absolute inset-0 bg-gradient-primary">
-                      {/* <motion.img
-                      className="h-full w-full object-cover"
-                      src="" /> */}
+                      {project.images && project.images.length > 0 && (
+                        <motion.img
+                          className="h-full w-full object-cover"
+                          src={project.images[0].url}
+                          alt={project.images[0].alt}
+                        />
+                      )}
                       <div className="absolute inset-0 bg-agriculture-green-dark/60"></div>
                     </div>
 

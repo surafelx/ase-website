@@ -7,6 +7,7 @@ import Customers from './pages/Customers';
 import Finance from './pages/Finance';
 import Analytics from './pages/Analytics';
 import Users from './pages/Users';
+import Gallery from './pages/Gallery';
 import Layout from './components/Layout';
 import Login from './pages/Login';
 import { AuthProvider } from './hooks/useAuth';
@@ -28,6 +29,7 @@ function App() {
               <Route path="finance" element={<Finance />} />
               <Route path="analytics" element={<Analytics />} />
               <Route path="users" element={<Users />} />
+              <Route path="gallery" element={<Gallery />} />
             </Route>
             {/* Redirect root to dashboard for now */}
             <Route path="*" element={<Layout />} />

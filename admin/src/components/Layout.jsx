@@ -12,7 +12,8 @@ import {
   Menu,
   X,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Image
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
@@ -52,6 +53,7 @@ const Layout = () => {
     { name: 'Dashboard', href: '/', icon: LayoutDashboard },
     { name: 'Inventory', href: '/inventory', icon: Package },
     { name: 'Projects', href: '/projects', icon: FolderOpen },
+    { name: 'Gallery', href: '/gallery', icon: Image },
     { name: 'Customers', href: '/customers', icon: Users },
     { name: 'Finance', href: '/finance', icon: DollarSign },
     { name: 'Analytics', href: '/analytics', icon: BarChart3 },

@@ -1,90 +1,41 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { api } from '../services/api';
-import { MapPin, Users, TrendingUp, Calendar } from 'lucide-react';
+import { MapPin, Users, TrendingUp, Calendar, Plus, Edit, Trash2, Image, X } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Textarea } from '../components/ui/textarea';
 import { Select } from '../components/ui/select';
+import ImageUpload from '../components/ImageUpload';
 
 const Projects = () => {
   const [statusFilter, setStatusFilter] = useState('');
+  const [showForm, setShowForm] = useState(false);
+  const [editingProject, setEditingProject] = useState(null);
+  const [formData, setFormData] = useState({
+    title: '',
+    location: '',
+    description: '',
+    status: 'Planning',
+    region: '',
+    beneficiaries: '',
+    area: '',
+    yieldIncrease: ''
+  });
 
-  // Mock data for projects
-  const mockProjectsData = [
-    {
-      _id: '1',
-      title: 'Solar Irrigation System - Amhara Region',
-      location: 'Bahir Dar, Amhara',
-      status: 'In Progress',
-      beneficiaries: 150,
-      yieldIncrease: '40% increase',
-      area: '25 hectares',
-      description: 'Complete solar-powered irrigation system for smallholder farmers in the Amhara region. Includes solar panels, pumps, and drip irrigation setup.',
-      createdAt: '2024-09-15'
-    },
-    {
-      _id: '2',
-      title: 'Water Pump Installation - Oromia',
-      location: 'Adama, Oromia',
-      status: 'Completed',
-      beneficiaries: 200,
-      yieldIncrease: '35% increase',
-      area: '30 hectares',
-      description: 'Installation of high-efficiency water pumps powered by solar energy for sustainable irrigation in Oromia region.',
-      createdAt: '2024-09-10'
-    },
-    {
-      _id: '3',
-      title: 'Farmer Training Program - Tigray',
-      location: 'Mekelle, Tigray',
-      status: 'Planning',
-      beneficiaries: 100,
-      yieldIncrease: '50% increase',
-      area: '20 hectares',
-      description: 'Comprehensive training program for farmers on modern irrigation techniques and solar-powered farming equipment.',
-      createdAt: '2024-09-08'
-    },
-    {
-      _id: '4',
-      title: 'Solar Panel Distribution - Shewa',
-      location: 'Addis Ababa, Shewa',
-      status: 'In Progress',
-      beneficiaries: 80,
-      yieldIncrease: '45% increase',
-      area: '15 hectares',
-      description: 'Distribution and installation of solar panels for off-grid farming communities in the Shewa region.',
-      createdAt: '2024-09-05'
-    },
-    {
-      _id: '5',
-      title: 'Drip Irrigation Network - Sidama',
-      location: 'Hawassa, Sidama',
-      status: 'Completed',
-      beneficiaries: 120,
-      yieldIncrease: '55% increase',
-      area: '18 hectares',
-      description: 'Advanced drip irrigation network implementation with water conservation technologies for Sidama coffee farmers.',
-      createdAt: '2024-09-01'
-    },
-    {
-      _id: '6',
-      title: 'Solar Battery Storage - Afar',
-      location: 'Semera, Afar',
-      status: 'Planning',
-      beneficiaries: 90,
-      yieldIncrease: '30% increase',
-      area: '22 hectares',
-      description: 'Solar battery storage system installation for reliable power supply in remote Afar region farming communities.',
-      createdAt: '2024-08-28'
+  // Fetch projects
+  const { data: projectsData, isLoading, refetch } = useQuery({
+    queryKey: ['projects', statusFilter],
+    queryFn: async () => {
+      const params = new URLSearchParams();
+      if (statusFilter) params.append('status', statusFilter);
+      const response = await api.get(`/projects?${params}`);
+      return response.data;
     }
-  ];
+  });
 
-  // Filter projects based on status
-  const filteredProjects = statusFilter
-    ? mockProjectsData.filter(project => project.status === statusFilter)
-    : mockProjectsData;
-
-  const projects = filteredProjects;
+  const projects = projectsData?.data || [];
 
   const getStatusColor = (status) => {
     switch (status) {
@@ -99,12 +50,69 @@ const Projects = () => {
     }
   };
 
-  // Remove loading state since we're using mock data
+  const handleCreateProject = () => {
+    setEditingProject(null);
+    setFormData({
+      title: '',
+      location: '',
+      description: '',
+      status: 'Planning',
+      region: '',
+      beneficiaries: '',
+      area: '',
+      yieldIncrease: ''
+    });
+    setShowForm(true);
+  };
+
+  const handleEditProject = (project) => {
+    setEditingProject(project);
+    setFormData({
+      title: project.title || '',
+      location: project.location || '',
+      description: project.description || '',
+      status: project.status || 'Planning',
+      region: project.region || '',
+      beneficiaries: project.beneficiaries || '',
+      area: project.area || '',
+      yieldIncrease: project.yieldIncrease || ''
+    });
+    setShowForm(true);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (editingProject) {
+        await api.put(`/projects/${editingProject._id}`, formData);
+      } else {
+        await api.post('/projects', formData);
+      }
+      setShowForm(false);
+      refetch();
+    } catch (error) {
+      console.error('Error saving project:', error);
+    }
+  };
+
+  const handleDeleteProject = async (projectId) => {
+    if (!confirm('Are you sure you want to delete this project?')) return;
+    try {
+      await api.delete(`/projects/${projectId}`);
+      refetch();
+    } catch (error) {
+      console.error('Error deleting project:', error);
+    }
+  };
 
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold">Projects Management</h1>
+        <Button onClick={handleCreateProject}>
+          <Plus className="w-4 h-4 mr-2" />
+          Add Project
+        </Button>
       </div>
 
       {/* Filters */}
@@ -123,53 +131,250 @@ const Projects = () => {
         </div>
       </div>
 
+      {/* Loading State */}
+      {isLoading && (
+        <div className="text-center py-12">
+          <p className="text-gray-500">Loading projects...</p>
+        </div>
+      )}
+
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project) => (
-          <div key={project._id} className="bg-white rounded-lg shadow overflow-hidden">
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold">{project.title}</h3>
-                <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(project.status)}`}>
+      {!isLoading && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <Card key={project._id}>
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-lg">{project.title}</CardTitle>
+                  <div className="flex space-x-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleEditProject(project)}
+                    >
+                      <Edit className="w-4 h-4" />
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleDeleteProject(project._id)}
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </Button>
+                  </div>
+                </div>
+                <span className={`px-2 py-1 text-xs rounded-full w-fit ${getStatusColor(project.status)}`}>
                   {project.status}
                 </span>
-              </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    {project.location}
+                  </div>
 
-              <div className="space-y-3">
-                <div className="flex items-center text-sm text-gray-600">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  {project.location}
+                  {project.beneficiaries && (
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Users className="w-4 h-4 mr-2" />
+                      {project.beneficiaries} beneficiaries
+                    </div>
+                  )}
+
+                  {project.yieldIncrease && (
+                    <div className="flex items-center text-sm text-gray-600">
+                      <TrendingUp className="w-4 h-4 mr-2" />
+                      {project.yieldIncrease}
+                    </div>
+                  )}
+
+                  {project.area && (
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {project.area}
+                    </div>
+                  )}
                 </div>
 
-                <div className="flex items-center text-sm text-gray-600">
-                  <Users className="w-4 h-4 mr-2" />
-                  {project.beneficiaries} beneficiaries
-                </div>
+                {project.description && (
+                  <div className="mt-4">
+                    <p className="text-sm text-gray-600 line-clamp-3">
+                      {project.description}
+                    </p>
+                  </div>
+                )}
 
-                <div className="flex items-center text-sm text-gray-600">
-                  <TrendingUp className="w-4 h-4 mr-2" />
-                  {project.yieldIncrease} increase
-                </div>
+                {project.images && project.images.length > 0 && (
+                  <div className="mt-4">
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Image className="w-4 h-4 mr-2" />
+                      {project.images.length} image{project.images.length > 1 ? 's' : ''}
+                    </div>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
 
-                <div className="flex items-center text-sm text-gray-600">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  {project.area}
-                </div>
-              </div>
-
-              <div className="mt-4">
-                <p className="text-sm text-gray-600 line-clamp-3">
-                  {project.description}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {projects.length === 0 && (
+      {projects.length === 0 && !isLoading && (
         <div className="text-center py-12">
           <p className="text-gray-500">No projects found</p>
+        </div>
+      )}
+
+      {/* Project Form Modal */}
+      {showForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-bold">
+                  {editingProject ? 'Edit Project' : 'Add New Project'}
+                </h2>
+                <button
+                  onClick={() => setShowForm(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Title *
+                    </label>
+                    <Input
+                      value={formData.title}
+                      onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Location *
+                    </label>
+                    <Input
+                      value={formData.location}
+                      onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Status
+                    </label>
+                    <Select
+                      value={formData.status}
+                      onChange={(e) => setFormData({ ...formData, status: e.target.value })}
+                    >
+                      <option value="Planning">Planning</option>
+                      <option value="In Progress">In Progress</option>
+                      <option value="Completed">Completed</option>
+                      <option value="Cancelled">Cancelled</option>
+                    </Select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Region
+                    </label>
+                    <Select
+                      value={formData.region}
+                      onChange={(e) => setFormData({ ...formData, region: e.target.value })}
+                    >
+                      <option value="">Select Region</option>
+                      <option value="Amhara">Amhara</option>
+                      <option value="Oromia">Oromia</option>
+                      <option value="Tigray">Tigray</option>
+                      <option value="Sidama">Sidama</option>
+                      <option value="SNNP">SNNP</option>
+                      <option value="Diredewa">Dire Dawa</option>
+                      <option value="Harari">Harari</option>
+                      <option value="Shewa">Shewa</option>
+                      <option value="Other">Other</option>
+                    </Select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Beneficiaries
+                    </label>
+                    <Input
+                      type="number"
+                      value={formData.beneficiaries}
+                      onChange={(e) => setFormData({ ...formData, beneficiaries: e.target.value })}
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Area
+                    </label>
+                    <Input
+                      value={formData.area}
+                      onChange={(e) => setFormData({ ...formData, area: e.target.value })}
+                      placeholder="e.g., 25 hectares"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Yield Increase
+                    </label>
+                    <Input
+                      value={formData.yieldIncrease}
+                      onChange={(e) => setFormData({ ...formData, yieldIncrease: e.target.value })}
+                      placeholder="e.g., 40% increase"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Description
+                  </label>
+                  <Textarea
+                    value={formData.description}
+                    onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                    rows={4}
+                  />
+                </div>
+
+                {/* Image Upload Section */}
+                {editingProject && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Project Images
+                    </label>
+                    <ImageUpload
+                      projectId={editingProject._id}
+                      existingImages={editingProject.images || []}
+                      onUploadSuccess={() => refetch()}
+                    />
+                  </div>
+                )}
+
+                <div className="flex justify-end space-x-4">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => setShowForm(false)}
+                  >
+                    Cancel
+                  </Button>
+                  <Button type="submit">
+                    {editingProject ? 'Update Project' : 'Create Project'}
+                  </Button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       )}
     </div>

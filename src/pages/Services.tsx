@@ -70,11 +70,11 @@ const ServicesPage = () => {
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   const services = [
     {
@@ -370,7 +370,7 @@ const ServicesPage = () => {
                       alt={image.alt}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-agriculture-green-dark/80 via-agriculture-green-dark/60 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-white"></div>
                   </motion.div>
                 </CarouselItem>
               ))}
@@ -381,7 +381,7 @@ const ServicesPage = () => {
         </div>
 
         {/* Content Overlay */}
-        <div className="absolute inset-0 bg-agriculture-green-dark/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-white"></div>
         <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div

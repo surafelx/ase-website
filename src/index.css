@@ -48,7 +48,7 @@ All colors MUST be HSL.
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--agriculture-green)), hsl(var(--solar-gold)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--agriculture-green)) 0%, hsl(var(--agriculture-green-dark)) 100%);
+    --gradient-hero: linear-gradient(to top, hsl(var(--agriculture-green-dark)) 0%, hsl(0 0% 100%) 100%);
     --gradient-sunset: linear-gradient(180deg, hsl(var(--solar-gold)) 0%, hsl(var(--solar-gold-dark)) 100%);
 
     /* Shadows */
