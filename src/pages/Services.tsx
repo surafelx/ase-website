@@ -345,59 +345,37 @@ const ServicesPage = () => {
       >
         <Navigation />
       </motion.div>
-      {/* Hero Section with Carousel */}
+      {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
         viewport={{ once: true }}
-        className="relative min-h-[70vh] text-white py-20 pt-36 overflow-hidden"
+        className="relative h-[60vh] bg-agriculture-green-dark text-white py-20 overflow-hidden"
       >
-        {/* Image Carousel */}
-        <div className="absolute inset-0">
-          <Carousel className="w-full h-full">
-            <CarouselContent>
-              {heroImages.map((image, index) => (
-                <CarouselItem key={index} className="relative">
-                  <motion.div
-                    className="relative h-full"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: currentSlide === index ? 1 : 0 }}
-                    transition={{ duration: 1 }}
-                  >
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-white"></div>
-                  </motion.div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-4 bg-white/20 border-white/30 text-white hover:bg-white/30" />
-            <CarouselNext className="right-4 bg-white/20 border-white/30 text-white hover:bg-white/30" />
-          </Carousel>
+        {/* Simple Graphics Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-20 h-20 border-2 border-white rounded-full"></div>
+          <div className="absolute top-20 left-20 w-16 h-16 bg-solar-gold rounded-lg rotate-45"></div>
+          <div className="absolute bottom-20 right-1/4 w-12 h-12 border-2 border-solar-gold rounded-full"></div>
+          <div className="absolute bottom-10 left-10 w-24 h-24 bg-white rounded-full opacity-20"></div>
         </div>
 
-        {/* Content Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-white"></div>
         <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              key={currentSlide}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-solar-gold">
-                {heroImages[currentSlide].title}
+                Comprehensive Services
               </h2>
               <h1 className="text-5xl md:text-6xl font-bold mb-4 mt-4">
-                Comprehensive Sustainable Agriculture Services
+                Sustainable Agriculture Solutions
               </h1>
               <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                {heroImages[currentSlide].description}
+                From borehole drilling to solar-powered grain milling
               </p>
             </motion.div>
 
@@ -418,21 +396,6 @@ const ServicesPage = () => {
                   </div>
                   <div className="text-sm text-white/80">{stat.label}</div>
                 </motion.div>
-              ))}
-            </div>
-
-            {/* Slide Indicators */}
-            <div className="flex justify-center mt-8 space-x-2">
-              {heroImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentSlide === index
-                      ? 'bg-solar-gold scale-125'
-                      : 'bg-white/50 hover:bg-white/75'
-                  }`}
-                />
               ))}
             </div>
           </div>

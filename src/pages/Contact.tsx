@@ -47,7 +47,7 @@ const ContactPage = () => {
   const offices = [
     {
       city: "Addis Ababa",
-      address: "Nigat Business Center, 11th Floor, 11-04, Addis Ababa, Ethiopia",
+      address: "IPDC Building, 2nd Floor, Office No.3, Addis Ababa, Ethiopia",
       phone: "0972262728",
       email: "agrisunethiopia@gmail.com",
       hours: "Mon-Fri: 8:00 AM - 6:00 PM"
@@ -96,19 +96,29 @@ const ContactPage = () => {
         <Navigation />
       </motion.div>
 
-      {/* Simple Hero Section */}
+      {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
         viewport={{ once: true }}
-        className="bg-gradient-primary text-white py-20 pt-24"
+        className="relative h-[50vh] bg-agriculture-green-dark text-white py-20 overflow-hidden"
       >
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Get in touch with our solar irrigation experts
-          </p>
+        {/* Simple Graphics Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-20 h-20 border-2 border-white rounded-full"></div>
+          <div className="absolute top-20 left-20 w-16 h-16 bg-solar-gold rounded-lg rotate-45"></div>
+          <div className="absolute bottom-20 right-1/4 w-12 h-12 border-2 border-solar-gold rounded-full"></div>
+          <div className="absolute bottom-10 left-10 w-24 h-24 bg-white rounded-full opacity-20"></div>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10 h-full flex items-center text-center">
+          <div className="max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+            <p className="text-xl text-white/90">
+              Get in touch with our solar irrigation experts
+            </p>
+          </div>
         </div>
       </motion.div>
 

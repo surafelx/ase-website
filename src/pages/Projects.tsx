@@ -183,45 +183,37 @@ const ProjectsPage = () => {
         <Navigation />
       </motion.div>
 
-      {/* Hero Section with Carousel */}
+      {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
         viewport={{ once: true }}
-        className="relative h-screen text-white py-20 pt-24 sm:pt-36 overflow-hidden"
+        className="relative h-[60vh] bg-agriculture-green-dark text-white py-20 overflow-hidden"
       >
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <motion.img
-            key={currentSlide}
-            src={heroImages[currentSlide].src}
-            alt={heroImages[currentSlide].alt}
-            className="w-full h-full object-cover"
-            initial={{ scale: 1 }}
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-agriculture-green-dark to-white z-10"></div>
+        {/* Simple Graphics Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-20 h-20 border-2 border-white rounded-full"></div>
+          <div className="absolute top-20 right-20 w-16 h-16 bg-solar-gold rounded-lg rotate-45"></div>
+          <div className="absolute bottom-20 left-1/4 w-12 h-12 border-2 border-solar-gold rounded-full"></div>
+          <div className="absolute bottom-10 right-10 w-24 h-24 bg-white rounded-full opacity-20"></div>
         </div>
 
-        {/* Content Overlay */}
-        <div className="container mx-auto px-6 relative z-10 h-full flex items-end mt-10 sm:mt-20">
+        <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              key={currentSlide}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 text-solar-gold">
-                {heroImages[currentSlide].title}
+                Transforming Agriculture
               </h2>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 mt-4">
                 Our Projects
               </h1>
               <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed">
-                {heroImages[currentSlide].description}
+                Innovative solar solutions across Ethiopian regions
               </p>
             </motion.div>
 
@@ -244,37 +236,8 @@ const ProjectsPage = () => {
                 </motion.div>
               ))}
             </div>
-
-            {/* Slide Indicators */}
-            <div className="flex mt-6 sm:mt-8 space-x-2">
-              {heroImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    currentSlide === index
-                      ? 'bg-solar-gold'
-                      : 'bg-solar-gold/50'
-                  }`}
-                />
-              ))}
-            </div>
           </div>
         </div>
-
-        {/* Custom Navigation */}
-        <button
-          onClick={() => setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length)}
-          className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white z-30 p-2 rounded"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        <button
-          onClick={() => setCurrentSlide((prev) => (prev + 1) % heroImages.length)}
-          className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white z-30 p-2 rounded"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
       </motion.div>
 
      

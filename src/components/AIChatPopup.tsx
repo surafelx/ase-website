@@ -28,8 +28,8 @@ const AIChatPopup = () => {
   const predefinedResponses = {
     "hello": "Hello! Welcome to AgriSun Ethiopia. I'm here to help you with information about our solar irrigation solutions.",
     "services": "We offer comprehensive services including: Borehole Drilling, Solar-Powered Pump Installation, Efficient Irrigation Systems, Solar-Powered Grain Milling, Training & Knowledge Transfer, and Maintenance & Technical Support.",
-    "price": "Our pricing varies based on your specific needs, farm size, and location. Please contact us at +251 9 41 97 00 26 for a personalized quote.",
-    "contact": "You can reach us at: Phone: +251 9 41 97 00 26, Email: contact@agrisunethiopia.com, Address: Nigat Business Center, 11th Floor, 11-04, Addis Ababa, Ethiopia",
+    "price": "Our pricing varies based on your specific needs, farm size, and location. Please contact us at +251972262728 for a personalized quote.",
+    "contact": "You can reach us at: Phone: +251972262728, Email: contact@agrisunethiopia.com, Address: IPDC Building, 2nd Floor, Office No.3, Addis Ababa, Ethiopia",
     "about": "AgriSun Ethiopia specializes in providing affordable, reliable solar-powered irrigation solutions for small and marginal farmers across Ethiopia. We've been transforming agriculture since 2023.",
     "warranty": "We provide comprehensive warranty coverage on all solar components, insurance coverage against weather damage, and quick replacement of faulty components.",
     "training": "Yes! We provide comprehensive training programs for farmers and local technicians, including farmer training programs, technical skill development, and local technician certification.",
@@ -45,7 +45,7 @@ const AIChatPopup = () => {
     }
     
     // Default response
-    return "Thank you for your question! For detailed information about our solar irrigation solutions, please contact our team at +251 9 41 97 00 26 or visit our office at Nigat Business Center, Addis Ababa. Our experts will be happy to assist you!";
+    return "Thank you for your question! For detailed information about our solar irrigation solutions, please contact our team at +251972262728 or visit our office at Nigat Business Center, Addis Ababa. Our experts will be happy to assist you!";
   };
 
   const handleSendMessage = () => {

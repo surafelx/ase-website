@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import GalleryCarousel from '../components/GalleryCarousel';
 
 const Gallery = () => {
   // Sample images - replace with actual project images
@@ -28,11 +29,38 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
+
+      {/* Hero Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        viewport={{ once: true }}
+        className="relative h-[50vh] bg-agriculture-green-dark text-white py-20 overflow-hidden"
+      >
+        {/* Simple Graphics Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-20 h-20 border-2 border-white rounded-full"></div>
+          <div className="absolute top-20 left-20 w-16 h-16 bg-solar-gold rounded-lg rotate-45"></div>
+          <div className="absolute bottom-20 right-1/4 w-12 h-12 border-2 border-solar-gold rounded-full"></div>
+          <div className="absolute bottom-10 left-10 w-24 h-24 bg-white rounded-full opacity-20"></div>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10 h-full flex items-center text-center">
+          <div className="max-w-2xl mx-auto">
+            <h1 className="text-4xl font-bold text-white mb-4">Project Gallery</h1>
+            <p className="text-xl text-white/90">
+              Explore our successful agricultural projects across Ethiopia
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="pt-20 pb-12"
+        className="pb-12"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -41,10 +69,7 @@ const Gallery = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Project Gallery</h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Explore our successful agricultural projects across Ethiopia
-            </p>
+            <h2 className="text-2xl font-semibold text-gray-700 mb-4">Browse by Category</h2>
           </motion.div>
 
           {/* Category Filter */}
@@ -71,57 +96,7 @@ const Gallery = () => {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {filteredImages.map((image, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.03, y: -5 }}
-                transition={{ duration: 0.3 }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="relative">
-                  <img
-                    src={image.src}
-                    alt={image.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-agriculture-green text-white px-3 py-1 rounded-full text-xs font-medium">
-                      {image.category}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{image.title}</h3>
-                  <p className="text-sm text-gray-600 mb-3">{image.location}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-agriculture-green font-medium">{image.category}</span>
-                    <button className="text-agriculture-green hover:text-agriculture-green-dark transition-colors">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {filteredImages.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-12"
-            >
-              <p className="text-gray-500 text-lg">No projects found in this category.</p>
-            </motion.div>
-          )}
+          <GalleryCarousel images={filteredImages} showHeader={false} />
         </div>
       </motion.div>
       <Footer />

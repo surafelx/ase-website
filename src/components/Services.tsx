@@ -108,7 +108,7 @@ const Services = () => {
                       animate={{ scale: [1, 1.05, 1] }}
                       transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                     />
-                    <div className="absolute top-4 left-4 w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="absolute top-4 left-4 w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
                   </>

@@ -138,7 +138,7 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Address</h4>
                       <p className="text-muted-foreground">
-                        Nigat Business Center, 11th Floor, 11-04<br />
+                        IPDC Building, 2nd Floor, Office No.3<br />
                         Addis Ababa, Ethiopia
                       </p>
                     </div>
