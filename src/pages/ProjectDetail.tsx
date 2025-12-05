@@ -4,6 +4,301 @@ import Footer from "@/components/Footer";
 import EthiopiaMap from "@/components/EthiopiaMap";
 import axios from "axios";
 import { useState, useEffect } from "react";
+
+const projectsData = {
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Supply and Installation of 3 units 2.2Kw solar powered submersible pumps",
+      "location": "Central Ethiopia",
+      "status": "In Progress",
+      "description": "Supply and Installation of 3 units 2.2Kw solar powered submersible pumps",
+      "customer": "Central Ethiopia Silte Zone, Silti woreda",
+      "projectPeriod": "April 20, 2025",
+      "estimatedCost": "Birr 3,400,000.00",
+      "serialNumber": 1,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Central Ethiopia Silte Zone, Silti woreda"
+        },
+        {
+          "label": "Project Period",
+          "value": "April 20, 2025"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 3,400,000.00"
+        },
+        {
+          "label": "Status",
+          "value": "In Progress"
+        }
+      ]
+    },
+    {
+      "id": "project-2",
+      "title": "Supply & Installation of solar surface pump, Fence and related works",
+      "location": "Ethiopia",
+      "status": "Completed",
+      "description": "Supply & Installation of solar surface pump, Fence and related works",
+      "customer": "Generation Integrated Rural Development Consultant",
+      "projectPeriod": "Feb 2025",
+      "estimatedCost": "Birr 3,500,000.00",
+      "serialNumber": 2,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Generation Integrated Rural Development Consultant"
+        },
+        {
+          "label": "Project Period",
+          "value": "Feb 2025"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 3,500,000.00"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-3",
+      "title": "Supply and Installation of 2.2Kw solar powered surface pump and submersible pump",
+      "location": "Ethiopia",
+      "status": "In Progress",
+      "description": "Supply and Installation of 2.2Kw solar powered surface pump and submersible pump",
+      "customer": "Eden Business Group",
+      "projectPeriod": "December 23-27, 2024",
+      "estimatedCost": "Birr 2,000,000.00",
+      "serialNumber": 3,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Eden Business Group"
+        },
+        {
+          "label": "Project Period",
+          "value": "December 23-27, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 2,000,000.00"
+        },
+        {
+          "label": "Status",
+          "value": "In Progress"
+        }
+      ]
+    },
+    {
+      "id": "project-4",
+      "title": "Supply and Installation of 750w solar powered submersible pumps",
+      "location": "Ethiopia",
+      "status": "In Progress",
+      "description": "Supply and Installation of 750w solar powered submersible pumps",
+      "customer": "Farm Africa",
+      "projectPeriod": "December 31, 2024 - January 5, 2025",
+      "estimatedCost": "Birr 450,000.00",
+      "serialNumber": 4,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Farm Africa"
+        },
+        {
+          "label": "Project Period",
+          "value": "December 31, 2024 - January 5, 2025"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 450,000.00"
+        },
+        {
+          "label": "Status",
+          "value": "In Progress"
+        }
+      ]
+    },
+    {
+      "id": "project-5",
+      "title": "Supply and Installation of solar powered pumps",
+      "location": "Ethiopia",
+      "status": "Completed",
+      "description": "Supply and Installation of solar powered pumps",
+      "customer": "Birhanu Integrated Farm",
+      "projectPeriod": "Ongoing",
+      "estimatedCost": "Birr 2,000,000.00",
+      "serialNumber": 5,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Birhanu Integrated Farm"
+        },
+        {
+          "label": "Project Period",
+          "value": "Ongoing"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 2,000,000.00"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-6",
+      "title": "Water well Drilling 80m for irrigation and drinking water",
+      "location": "Ethiopia",
+      "status": "Completed",
+      "description": "Water well Drilling 80m for irrigation and drinking water",
+      "customer": "Shali Mesgied, Harbu",
+      "projectPeriod": "December 25-31, 2024",
+      "estimatedCost": "Birr 2,500,000.00",
+      "serialNumber": 6,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Shali Mesgied, Harbu"
+        },
+        {
+          "label": "Project Period",
+          "value": "December 25-31, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 2,500,000.00"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-7",
+      "title": "Supply and Installation of 16 solar-powered submersible pumps 5.5Kw",
+      "location": "Ethiopia",
+      "status": "In Progress",
+      "description": "Supply and Installation of 16 solar-powered submersible pumps 5.5Kw",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "July 15, 2024 – August 30, 2024",
+      "estimatedCost": "Birr 25,357,873.74",
+      "serialNumber": 7,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Ministry of Agriculture (Federal)"
+        },
+        {
+          "label": "Project Period",
+          "value": "July 15, 2024 – August 30, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 25,357,873.74"
+        },
+        {
+          "label": "Status",
+          "value": "In Progress"
+        }
+      ]
+    },
+    {
+      "id": "project-8",
+      "title": "Supply and Installation of 6 solar-powered surface pumps 750w, 1500w and 2.2Kw",
+      "location": "Ethiopia",
+      "status": "In Progress",
+      "description": "Supply and Installation of 6 solar-powered surface pumps 750w, 1500w and 2.2Kw",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "July 1, 2024 – August 30, 2024",
+      "estimatedCost": "Birr 4,957,287.56",
+      "serialNumber": 8,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Ministry of Agriculture (Federal)"
+        },
+        {
+          "label": "Project Period",
+          "value": "July 1, 2024 – August 30, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 4,957,287.56"
+        },
+        {
+          "label": "Status",
+          "value": "In Progress"
+        }
+      ]
+    },
+    {
+      "id": "project-9",
+      "title": "Supply drilling machine Accessories",
+      "location": "Amhara",
+      "status": "Completed",
+      "description": "Supply drilling machine Accessories",
+      "customer": "Ministry of Agriculture (Amhara Region)",
+      "projectPeriod": "July 1 – July 7, 2024",
+      "estimatedCost": "Birr 3,440,152.12",
+      "serialNumber": 9,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Ministry of Agriculture (Amhara Region)"
+        },
+        {
+          "label": "Project Period",
+          "value": "July 1 – July 7, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 3,440,152.12"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-10",
+      "title": "MOA Supply, Installation, testing, commissioning, and training of solar-powered water pumps – Sub contract Amhara Region 16 sites pump installation",
+      "location": "Amhara",
+      "status": "Completed",
+      "description": "MOA Supply, Installation, testing, commissioning, and training of solar-powered water pumps – Sub contract Amhara Region 16 sites pump installation",
+      "customer": "Nahom Construction",
+      "projectPeriod": "July 1, 2024 – July 30, 2024",
+      "estimatedCost": "Birr 1,148,160.00",
+      "serialNumber": 10,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Nahom Construction"
+        },
+        {
+          "label": "Project Period",
+          "value": "July 1, 2024 – July 30, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 1,148,160.00"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    }
+  ]
+};
 import {
   Card,
   CardContent,
@@ -33,30 +328,22 @@ const ProjectDetail = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchProject = async () => {
+    const loadProject = () => {
+      setLoading(true);
       try {
-        setLoading(true);
-        const response = await axios.get(`http://localhost:5000/api/content/projects/${projectId}`);
-        setProject(response.data.data);
+        const foundProject = projectsData.projects.find((p) => p.id === projectId);
+        setProject(foundProject);
         setError(null);
       } catch (err) {
-        console.error('Error fetching project:', err);
+        console.error('Error loading project:', err);
         setError('Failed to load project');
-        // Fallback to static data if API fails
-        try {
-          const projectsData = await import("@/data/projects.json");
-          const foundProject = projectsData.default.projects.find((p) => p.id === projectId);
-          setProject(foundProject);
-        } catch (fallbackErr) {
-          console.error('Fallback data also failed:', fallbackErr);
-        }
       } finally {
         setLoading(false);
       }
     };
 
     if (projectId) {
-      fetchProject();
+      loadProject();
     }
   }, [projectId]);
 

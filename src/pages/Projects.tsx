@@ -128,6 +128,499 @@ const projectsData = {
           "value": "In Progress"
         }
       ]
+    },
+    {
+      "id": "project-4",
+      "title": "Supply and Installation of 750w solar powered submersible pumps",
+      "location": "Ethiopia",
+      "status": "In Progress",
+      "description": "Supply and Installation of 750w solar powered submersible pumps",
+      "customer": "Farm Africa",
+      "projectPeriod": "December 31, 2024 - January 5, 2025",
+      "estimatedCost": "Birr 450,000.00",
+      "serialNumber": 4,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Farm Africa"
+        },
+        {
+          "label": "Project Period",
+          "value": "December 31, 2024 - January 5, 2025"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 450,000.00"
+        },
+        {
+          "label": "Status",
+          "value": "In Progress"
+        }
+      ]
+    },
+    {
+      "id": "project-5",
+      "title": "Supply and Installation of solar powered pumps",
+      "location": "Ethiopia",
+      "status": "Completed",
+      "description": "Supply and Installation of solar powered pumps",
+      "customer": "Birhanu Integrated Farm",
+      "projectPeriod": "Ongoing",
+      "estimatedCost": "Birr 2,000,000.00",
+      "serialNumber": 5,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Birhanu Integrated Farm"
+        },
+        {
+          "label": "Project Period",
+          "value": "Ongoing"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 2,000,000.00"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-6",
+      "title": "Water well Drilling 80m for irrigation and drinking water",
+      "location": "Ethiopia",
+      "status": "Completed",
+      "description": "Water well Drilling 80m for irrigation and drinking water",
+      "customer": "Shali Mesgied, Harbu",
+      "projectPeriod": "December 25-31, 2024",
+      "estimatedCost": "Birr 2,500,000.00",
+      "serialNumber": 6,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Shali Mesgied, Harbu"
+        },
+        {
+          "label": "Project Period",
+          "value": "December 25-31, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 2,500,000.00"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-7",
+      "title": "Supply and Installation of 16 solar-powered submersible pumps 5.5Kw",
+      "location": "Ethiopia",
+      "status": "In Progress",
+      "description": "Supply and Installation of 16 solar-powered submersible pumps 5.5Kw",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "July 15, 2024 – August 30, 2024",
+      "estimatedCost": "Birr 25,357,873.74",
+      "serialNumber": 7,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Ministry of Agriculture (Federal)"
+        },
+        {
+          "label": "Project Period",
+          "value": "July 15, 2024 – August 30, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 25,357,873.74"
+        },
+        {
+          "label": "Status",
+          "value": "In Progress"
+        }
+      ]
+    },
+    {
+      "id": "project-8",
+      "title": "Supply and Installation of 6 solar-powered surface pumps 750w, 1500w and 2.2Kw",
+      "location": "Ethiopia",
+      "status": "In Progress",
+      "description": "Supply and Installation of 6 solar-powered surface pumps 750w, 1500w and 2.2Kw",
+      "customer": "Ministry of Agriculture (Federal)",
+      "projectPeriod": "July 1, 2024 – August 30, 2024",
+      "estimatedCost": "Birr 4,957,287.56",
+      "serialNumber": 8,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Ministry of Agriculture (Federal)"
+        },
+        {
+          "label": "Project Period",
+          "value": "July 1, 2024 – August 30, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 4,957,287.56"
+        },
+        {
+          "label": "Status",
+          "value": "In Progress"
+        }
+      ]
+    },
+    {
+      "id": "project-9",
+      "title": "Supply drilling machine Accessories",
+      "location": "Amhara",
+      "status": "Completed",
+      "description": "Supply drilling machine Accessories",
+      "customer": "Ministry of Agriculture (Amhara Region)",
+      "projectPeriod": "July 1 – July 7, 2024",
+      "estimatedCost": "Birr 3,440,152.12",
+      "serialNumber": 9,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Ministry of Agriculture (Amhara Region)"
+        },
+        {
+          "label": "Project Period",
+          "value": "July 1 – July 7, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 3,440,152.12"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-10",
+      "title": "MOA Supply, Installation, testing, commissioning, and training of solar-powered water pumps – Sub contract Amhara Region 16 sites pump installation",
+      "location": "Amhara",
+      "status": "Completed",
+      "description": "MOA Supply, Installation, testing, commissioning, and training of solar-powered water pumps – Sub contract Amhara Region 16 sites pump installation",
+      "customer": "Nahom Construction",
+      "projectPeriod": "July 1, 2024 – July 30, 2024",
+      "estimatedCost": "Birr 1,148,160.00",
+      "serialNumber": 10,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Nahom Construction"
+        },
+        {
+          "label": "Project Period",
+          "value": "July 1, 2024 – July 30, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 1,148,160.00"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-11",
+      "title": "MOA Supply, Installation, testing, commissioning, and training of solar-powered water pumps – Sub contract South, Central Ethiopia and Sidama region 16 sites pump installation",
+      "location": "Sidama",
+      "status": "Completed",
+      "description": "MOA Supply, Installation, testing, commissioning, and training of solar-powered water pumps – Sub contract South, Central Ethiopia and Sidama region 16 sites pump installation",
+      "customer": "Nahom Construction",
+      "projectPeriod": "March 24, 2024 – April 19, 2024",
+      "estimatedCost": "Birr 1,163,340.00",
+      "serialNumber": 11,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Nahom Construction"
+        },
+        {
+          "label": "Project Period",
+          "value": "March 24, 2024 – April 19, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 1,163,340.00"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-12",
+      "title": "MOA Supply, Installation, testing, commissioning, and training of solar-powered water pumps – Sub contract Dire Dewa and Hareri region 5 sites installation",
+      "location": "Hareri",
+      "status": "Completed",
+      "description": "MOA Supply, Installation, testing, commissioning, and training of solar-powered water pumps – Sub contract Dire Dewa and Hareri region 5 sites installation",
+      "customer": "Nahom Construction",
+      "projectPeriod": "March 4, 2024 – March 11, 2024",
+      "estimatedCost": "Birr 241,500.00",
+      "serialNumber": 12,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Nahom Construction"
+        },
+        {
+          "label": "Project Period",
+          "value": "March 4, 2024 – March 11, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 241,500.00"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-13",
+      "title": "Supply and Installation of solar-powered water lifting Technology",
+      "location": "Amhara",
+      "status": "Completed",
+      "description": "Supply and Installation of solar-powered water lifting Technology",
+      "customer": "ATI (Amhara Region)",
+      "projectPeriod": "May 15, 2023 – June 30, 2023",
+      "estimatedCost": "Birr 2,259,337.14",
+      "serialNumber": 13,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "ATI (Amhara Region)"
+        },
+        {
+          "label": "Project Period",
+          "value": "May 15, 2023 – June 30, 2023"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 2,259,337.14"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-14",
+      "title": "Solar-powered water lifting supply, Installation and commission including pipeline",
+      "location": "Amhara",
+      "status": "Completed",
+      "description": "Solar-powered water lifting supply, Installation and commission including pipeline",
+      "customer": "ATI (Amhara Region)",
+      "projectPeriod": "May 15, 2023 – June 30, 2023",
+      "estimatedCost": "Birr 10,560,206.23",
+      "serialNumber": 14,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "ATI (Amhara Region)"
+        },
+        {
+          "label": "Project Period",
+          "value": "May 15, 2023 – June 30, 2023"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 10,560,206.23"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-15",
+      "title": "Borehole well drilling Service",
+      "location": "Ethiopia",
+      "status": "Completed",
+      "description": "Borehole well drilling Service",
+      "customer": "ARGS Finance & Economy Cooperation Bureau",
+      "projectPeriod": "March 16, 2023",
+      "estimatedCost": "Birr 962,550.00",
+      "serialNumber": 15,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "ARGS Finance & Economy Cooperation Bureau"
+        },
+        {
+          "label": "Project Period",
+          "value": "March 16, 2023"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 962,550.00"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-16",
+      "title": "Supply and install solar-powered water pumps with PV Fencing structures for 10 Water pumping systems",
+      "location": "Sidama",
+      "status": "Completed",
+      "description": "Supply and install solar-powered water pumps with PV Fencing structures for 10 Water pumping systems",
+      "customer": "Sidama Region Water, Mining and Energy Bureau",
+      "projectPeriod": "Feb 20, 2023 – March 11, 2023",
+      "estimatedCost": "Birr 4,183,127.44",
+      "serialNumber": 16,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Sidama Region Water, Mining and Energy Bureau"
+        },
+        {
+          "label": "Project Period",
+          "value": "Feb 20, 2023 – March 11, 2023"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 4,183,127.44"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-17",
+      "title": "Supply three types of plug and play solar kits 60 units",
+      "location": "Ethiopia",
+      "status": "Completed",
+      "description": "Supply three types of plug and play solar kits 60 units",
+      "customer": "GIZ",
+      "projectPeriod": "Feb 7, 2023",
+      "estimatedCost": "Birr 601,200.00",
+      "serialNumber": 17,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "GIZ"
+        },
+        {
+          "label": "Project Period",
+          "value": "Feb 7, 2023"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 601,200.00"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-18",
+      "title": "Supply, Installation, testing, commissioning, and training of solar-powered water pumps and Sprinkler irrigation systems at four regions, seven Woredas, seventy-seven solar water pumps for small scale irrigation purposes",
+      "location": "Ethiopia",
+      "status": "On Progress (90% completed)",
+      "description": "Supply, Installation, testing, commissioning, and training of solar-powered water pumps and Sprinkler irrigation systems at four regions, seven Woredas, seventy-seven solar water pumps for small scale irrigation purposes",
+      "customer": "FDRE ATI",
+      "projectPeriod": "June 31, 2023",
+      "estimatedCost": "USD 243,76.28 & Birr 5,998,164.32",
+      "serialNumber": 18,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "FDRE ATI"
+        },
+        {
+          "label": "Project Period",
+          "value": "June 31, 2023"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "USD 243,76.28 & Birr 5,998,164.32"
+        },
+        {
+          "label": "Status",
+          "value": "On Progress (90% completed)"
+        }
+      ]
+    },
+    {
+      "id": "project-19",
+      "title": "Supply and installation of solar powered pumps",
+      "location": "Ethiopia",
+      "status": "Completed",
+      "description": "Supply and installation of solar powered pumps",
+      "customer": "HRNS-Ethiopia",
+      "projectPeriod": "2 months",
+      "estimatedCost": "Birr 12,111,444.67",
+      "serialNumber": 19,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "HRNS-Ethiopia"
+        },
+        {
+          "label": "Project Period",
+          "value": "2 months"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 12,111,444.67"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-20",
+      "title": "Solarization, Solar system supply and installation for Hamacho, Gemcho and Duba water supply, Bensa Woreda, Sidama regional state",
+      "location": "Sidama",
+      "status": "Completed",
+      "description": "Solarization, Solar system supply and installation for Hamacho, Gemcho and Duba water supply, Bensa Woreda, Sidama regional state",
+      "customer": "EECMY-DASSC",
+      "projectPeriod": "30 days",
+      "estimatedCost": "Birr 10,232,519.20",
+      "serialNumber": 20,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "EECMY-DASSC"
+        },
+        {
+          "label": "Project Period",
+          "value": "30 days"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 10,232,519.20"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
     }
   ]
 };
@@ -139,8 +632,8 @@ const ProjectsPage = () => {
   const [regionFilter, setRegionFilter] = useState("all");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState(projectsData.projects);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const heroImages = [
