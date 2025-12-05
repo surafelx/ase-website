@@ -39,7 +39,98 @@ import { motion } from "framer-motion";
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import projectsData from "../data/projects.json";
+
+const projectsData = {
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Supply and Installation of 3 units 2.2Kw solar powered submersible pumps",
+      "location": "Central Ethiopia",
+      "status": "In Progress",
+      "description": "Supply and Installation of 3 units 2.2Kw solar powered submersible pumps",
+      "customer": "Central Ethiopia Silte Zone, Silti woreda",
+      "projectPeriod": "April 20, 2025",
+      "estimatedCost": "Birr 3,400,000.00",
+      "serialNumber": 1,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Central Ethiopia Silte Zone, Silti woreda"
+        },
+        {
+          "label": "Project Period",
+          "value": "April 20, 2025"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 3,400,000.00"
+        },
+        {
+          "label": "Status",
+          "value": "In Progress"
+        }
+      ]
+    },
+    {
+      "id": "project-2",
+      "title": "Supply & Installation of solar surface pump, Fence and related works",
+      "location": "Ethiopia",
+      "status": "Completed",
+      "description": "Supply & Installation of solar surface pump, Fence and related works",
+      "customer": "Generation Integrated Rural Development Consultant",
+      "projectPeriod": "Feb 2025",
+      "estimatedCost": "Birr 3,500,000.00",
+      "serialNumber": 2,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Generation Integrated Rural Development Consultant"
+        },
+        {
+          "label": "Project Period",
+          "value": "Feb 2025"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 3,500,000.00"
+        },
+        {
+          "label": "Status",
+          "value": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "project-3",
+      "title": "Supply and Installation of 2.2Kw solar powered surface pump and submersible pump",
+      "location": "Ethiopia",
+      "status": "In Progress",
+      "description": "Supply and Installation of 2.2Kw solar powered surface pump and submersible pump",
+      "customer": "Eden Business Group",
+      "projectPeriod": "December 23-27, 2024",
+      "estimatedCost": "Birr 2,000,000.00",
+      "serialNumber": 3,
+      "specifications": [
+        {
+          "label": "Customer",
+          "value": "Eden Business Group"
+        },
+        {
+          "label": "Project Period",
+          "value": "December 23-27, 2024"
+        },
+        {
+          "label": "Estimated Cost",
+          "value": "Birr 2,000,000.00"
+        },
+        {
+          "label": "Status",
+          "value": "In Progress"
+        }
+      ]
+    }
+  ]
+};
 
 const ProjectsPage = () => {
   const navigate = useNavigate();
@@ -90,16 +181,7 @@ const ProjectsPage = () => {
 
   // Load projects from static data
   useEffect(() => {
-    setLoading(true);
-    try {
-      setProjects(projectsData.default.projects);
-      setError(null);
-    } catch (err) {
-      console.error('Error loading projects:', err);
-      setError('Failed to load projects');
-    } finally {
-      setLoading(false);
-    }
+    setProjects(projectsData.projects);
   }, []);
 
   const projectStats = [
