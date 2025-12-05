@@ -87,30 +87,23 @@ const ProjectsPage = () => {
     return () => clearInterval(interval);
   }, [heroImages.length]);
 
-  // Fetch projects from API
+  // Load projects from static data
   useEffect(() => {
-    const fetchProjects = async () => {
+    const loadProjects = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5000/api/content/projects');
-        setProjects(response.data.data);
+        const projectsData = await import("../data/projects.json");
+        setProjects(projectsData.default.projects);
         setError(null);
       } catch (err) {
-        console.error('Error fetching projects:', err);
+        console.error('Error loading projects:', err);
         setError('Failed to load projects');
-        // Fallback to static data if API fails
-        try {
-          const projectsData = await import("../data/projects.json");
-          setProjects(projectsData.default.projects);
-        } catch (fallbackErr) {
-          console.error('Fallback data also failed:', fallbackErr);
-        }
       } finally {
         setLoading(false);
       }
     };
 
-    fetchProjects();
+    loadProjects();
   }, []);
 
   const projectStats = [
