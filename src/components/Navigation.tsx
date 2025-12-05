@@ -31,7 +31,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-4">
-            <img src="/logo.png" alt="Agri-Sun Ethiopia Logo" className=" rounded-full p-2 w-12 h-12 object-contain" />
+            <div className="p-1 rounded-full bg-solar-gold">
+              <img src="/logo.png" alt="Agri-Sun Ethiopia Logo" className="rounded-full p-1 w-12 h-12 object-contain" />
+            </div>
             <span className={`text-xl font-bold ${isScrolled ? 'text-agriculture-green-dark' : 'text-white'}`}>AgriSun Ethiopia</span>
           </Link>
 

@@ -100,7 +100,7 @@ const ProjectsPage = () => {
         setError('Failed to load projects');
         // Fallback to static data if API fails
         try {
-          const projectsData = await import("@/data/projects/projects.json");
+          const projectsData = await import("../data/projects.json");
           setProjects(projectsData.default.projects);
         } catch (fallbackErr) {
           console.error('Fallback data also failed:', fallbackErr);
