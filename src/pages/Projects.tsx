@@ -39,6 +39,7 @@ import { motion } from "framer-motion";
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import projectsData from "../data/projects.json";
 
 const ProjectsPage = () => {
   const navigate = useNavigate();
@@ -89,21 +90,16 @@ const ProjectsPage = () => {
 
   // Load projects from static data
   useEffect(() => {
-    const loadProjects = async () => {
-      try {
-        setLoading(true);
-        const projectsData = await import("../data/projects.json");
-        setProjects(projectsData.default.projects);
-        setError(null);
-      } catch (err) {
-        console.error('Error loading projects:', err);
-        setError('Failed to load projects');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadProjects();
+    setLoading(true);
+    try {
+      setProjects(projectsData.projects);
+      setError(null);
+    } catch (err) {
+      console.error('Error loading projects:', err);
+      setError('Failed to load projects');
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   const projectStats = [
