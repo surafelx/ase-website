@@ -92,7 +92,7 @@ const ProjectsPage = () => {
   useEffect(() => {
     setLoading(true);
     try {
-      setProjects(projectsData.projects);
+      setProjects(projectsData.default.projects);
       setError(null);
     } catch (err) {
       console.error('Error loading projects:', err);
