@@ -15,8 +15,13 @@ const projectsData = {
       "description": "Supply and Installation of 3 units 2.2Kw solar powered submersible pumps",
       "customer": "Central Ethiopia Silte Zone, Silti woreda",
       "projectPeriod": "April 20, 2025",
-      "estimatedCost": "Birr 3,400,000.00",
       "serialNumber": 1,
+      "images": [
+        {
+          "url": "/assets/projects/shewa/shewa-1.png",
+          "alt": "Solar powered submersible pumps installation"
+        }
+      ],
       "specifications": [
         {
           "label": "Customer",
@@ -25,10 +30,6 @@ const projectsData = {
         {
           "label": "Project Period",
           "value": "April 20, 2025"
-        },
-        {
-          "label": "Estimated Cost",
-          "value": "Birr 3,400,000.00"
         },
         {
           "label": "Status",
@@ -44,8 +45,13 @@ const projectsData = {
       "description": "Supply & Installation of solar surface pump, Fence and related works",
       "customer": "Generation Integrated Rural Development Consultant",
       "projectPeriod": "Feb 2025",
-      "estimatedCost": "Birr 3,500,000.00",
       "serialNumber": 2,
+      "images": [
+        {
+          "url": "/assets/projects/tigray/tigray-1.jpg",
+          "alt": "Solar surface pump installation"
+        }
+      ],
       "specifications": [
         {
           "label": "Customer",
@@ -54,10 +60,6 @@ const projectsData = {
         {
           "label": "Project Period",
           "value": "Feb 2025"
-        },
-        {
-          "label": "Estimated Cost",
-          "value": "Birr 3,500,000.00"
         },
         {
           "label": "Status",
@@ -73,8 +75,13 @@ const projectsData = {
       "description": "Supply and Installation of 2.2Kw solar powered surface pump and submersible pump",
       "customer": "Eden Business Group",
       "projectPeriod": "December 23-27, 2024",
-      "estimatedCost": "Birr 2,000,000.00",
       "serialNumber": 3,
+      "images": [
+        {
+          "url": "/assets/projects/oromia/oromia-1.jpg",
+          "alt": "Solar powered surface and submersible pump installation"
+        }
+      ],
       "specifications": [
         {
           "label": "Customer",
@@ -83,10 +90,6 @@ const projectsData = {
         {
           "label": "Project Period",
           "value": "December 23-27, 2024"
-        },
-        {
-          "label": "Estimated Cost",
-          "value": "Birr 2,000,000.00"
         },
         {
           "label": "Status",
@@ -102,8 +105,13 @@ const projectsData = {
       "description": "Supply and Installation of 750w solar powered submersible pumps",
       "customer": "Farm Africa",
       "projectPeriod": "December 31, 2024 - January 5, 2025",
-      "estimatedCost": "Birr 450,000.00",
       "serialNumber": 4,
+      "images": [
+        {
+          "url": "/assets/projects/diredawa/diredawa-1.png",
+          "alt": "750w solar powered submersible pumps installation"
+        }
+      ],
       "specifications": [
         {
           "label": "Customer",
@@ -112,10 +120,6 @@ const projectsData = {
         {
           "label": "Project Period",
           "value": "December 31, 2024 - January 5, 2025"
-        },
-        {
-          "label": "Estimated Cost",
-          "value": "Birr 450,000.00"
         },
         {
           "label": "Status",
@@ -131,8 +135,13 @@ const projectsData = {
       "description": "Supply and Installation of solar powered pumps",
       "customer": "Birhanu Integrated Farm",
       "projectPeriod": "Ongoing",
-      "estimatedCost": "Birr 2,000,000.00",
       "serialNumber": 5,
+      "images": [
+        {
+          "url": "/assets/projects/tigray/tigray-2.jpg",
+          "alt": "Solar powered pumps installation"
+        }
+      ],
       "specifications": [
         {
           "label": "Customer",
@@ -141,10 +150,6 @@ const projectsData = {
         {
           "label": "Project Period",
           "value": "Ongoing"
-        },
-        {
-          "label": "Estimated Cost",
-          "value": "Birr 2,000,000.00"
         },
         {
           "label": "Status",
@@ -160,8 +165,13 @@ const projectsData = {
       "description": "Water well Drilling 80m for irrigation and drinking water",
       "customer": "Shali Mesgied, Harbu",
       "projectPeriod": "December 25-31, 2024",
-      "estimatedCost": "Birr 2,500,000.00",
       "serialNumber": 6,
+      "images": [
+        {
+          "url": "/assets/projects/shewa/shewa-2.png",
+          "alt": "Water well drilling for irrigation"
+        }
+      ],
       "specifications": [
         {
           "label": "Customer",
@@ -170,10 +180,6 @@ const projectsData = {
         {
           "label": "Project Period",
           "value": "December 25-31, 2024"
-        },
-        {
-          "label": "Estimated Cost",
-          "value": "Birr 2,500,000.00"
         },
         {
           "label": "Status",
@@ -189,8 +195,13 @@ const projectsData = {
       "description": "Supply and Installation of 16 solar-powered submersible pumps 5.5Kw",
       "customer": "Ministry of Agriculture (Federal)",
       "projectPeriod": "July 15, 2024 – August 30, 2024",
-      "estimatedCost": "Birr 25,357,873.74",
       "serialNumber": 7,
+      "images": [
+        {
+          "url": "/assets/projects/oromia/oromia-2.jpg",
+          "alt": "16 solar-powered submersible pumps installation"
+        }
+      ],
       "specifications": [
         {
           "label": "Customer",
@@ -199,10 +210,6 @@ const projectsData = {
         {
           "label": "Project Period",
           "value": "July 15, 2024 – August 30, 2024"
-        },
-        {
-          "label": "Estimated Cost",
-          "value": "Birr 25,357,873.74"
         },
         {
           "label": "Status",
@@ -218,8 +225,13 @@ const projectsData = {
       "description": "Supply and Installation of 6 solar-powered surface pumps 750w, 1500w and 2.2Kw",
       "customer": "Ministry of Agriculture (Federal)",
       "projectPeriod": "July 1, 2024 – August 30, 2024",
-      "estimatedCost": "Birr 4,957,287.56",
       "serialNumber": 8,
+      "images": [
+        {
+          "url": "/assets/projects/diredawa/diredawa-2.png",
+          "alt": "Solar-powered surface pumps installation"
+        }
+      ],
       "specifications": [
         {
           "label": "Customer",
@@ -228,10 +240,6 @@ const projectsData = {
         {
           "label": "Project Period",
           "value": "July 1, 2024 – August 30, 2024"
-        },
-        {
-          "label": "Estimated Cost",
-          "value": "Birr 4,957,287.56"
         },
         {
           "label": "Status",
@@ -247,8 +255,13 @@ const projectsData = {
       "description": "Supply drilling machine Accessories",
       "customer": "Ministry of Agriculture (Amhara Region)",
       "projectPeriod": "July 1 – July 7, 2024",
-      "estimatedCost": "Birr 3,440,152.12",
       "serialNumber": 9,
+      "images": [
+        {
+          "url": "/assets/projects/amhara/amhara-1.jpg",
+          "alt": "Drilling machine accessories supply"
+        }
+      ],
       "specifications": [
         {
           "label": "Customer",
@@ -257,10 +270,6 @@ const projectsData = {
         {
           "label": "Project Period",
           "value": "July 1 – July 7, 2024"
-        },
-        {
-          "label": "Estimated Cost",
-          "value": "Birr 3,440,152.12"
         },
         {
           "label": "Status",
@@ -276,8 +285,13 @@ const projectsData = {
       "description": "MOA Supply, Installation, testing, commissioning, and training of solar-powered water pumps – Sub contract Amhara Region 16 sites pump installation",
       "customer": "Nahom Construction",
       "projectPeriod": "July 1, 2024 – July 30, 2024",
-      "estimatedCost": "Birr 1,148,160.00",
       "serialNumber": 10,
+      "images": [
+        {
+          "url": "/assets/projects/amhara/amhara-2.jpg",
+          "alt": "Solar-powered water pumps installation in Amhara"
+        }
+      ],
       "specifications": [
         {
           "label": "Customer",
@@ -286,10 +300,6 @@ const projectsData = {
         {
           "label": "Project Period",
           "value": "July 1, 2024 – July 30, 2024"
-        },
-        {
-          "label": "Estimated Cost",
-          "value": "Birr 1,148,160.00"
         },
         {
           "label": "Status",
@@ -421,7 +431,7 @@ const ProjectDetail = () => {
              />
            ) : (
              <motion.img
-               src=""
+               src="/assets/logo.png"
                alt={project.title}
                className="w-full h-full object-cover"
                animate={{ scale: [1, 1.1, 1] }}
@@ -452,12 +462,6 @@ const ProjectDetail = () => {
                <div className="flex items-center bg-agriculture-green/30 backdrop-blur-sm rounded-full px-4 py-2 border border-agriculture-green/50">
                  <User className="w-5 h-5 mr-2 text-white" />
                  <span className="font-medium">{project.customer}</span>
-               </div>
-
-               {/* Cost with Gradient Badge */}
-               <div className="flex items-center bg-gradient-to-r from-solar-gold/30 to-agriculture-green/30 backdrop-blur-sm rounded-full px-4 py-2 border border-solar-gold/50">
-                 <Award className="w-5 h-5 mr-2 text-solar-gold" />
-                 <span className="font-semibold text-white">{project.estimatedCost}</span>
                </div>
              </div>
           </div>
@@ -568,14 +572,6 @@ const ProjectDetail = () => {
                     <span className="text-muted-foreground">Customer</span>
                     <span className="font-bold text-primary">
                       {project.customer}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">
-                      Estimated Cost
-                    </span>
-                    <span className="font-bold text-primary">
-                      {project.estimatedCost}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
