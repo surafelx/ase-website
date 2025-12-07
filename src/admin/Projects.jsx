@@ -1,18 +1,18 @@
-import { useState } from 'react';
-import { useQuery } from '@tanstack/react-query';
-import { api } from '../services/api';
+import { useState, useEffect } from 'react';
 import { MapPin, Users, TrendingUp, Calendar, Plus, Edit, Trash2, Image, X, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Select } from '../components/ui/select';
-import ImageUpload from '../components/ImageUpload';
+import ImageUpload from './components/ImageUpload';
 
 const Projects = () => {
   const [statusFilter, setStatusFilter] = useState('');
   const [showForm, setShowForm] = useState(false);
   const [editingProject, setEditingProject] = useState(null);
+  const [projects, setProjects] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [formData, setFormData] = useState({
     title: '',
     location: '',
@@ -24,26 +24,37 @@ const Projects = () => {
     yieldIncrease: ''
   });
 
-  // Fetch projects
-  const { data: projectsData, isLoading, refetch } = useQuery({
-    queryKey: ['projects', statusFilter],
-    queryFn: async () => {
-      const params = new URLSearchParams();
-      if (statusFilter) params.append('status', statusFilter);
-      const response = await api.get(`/projects?${params}`);
-      return response.data;
-    }
-  });
+  // Load projects from localStorage
+  useEffect(() => {
+    const loadProjects = () => {
+      try {
+        const storedProjects = JSON.parse(localStorage.getItem('projects') || '[]');
+        let filteredProjects = storedProjects;
 
-  const projects = projectsData?.data || [];
+        if (statusFilter) {
+          filteredProjects = storedProjects.filter(project => project.status === statusFilter);
+        }
 
-  // Analytics data
+        setProjects(filteredProjects);
+      } catch (error) {
+        console.error('Error loading projects:', error);
+        setProjects([]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadProjects();
+  }, [statusFilter]);
+
+  // Analytics data - use all projects for totals, not filtered
+  const allProjects = JSON.parse(localStorage.getItem('projects') || '[]');
   const analyticsOverview = {
-    totalProjects: projects.length,
-    activeProjects: projects.filter(p => p.status === 'In Progress').length,
-    completedProjects: projects.filter(p => p.status === 'Completed').length,
-    totalBeneficiaries: projects.reduce((sum, p) => sum + (parseInt(p.beneficiaries) || 0), 0),
-    regionsCovered: [...new Set(projects.map(p => p.region).filter(Boolean))].length,
+    totalProjects: allProjects.length,
+    activeProjects: allProjects.filter(p => p.status === 'In Progress').length,
+    completedProjects: allProjects.filter(p => p.status === 'Completed').length,
+    totalBeneficiaries: allProjects.reduce((sum, p) => sum + (parseInt(p.beneficiaries) || 0), 0),
+    regionsCovered: [...new Set(allProjects.map(p => p.region).filter(Boolean))].length,
   };
 
   const getStatusColor = (status) => {
@@ -92,13 +103,33 @@ const Projects = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const storedProjects = JSON.parse(localStorage.getItem('projects') || '[]');
+
       if (editingProject) {
-        await api.put(`/projects/${editingProject._id}`, formData);
+        // Update existing project
+        const projectIndex = storedProjects.findIndex(p => p._id === editingProject._id);
+        if (projectIndex !== -1) {
+          storedProjects[projectIndex] = { ...storedProjects[projectIndex], ...formData };
+        }
       } else {
-        await api.post('/projects', formData);
+        // Create new project
+        const newProject = {
+          ...formData,
+          _id: Date.now().toString(), // Simple ID generation
+          images: [],
+          createdAt: new Date().toISOString()
+        };
+        storedProjects.push(newProject);
       }
+
+      localStorage.setItem('projects', JSON.stringify(storedProjects));
       setShowForm(false);
-      refetch();
+
+      // Reload projects
+      const filteredProjects = statusFilter
+        ? storedProjects.filter(project => project.status === statusFilter)
+        : storedProjects;
+      setProjects(filteredProjects);
     } catch (error) {
       console.error('Error saving project:', error);
     }
@@ -107,8 +138,15 @@ const Projects = () => {
   const handleDeleteProject = async (projectId) => {
     if (!confirm('Are you sure you want to delete this project?')) return;
     try {
-      await api.delete(`/projects/${projectId}`);
-      refetch();
+      const storedProjects = JSON.parse(localStorage.getItem('projects') || '[]');
+      const updatedProjects = storedProjects.filter(p => p._id !== projectId);
+      localStorage.setItem('projects', JSON.stringify(updatedProjects));
+
+      // Reload projects
+      const filteredProjects = statusFilter
+        ? updatedProjects.filter(project => project.status === statusFilter)
+        : updatedProjects;
+      setProjects(filteredProjects);
     } catch (error) {
       console.error('Error deleting project:', error);
     }
@@ -423,7 +461,14 @@ const Projects = () => {
                     <ImageUpload
                       projectId={editingProject._id}
                       existingImages={editingProject.images || []}
-                      onUploadSuccess={() => refetch()}
+                      onUploadSuccess={() => {
+                        // Reload projects after image upload
+                        const storedProjects = JSON.parse(localStorage.getItem('projects') || '[]');
+                        const filteredProjects = statusFilter
+                          ? storedProjects.filter(project => project.status === statusFilter)
+                          : storedProjects;
+                        setProjects(filteredProjects);
+                      }}
                     />
                   </div>
                 )}

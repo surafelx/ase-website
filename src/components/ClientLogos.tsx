@@ -180,7 +180,7 @@ const ClientLogos = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg p-6 shadow-md border h-full flex flex-col items-center justify-center text-center"
+              className="h-full flex flex-col items-center justify-center text-center"
             >
               <stat.icon className="w-8 h-8 text-solar-gold mb-3" />
               <div className="text-3xl font-bold text-solar-gold mb-1">
@@ -224,7 +224,7 @@ const ClientLogos = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white rounded-lg p-6 shadow-md border h-full flex flex-col items-center justify-center text-center"
+                    className="h-full flex flex-col items-center justify-center text-center p-4"
                   >
                     <div className="w-20 h-20 flex items-center justify-center mb-3">
                       <img

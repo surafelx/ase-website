@@ -10,29 +10,24 @@ const HeroSlideshow = () => {
 
   const slides = [
     {
-      image: "/assets/heroes/hero-6.jpg",
-      title: "Solar Irrigation System",
-      location: "Oromia Region, Ethiopia",
-      description: "Complete solar-powered water pumping solution serving 50+ farmers with sustainable irrigation for maize and vegetable crops.",
-      impact: "Increased crop yield by 200% and reduced water costs by 70%"
+      image: "/assets/heroes/hero-6.jpg"
     },
     {
-      image: "/assets/heroes/hero-7.jpg",
-      title: "Agricultural Training Program",
-      location: "Amhara Region, Ethiopia",
-      description: "Comprehensive training initiatives empowering local farmers with modern agricultural techniques and sustainable practices.",
-      impact: "Trained 200+ farmers and improved agricultural productivity by 150%"
+      image: "/assets/heroes/hero-7.jpg"
     },
     {
-      image: "/assets/heroes/hero-8.jpg",
-      title: "Water Management Solutions",
-      location: "Tigray Region, Ethiopia",
-      description: "Advanced water management systems providing reliable irrigation for drought-prone agricultural areas.",
-      impact: "Reduced water waste by 60% and increased farm efficiency"
+      image: "/assets/heroes/hero-8.jpg"
     }
   ];
 
-  const projectDetails = slides[currentSlide];
+  const heroContent = {
+    title: "Empowering Agriculture Through Innovation",
+    location: "Ethiopia",
+    description: "Leading provider of solar irrigation and agricultural solutions, transforming farming practices across Ethiopia with cutting-edge technology.",
+    impact: "Delivering sustainable, efficient, and cost-effective solutions for Ethiopian farmers"
+  };
+
+  const projectDetails = heroContent;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -60,14 +55,14 @@ const HeroSlideshow = () => {
         <div className="absolute inset-0 z-0 overflow-hidden">
           <motion.img
             key={currentSlide}
-            src={projectDetails.image}
+            src={slides[currentSlide].image}
             alt={`${projectDetails.title} in Ethiopia`}
             className="w-full h-full object-cover"
             initial={{ scale: 1, opacity: 0 }}
             animate={{ scale: [1, 1.1, 1], opacity: 1 }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", opacity: { duration: 0.5 } }}
           />
-          <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+          <div className="absolute inset-0 bg-agriculture-green-dark opacity-60 z-10"></div>
         </div>
 
         {/* Navigation Arrows */}
@@ -97,63 +92,38 @@ const HeroSlideshow = () => {
           ))}
         </div>
 
-        {/* Content Overlay - Left Aligned */}
-        <motion.div
-          className="container relative z-20 mx-auto px-12 py-8 pt-40"
-          initial={{ opacity: 0, x: -50 }}
-          animate={
-            isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
-          }
-          transition={{ duration: 0.8, delay: 0.2 }}
+        {/* Content Overlay */}
+        <div
+          className="container relative z-20 mx-auto px-8 md:px-12 py-8 pt-20 md:pt-40"
         >
           <div className="max-w-2xl text-white">
-            <motion.div
+            <div
               className="mb-6"
-              initial={{ opacity: 0, x: -30 }}
-              animate={
-                isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
-              }
-              transition={{ duration: 0.8, delay: 0.4 }}
             >
-               <h2 className="text-3xl md:text-3xl font-bold mb-2 text-white"
-                  style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
-                Recent Projects and Events
-              </h2>
-              <h1 className="text-4xl md:text-6xl font-bold mb-2 text-white"
-                  style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
-                {projectDetails.title}
-              </h1>
-              <p className="text-xl md:text-2xl text-white/90 font-medium"
-                 style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                {projectDetails.location}
-              </p>
-            </motion.div>
+               <h2 className="text-2xl md:text-3xl font-medium mb-2 text-white">
+                 Welcome to AgriSun Ethiopia
+               </h2>
+               <h1 className="text-3xl md:text-5xl font-semibold mb-2 text-white">
+                 {projectDetails.title}
+               </h1>
+               <p className="text-lg md:text-xl text-white/90 font-normal">
+                 {projectDetails.location}
+               </p>
+            </div>
 
-            <motion.div
+            <div
               className="mb-8"
-              initial={{ opacity: 0, x: -30 }}
-              animate={
-                isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
-              }
-              transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <p className="text-lg md:text-xl text-white/95 leading-relaxed mb-4"
-                 style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>
+              <p className="text-base md:text-lg text-white/95 leading-normal mb-4">
                 {projectDetails.description}
               </p>
-              <p className="text-base md:text-lg text-solar-gold font-semibold"
-                 style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+              <p className="text-sm md:text-base text-solar-gold font-medium">
                 {projectDetails.impact}
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               className="flex flex-col sm:flex-row gap-4"
-              initial={{ opacity: 0, x: -30 }}
-              animate={
-                isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
-              }
-              transition={{ duration: 0.8, delay: 0.8 }}
             >
               <Link to="/projects">
                 <button className="bg-solar-gold hover:bg-solar-gold-dark text-agriculture-green-dark font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
@@ -166,9 +136,9 @@ const HeroSlideshow = () => {
                   Get Started
                 </button>
               </Link>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Down Arrow */}
