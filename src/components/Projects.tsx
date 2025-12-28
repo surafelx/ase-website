@@ -95,20 +95,13 @@ const Projects = () => {
                   </p>
 
                   {/* Key Metrics */}
-                  <div className="grid grid-cols-2 gap-2 mb-3">
+                  <div className="grid grid-cols-1 gap-2 mb-3">
                     <div className="text-center bg-white/10 rounded-lg p-1 backdrop-blur-sm">
                       <Users className="w-3 h-3 mx-auto mb-1 text-white" />
                       <div className="text-xs font-bold text-white">
                         {project.serialNumber}
                       </div>
                       <div className="text-xs text-white/80">Project #</div>
-                    </div>
-                    <div className="text-center bg-white/10 rounded-lg p-1 backdrop-blur-sm">
-                      <TrendingUp className="w-3 h-3 mx-auto mb-1 text-white" />
-                      <div className="text-xs font-bold text-white">
-                        {project.estimatedCost}
-                      </div>
-                      <div className="text-xs text-white/80">Cost</div>
                     </div>
                   </div>
 
