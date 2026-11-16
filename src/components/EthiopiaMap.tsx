@@ -8,7 +8,6 @@ const EthiopiaMap = () => {
   // Solar panel locations with project links
   const solarSites = [
     { x: 0.3, y: 0.4, projectId: "solar-pumps-moa", region: "Diredewa & Harari" },
-    { x: 0.5, y: 0.35, projectId: "nahom-construction-partnership", region: "Shoa Robit" },
     { x: 0.7, y: 0.45, projectId: "sidama-solar-pumps", region: "Sidama" },
     { x: 0.4, y: 0.6, projectId: "snnpr-solar-pumps", region: "SNNP" },
     { x: 0.6, y: 0.65, projectId: "amhara-solar-pumps", region: "Amhara" }

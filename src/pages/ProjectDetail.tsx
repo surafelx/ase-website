@@ -276,36 +276,6 @@ const projectsData = {
           "value": "Completed"
         }
       ]
-    },
-    {
-      "id": "project-10",
-      "title": "MOA Supply, Installation, testing, commissioning, and training of solar-powered water pumps – Sub contract Amhara Region 16 sites pump installation",
-      "location": "Amhara",
-      "status": "Completed",
-      "description": "MOA Supply, Installation, testing, commissioning, and training of solar-powered water pumps – Sub contract Amhara Region 16 sites pump installation",
-      "customer": "Nahom Construction",
-      "projectPeriod": "July 1, 2024 – July 30, 2024",
-      "serialNumber": 10,
-      "images": [
-        {
-          "url": "/assets/projects/amhara/amhara-2.jpg",
-          "alt": "Solar-powered water pumps installation in Amhara"
-        }
-      ],
-      "specifications": [
-        {
-          "label": "Customer",
-          "value": "Nahom Construction"
-        },
-        {
-          "label": "Project Period",
-          "value": "July 1, 2024 – July 30, 2024"
-        },
-        {
-          "label": "Status",
-          "value": "Completed"
-        }
-      ]
     }
   ]
 };
